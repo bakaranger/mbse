@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/ERSchema/src" modelPluginID="ERSchema" modelName="Erschema"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="8.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>erschema.ecore</foreignModel>
+  <genPackages prefix="Erschema" disposableProviderFactory="true" ecorePackage="erschema.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="erschema.ecore#//Datatype">
+      <genEnumLiterals ecoreEnumLiteral="erschema.ecore#//Datatype/Date"/>
+      <genEnumLiterals ecoreEnumLiteral="erschema.ecore#//Datatype/String"/>
+      <genEnumLiterals ecoreEnumLiteral="erschema.ecore#//Datatype/Float"/>
+      <genEnumLiterals ecoreEnumLiteral="erschema.ecore#//Datatype/Integer"/>
+      <genEnumLiterals ecoreEnumLiteral="erschema.ecore#//Datatype/Char"/>
+      <genEnumLiterals ecoreEnumLiteral="erschema.ecore#//Datatype/Bool"/>
+    </genEnums>
+    <genClasses ecoreClass="erschema.ecore#//Schema">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference erschema.ecore#//Schema/contains"/>
+    </genClasses>
+    <genClasses ecoreClass="erschema.ecore#//Entity">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference erschema.ecore#//Entity/parentOf"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference erschema.ecore#//Entity/childOf"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference erschema.ecore#//Entity/compositions"/>
+    </genClasses>
+    <genClasses ecoreClass="erschema.ecore#//Attribute"/>
+    <genClasses ecoreClass="erschema.ecore#//Composition">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference erschema.ecore#//Composition/attributes"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="erschema.ecore#//Element">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute erschema.ecore#//Element/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute erschema.ecore#//Element/type"/>
+    </genClasses>
+    <genClasses ecoreClass="erschema.ecore#//PrimaryKey"/>
+    <genClasses ecoreClass="erschema.ecore#//ForeignKey"/>
+  </genPackages>
+</genmodel:GenModel>
