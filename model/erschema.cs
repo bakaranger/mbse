@@ -1,6 +1,6 @@
 SYNTAXDEF erm
 FOR <http://tu-bs.de/cs/isf/mbse/erschema> <erschema.genmodel>
-START Schema
+START Model
 
 OPTIONS {
 	reloadGeneratorModel = "true";
@@ -9,5 +9,5 @@ OPTIONS {
 
 RULES {
 	// TODO write rules
-	Schema   ::= "model";	
+	Model   ::= "model";	
 }

@@ -6,30 +6,37 @@
   <foreignModel>erschema.ecore</foreignModel>
   <genPackages prefix="Erschema" disposableProviderFactory="true" ecorePackage="erschema.ecore#/">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="erschema.ecore#//Datatype">
-      <genEnumLiterals ecoreEnumLiteral="erschema.ecore#//Datatype/Date"/>
-      <genEnumLiterals ecoreEnumLiteral="erschema.ecore#//Datatype/String"/>
-      <genEnumLiterals ecoreEnumLiteral="erschema.ecore#//Datatype/Float"/>
-      <genEnumLiterals ecoreEnumLiteral="erschema.ecore#//Datatype/Integer"/>
-      <genEnumLiterals ecoreEnumLiteral="erschema.ecore#//Datatype/Char"/>
-      <genEnumLiterals ecoreEnumLiteral="erschema.ecore#//Datatype/Bool"/>
+      <genEnumLiterals ecoreEnumLiteral="erschema.ecore#//Datatype/int"/>
+      <genEnumLiterals ecoreEnumLiteral="erschema.ecore#//Datatype/double"/>
+      <genEnumLiterals ecoreEnumLiteral="erschema.ecore#//Datatype/string"/>
+      <genEnumLiterals ecoreEnumLiteral="erschema.ecore#//Datatype/bool"/>
+      <genEnumLiterals ecoreEnumLiteral="erschema.ecore#//Datatype/date"/>
+      <genEnumLiterals ecoreEnumLiteral="erschema.ecore#//Datatype/time"/>
+      <genEnumLiterals ecoreEnumLiteral="erschema.ecore#//Datatype/text"/>
     </genEnums>
-    <genClasses ecoreClass="erschema.ecore#//Schema">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference erschema.ecore#//Schema/contains"/>
+    <genClasses ecoreClass="erschema.ecore#//Model">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference erschema.ecore#//Model/entities"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference erschema.ecore#//Model/relations"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute erschema.ecore#//Model/name"/>
     </genClasses>
     <genClasses ecoreClass="erschema.ecore#//Entity">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference erschema.ecore#//Entity/parentOf"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference erschema.ecore#//Entity/childOf"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference erschema.ecore#//Entity/compositions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference erschema.ecore#//Entity/attributes"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference erschema.ecore#//Entity/key"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute erschema.ecore#//Entity/constraint"/>
     </genClasses>
-    <genClasses ecoreClass="erschema.ecore#//Attribute"/>
-    <genClasses ecoreClass="erschema.ecore#//Composition">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference erschema.ecore#//Composition/attributes"/>
+    <genClasses ecoreClass="erschema.ecore#//Attribute">
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute erschema.ecore#//Attribute/type"/>
     </genClasses>
     <genClasses image="false" ecoreClass="erschema.ecore#//Element">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute erschema.ecore#//Element/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute erschema.ecore#//Element/type"/>
     </genClasses>
-    <genClasses ecoreClass="erschema.ecore#//PrimaryKey"/>
-    <genClasses ecoreClass="erschema.ecore#//ForeignKey"/>
+    <genClasses ecoreClass="erschema.ecore#//Relation">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference erschema.ecore#//Relation/roles"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute erschema.ecore#//Relation/constraint"/>
+    </genClasses>
+    <genClasses ecoreClass="erschema.ecore#//Role">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute erschema.ecore#//Role/cardinality"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference erschema.ecore#//Role/entity"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>
