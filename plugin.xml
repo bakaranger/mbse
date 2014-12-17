@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated erschema -->
+      <package
+            uri="http://tu-bs.de/cs/isf/mbse/erschema"
+            class="de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage"
+            genModel="model/erschema.genmodel"/>
+   </extension>
+
+</plugin>

@@ -1,0 +1,6 @@
+import 'erschema.ecore'
+
+package erschema 
+
+
+endpackage

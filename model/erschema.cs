@@ -8,6 +8,17 @@ OPTIONS {
 }
 
 RULES {
-	// TODO write rules
-	Model   ::= "model";	
+	Model   ::= "model" name['"', '"'] "{" entities* relations* "}";   
+	
+	Entity ::= "entity" name['"', '"'] "{" attributes+ compositions* dummyConstraints* "}"; 
+ 	
+	Relation ::= "relation" name[] "{" attributes* roles(roles+) dummyConstraints* "}";	
+	
+	Composition ::= "composition" name[] "{" attributes(attributes+) "}";
+	
+	Attribute ::= "val" name[] ":" type[];
+	
+	Role ::= "role" name[] "references" entity "[" lowerBound[] "," upperBound[] "]";
+	
+	DummyConstraint ::= "constraint" "(" constraint[] ")";
 }

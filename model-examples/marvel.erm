@@ -1,0 +1,19 @@
+model marvel {
+entity hero {
+composite name {
+val first_name : string
+val last_name : string
+}
+key val alias : string
+}
+entity team {
+key val name : string
+}
+relation member_of {
+val join : date
+val leave : date
+role hero references hero[*]
+role team references team[*]
+constraint (hero.alias is not team.name)
+}
+}
