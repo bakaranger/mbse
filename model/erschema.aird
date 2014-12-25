@@ -1171,7 +1171,7 @@
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
         </ownedElements>
-        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_D0Z50IXWEeSFBIsl2YRTig" name="upperBound : EInt = 0" tooltipText="&#xA;ERROR : The required feature 'eAttributeType' of 'org.eclipse.emf.ecore.impl.EAttributeImpl@4b70dad8{platform:/resource/ERSchema/model/erschema.ecore#//Role/newAttribute}' must be set&#xA;ERROR : The typed element must have a type">
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_D0Z50IXWEeSFBIsl2YRTig" name="upperBound : EInt = 0" tooltipText="">
           <target xmi:type="ecore:EAttribute" href="erschema.ecore#//Role/upperBound"/>
           <semanticElements xmi:type="ecore:EAttribute" href="erschema.ecore#//Role/upperBound"/>
           <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_J93ydIXWEeSFBIsl2YRTig" labelFormat="bold" labelAlignment="LEFT" description="_J93ycoXWEeSFBIsl2YRTig">
@@ -1389,7 +1389,7 @@
           <foregroundColor xmi:type="viewpoint:RGBValues" xmi:id="_s-3XZIXTEeSFBIsl2YRTig" red="255" green="252" blue="216"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
-        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_j9LUcIXTEeSFBIsl2YRTig" name="lop : LogicalBinaryOperator = or" tooltipText="&#xA;ERROR : The required feature 'eAttributeType' of 'org.eclipse.emf.ecore.impl.EAttributeImpl@4e086b0a{platform:/resource/ERSchema/model/erschema.ecore#//Predicate/newAttribute}' must be set&#xA;ERROR : The typed element must have a type">
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_j9LUcIXTEeSFBIsl2YRTig" name="lop : LogicalBinaryOperator = or" tooltipText="">
           <target xmi:type="ecore:EAttribute" href="erschema.ecore#//Predicate/lop"/>
           <semanticElements xmi:type="ecore:EAttribute" href="erschema.ecore#//Predicate/lop"/>
           <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_lgndIIXTEeSFBIsl2YRTig" labelAlignment="LEFT">
@@ -1400,7 +1400,7 @@
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
         </ownedElements>
-        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_rkC_MIXTEeSFBIsl2YRTig" name="bop : BinaryOperator" tooltipText="&#xA;ERROR : The required feature 'eAttributeType' of 'org.eclipse.emf.ecore.impl.EAttributeImpl@389a5b52{platform:/resource/ERSchema/model/erschema.ecore#//Predicate/newAttribute}' must be set&#xA;ERROR : The typed element must have a type">
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_rkC_MIXTEeSFBIsl2YRTig" name="bop : BinaryOperator" tooltipText="">
           <target xmi:type="ecore:EAttribute" href="erschema.ecore#//Predicate/bop"/>
           <semanticElements xmi:type="ecore:EAttribute" href="erschema.ecore#//Predicate/bop"/>
           <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_s-4lgIXTEeSFBIsl2YRTig" labelAlignment="LEFT">
@@ -1544,7 +1544,7 @@
           <foregroundColor xmi:type="viewpoint:RGBValues" xmi:id="_YIYipIXREeSFBIsl2YRTig" red="255" green="252" blue="216"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
-        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_Wn188IXREeSFBIsl2YRTig" name="type : Datatype = int" tooltipText="&#xA;ERROR : The required feature 'eAttributeType' of 'org.eclipse.emf.ecore.impl.EAttributeImpl@716efde2{platform:/resource/ERSchema/model/erschema.ecore#//Term/newAttribute}' must be set&#xA;ERROR : The typed element must have a type">
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_Wn188IXREeSFBIsl2YRTig" name="type : Datatype = int" tooltipText="">
           <target xmi:type="ecore:EAttribute" href="erschema.ecore#//Term/type"/>
           <semanticElements xmi:type="ecore:EAttribute" href="erschema.ecore#//Term/type"/>
           <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_YIa-4IXREeSFBIsl2YRTig" labelAlignment="LEFT">
@@ -1598,7 +1598,7 @@
           <foregroundColor xmi:type="viewpoint:RGBValues" xmi:id="_Fa1zhIXTEeSFBIsl2YRTig" red="255" green="252" blue="216"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
-        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_D5D3sIXTEeSFBIsl2YRTig" name="type : LogicalBinaryOperator = or" tooltipText="&#xA;ERROR : The required feature 'eAttributeType' of 'org.eclipse.emf.ecore.impl.EAttributeImpl@7d237704{platform:/resource/ERSchema/model/erschema.ecore#//LogicalTermOperator/newAttribute}' must be set&#xA;ERROR : The typed element must have a type">
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_D5D3sIXTEeSFBIsl2YRTig" name="type : LogicalBinaryOperator = or" tooltipText="">
           <target xmi:type="ecore:EAttribute" href="erschema.ecore#//PredicateOperator/type"/>
           <semanticElements xmi:type="ecore:EAttribute" href="erschema.ecore#//PredicateOperator/type"/>
           <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_Fa3BoIXTEeSFBIsl2YRTig" labelAlignment="LEFT">
@@ -1670,7 +1670,7 @@
           <foregroundColor xmi:type="viewpoint:RGBValues" xmi:id="_3kTdVIXZEeSFBIsl2YRTig" red="255" green="252" blue="216"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
-        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_2cJicIXZEeSFBIsl2YRTig" name="constraint : EString" tooltipText="&#xA;ERROR : The required feature 'eAttributeType' of 'org.eclipse.emf.ecore.impl.EAttributeImpl@52f2375d{platform:/resource/ERSchema/model/erschema.ecore#//DummyConstraint/newAttribute}' must be set&#xA;ERROR : The typed element must have a type">
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_2cJicIXZEeSFBIsl2YRTig" name="constraint : EString" tooltipText="">
           <target xmi:type="ecore:EAttribute" href="erschema.ecore#//DummyConstraint/constraint"/>
           <semanticElements xmi:type="ecore:EAttribute" href="erschema.ecore#//DummyConstraint/constraint"/>
           <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_BfG5lIXaEeSFBIsl2YRTig" labelFormat="bold" labelAlignment="LEFT" description="_BfG5koXaEeSFBIsl2YRTig">

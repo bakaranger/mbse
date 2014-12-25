@@ -2,5 +2,8 @@ import 'erschema.ecore'
 
 package erschema 
 
+-- there are no attributes with the same name in an entity
+context Entity 
+	inv: attributes->isUnique(self.name)
 
 endpackage

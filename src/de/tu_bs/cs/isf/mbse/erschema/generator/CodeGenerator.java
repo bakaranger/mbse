@@ -1,4 +1,4 @@
-package de.tu_bs.cs.isf.mbse.erm.generator;
+package de.tu_bs.cs.isf.mbse.erschema.generator;
 
 public final class CodeGenerator {
 
