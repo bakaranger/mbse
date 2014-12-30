@@ -10,13 +10,15 @@ OPTIONS {
 RULES {
 	Model   ::= "model" name['"', '"'] "{" entities* relations* "}";   
 	
-	Entity ::= "entity" name['"', '"'] "{" attributes+ compositions* dummyConstraints* "}"; 
+	Entity ::= "entity" name['"', '"'] "{" keys+ attributes* compositions* dummyConstraints* "}"; 
  	
 	Relation ::= "relation" name[] "{" attributes* roles(roles+) dummyConstraints* "}";	
 	
 	Composition ::= "composition" name[] "{" attributes(attributes+) "}";
 	
 	Attribute ::= "val" name[] ":" type[];
+	
+	KeyValue ::= "key" (composition|attribute);
 	
 	Role ::= "role" name[] "references" entity "[" lowerBound[] "," upperBound[] "]";
 	

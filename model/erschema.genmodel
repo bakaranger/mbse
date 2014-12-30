@@ -34,10 +34,10 @@
     </genClasses>
     <genClasses ecoreClass="erschema.ecore#//Entity">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference erschema.ecore#//Entity/attributes"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference erschema.ecore#//Entity/key"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference erschema.ecore#//Entity/compositions"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference erschema.ecore#//Entity/constraints"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference erschema.ecore#//Entity/dummyConstraints"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference erschema.ecore#//Entity/keys"/>
     </genClasses>
     <genClasses ecoreClass="erschema.ecore#//Attribute">
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute erschema.ecore#//Attribute/type"/>
@@ -76,6 +76,10 @@
     </genClasses>
     <genClasses ecoreClass="erschema.ecore#//DummyConstraint">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute erschema.ecore#//DummyConstraint/constraint"/>
+    </genClasses>
+    <genClasses ecoreClass="erschema.ecore#//KeyValue">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference erschema.ecore#//KeyValue/attribute"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference erschema.ecore#//KeyValue/composition"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

@@ -5,5 +5,9 @@ package erschema
 -- there are no attributes with the same name in an entity
 context Entity 
 	inv: attributes->isUnique(self.name)
+	
+-- XOR constraint for key values
+context KeyValue
+	inv: composition->size() + attribute->size() = 1
 
 endpackage
