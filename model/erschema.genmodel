@@ -6,18 +6,10 @@
   <foreignModel>erschema.ecore</foreignModel>
   <genPackages prefix="Erschema" basePackage="de.tu_bs.cs.isf.mbse" disposableProviderFactory="true"
       ecorePackage="erschema.ecore#/">
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="erschema.ecore#//Datatype">
-      <genEnumLiterals ecoreEnumLiteral="erschema.ecore#//Datatype/int"/>
-      <genEnumLiterals ecoreEnumLiteral="erschema.ecore#//Datatype/double"/>
-      <genEnumLiterals ecoreEnumLiteral="erschema.ecore#//Datatype/string"/>
-      <genEnumLiterals ecoreEnumLiteral="erschema.ecore#//Datatype/bool"/>
-      <genEnumLiterals ecoreEnumLiteral="erschema.ecore#//Datatype/date"/>
-      <genEnumLiterals ecoreEnumLiteral="erschema.ecore#//Datatype/time"/>
-      <genEnumLiterals ecoreEnumLiteral="erschema.ecore#//Datatype/text"/>
-    </genEnums>
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="erschema.ecore#//LogicalBinaryOperator">
-      <genEnumLiterals ecoreEnumLiteral="erschema.ecore#//LogicalBinaryOperator/or"/>
-      <genEnumLiterals ecoreEnumLiteral="erschema.ecore#//LogicalBinaryOperator/and"/>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="erschema.ecore#//LogicalOperator">
+      <genEnumLiterals ecoreEnumLiteral="erschema.ecore#//LogicalOperator/or"/>
+      <genEnumLiterals ecoreEnumLiteral="erschema.ecore#//LogicalOperator/and"/>
+      <genEnumLiterals ecoreEnumLiteral="erschema.ecore#//LogicalOperator/not"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="erschema.ecore#//BinaryOperator">
       <genEnumLiterals ecoreEnumLiteral="erschema.ecore#//BinaryOperator/add"/>
@@ -39,9 +31,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference erschema.ecore#//Entity/dummyConstraints"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference erschema.ecore#//Entity/keys"/>
     </genClasses>
-    <genClasses ecoreClass="erschema.ecore#//Attribute">
-      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute erschema.ecore#//Attribute/type"/>
-    </genClasses>
+    <genClasses ecoreClass="erschema.ecore#//Attribute"/>
     <genClasses image="false" ecoreClass="erschema.ecore#//Element">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute erschema.ecore#//Element/name"/>
     </genClasses>
@@ -59,20 +49,11 @@
     <genClasses ecoreClass="erschema.ecore#//Composition">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference erschema.ecore#//Composition/attributes"/>
     </genClasses>
-    <genClasses ecoreClass="erschema.ecore#//Constraint">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference erschema.ecore#//Constraint/predicates"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference erschema.ecore#//Constraint/operators"/>
-    </genClasses>
-    <genClasses ecoreClass="erschema.ecore#//Predicate">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference erschema.ecore#//Predicate/terms"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute erschema.ecore#//Predicate/lop"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute erschema.ecore#//Predicate/bop"/>
+    <genClasses ecoreClass="erschema.ecore#//SimpleConstraint">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute erschema.ecore#//SimpleConstraint/op"/>
     </genClasses>
     <genClasses ecoreClass="erschema.ecore#//Term">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute erschema.ecore#//Term/type"/>
-    </genClasses>
-    <genClasses ecoreClass="erschema.ecore#//PredicateOperator">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute erschema.ecore#//PredicateOperator/type"/>
+      <genFeatures createChild="false"/>
     </genClasses>
     <genClasses ecoreClass="erschema.ecore#//DummyConstraint">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute erschema.ecore#//DummyConstraint/constraint"/>
@@ -81,5 +62,22 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference erschema.ecore#//KeyValue/attribute"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference erschema.ecore#//KeyValue/composition"/>
     </genClasses>
+    <genClasses ecoreClass="erschema.ecore#//ArithmeticExpression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference erschema.ecore#//ArithmeticExpression/left"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference erschema.ecore#//ArithmeticExpression/right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute erschema.ecore#//ArithmeticExpression/op"/>
+      <genFeatures property="None" children="true" createChild="true"/>
+    </genClasses>
+    <genClasses ecoreClass="erschema.ecore#//Datatype">
+      <genFeatures createChild="false"/>
+    </genClasses>
+    <genClasses ecoreClass="erschema.ecore#//Number"/>
+    <genClasses ecoreClass="erschema.ecore#//CharSequence"/>
+    <genClasses ecoreClass="erschema.ecore#//Text"/>
+    <genClasses ecoreClass="erschema.ecore#//String"/>
+    <genClasses ecoreClass="erschema.ecore#//Integer"/>
+    <genClasses ecoreClass="erschema.ecore#//Boolean"/>
+    <genClasses ecoreClass="erschema.ecore#//Double"/>
+    <genClasses ecoreClass="erschema.ecore#//Date"/>
   </genPackages>
 </genmodel:GenModel>

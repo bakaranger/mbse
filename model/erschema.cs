@@ -16,11 +16,12 @@ RULES {
 	
 	Composition ::= "composition" name[] "{" attributes(attributes+) "}";
 	
-	Attribute ::= "val" name[] ":" type[];
+	Attribute ::= "val" name[] ":";
 	
 	KeyValue ::= "key" (composition|attribute);
 	
 	Role ::= "role" name[] "references" entity "[" lowerBound[] "," upperBound[] "]";
 	
 	DummyConstraint ::= "constraint" "(" constraint[] ")";
+	
 }

@@ -15,27 +15,18 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="compositions" upperBound="-1"
         eType="#//Composition" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="constraints" upperBound="-1"
-        eType="#//Constraint" containment="true"/>
+        eType="#//SimpleConstraint" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="dummyConstraints" upperBound="-1"
         eType="#//DummyConstraint" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="keys" lowerBound="1" upperBound="-1"
         eType="#//KeyValue" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Attribute" eSuperTypes="#//Element">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1" eType="#//Datatype"
-        changeable="false"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" lowerBound="1" eType="#//Datatype"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Element" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="Datatype">
-    <eLiterals name="int"/>
-    <eLiterals name="double"/>
-    <eLiterals name="string"/>
-    <eLiterals name="bool"/>
-    <eLiterals name="date"/>
-    <eLiterals name="time"/>
-    <eLiterals name="text"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Relation" eSuperTypes="#//Element">
     <eStructuralFeatures xsi:type="ecore:EReference" name="roles" lowerBound="2" upperBound="-1"
@@ -43,7 +34,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" upperBound="-1"
         eType="#//Attribute" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="constraints" upperBound="-1"
-        eType="#//Constraint" containment="true"/>
+        eType="#//SimpleConstraint" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="dummyConstraints" upperBound="-1"
         eType="#//DummyConstraint" containment="true"/>
   </eClassifiers>
@@ -53,28 +44,22 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="entity" lowerBound="1"
         eType="#//Entity" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="upperBound" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" defaultValueLiteral="-1"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Composition" eSuperTypes="#//Element">
     <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" lowerBound="2"
         upperBound="-1" eType="#//Attribute" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Constraint">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="predicates" lowerBound="1"
-        upperBound="-1" eType="#//Predicate" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="operators" upperBound="-1"
-        eType="#//PredicateOperator" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Predicate">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="terms" lowerBound="1" upperBound="-1"
-        eType="#//Term" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lop" eType="#//LogicalBinaryOperator"
+  <eClassifiers xsi:type="ecore:EClass" name="SimpleConstraint">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="op" lowerBound="1" eType="#//LogicalOperator"
         defaultValueLiteral="or"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="bop" upperBound="-1" eType="#//BinaryOperator"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="expr" lowerBound="1" eType="#//Expression"
+        containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="LogicalBinaryOperator">
+  <eClassifiers xsi:type="ecore:EEnum" name="LogicalOperator">
     <eLiterals name="or"/>
     <eLiterals name="and"/>
+    <eLiterals name="not"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="BinaryOperator">
     <eLiterals name="add"/>
@@ -85,10 +70,8 @@
     <eLiterals name="gt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Term">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//Datatype"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="PredicateOperator">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//LogicalBinaryOperator"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" lowerBound="1" eType="#//Expression"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DummyConstraint">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="constraint" lowerBound="1"
@@ -99,5 +82,39 @@
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="composition" eType="#//Composition"
         containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ArithmeticExpression" eSuperTypes="#//Expression">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="left" lowerBound="1" eType="#//Term"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="right" lowerBound="1" eType="#//Term"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="op" lowerBound="1" eType="#//BinaryOperator"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Datatype" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Number" abstract="true" eSuperTypes="#//Datatype"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CharSequence" abstract="true" eSuperTypes="#//Datatype">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Text" eSuperTypes="#//CharSequence"/>
+  <eClassifiers xsi:type="ecore:EClass" name="String" eSuperTypes="#//CharSequence"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Integer" eSuperTypes="#//Number">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Boolean" eSuperTypes="#//Datatype">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Double" eSuperTypes="#//Number">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Date" eSuperTypes="#//Datatype">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LogicalExpression" eSuperTypes="#//Expression">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="op" lowerBound="1" eType="#//LogicalOperator"
+        defaultValueLiteral="or"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Expression" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="returnValue" lowerBound="1"
+        eType="#//Datatype" containment="true"/>
   </eClassifiers>
 </ecore:EPackage>
