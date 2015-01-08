@@ -6,19 +6,6 @@
   <foreignModel>erschema.ecore</foreignModel>
   <genPackages prefix="Erschema" basePackage="de.tu_bs.cs.isf.mbse" disposableProviderFactory="true"
       ecorePackage="erschema.ecore#/">
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="erschema.ecore#//LogicalOperator">
-      <genEnumLiterals ecoreEnumLiteral="erschema.ecore#//LogicalOperator/or"/>
-      <genEnumLiterals ecoreEnumLiteral="erschema.ecore#//LogicalOperator/and"/>
-      <genEnumLiterals ecoreEnumLiteral="erschema.ecore#//LogicalOperator/not"/>
-    </genEnums>
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="erschema.ecore#//BinaryOperator">
-      <genEnumLiterals ecoreEnumLiteral="erschema.ecore#//BinaryOperator/add"/>
-      <genEnumLiterals ecoreEnumLiteral="erschema.ecore#//BinaryOperator/mul"/>
-      <genEnumLiterals ecoreEnumLiteral="erschema.ecore#//BinaryOperator/sub"/>
-      <genEnumLiterals ecoreEnumLiteral="erschema.ecore#//BinaryOperator/div"/>
-      <genEnumLiterals ecoreEnumLiteral="erschema.ecore#//BinaryOperator/eq"/>
-      <genEnumLiterals ecoreEnumLiteral="erschema.ecore#//BinaryOperator/gt"/>
-    </genEnums>
     <genClasses ecoreClass="erschema.ecore#//Model">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference erschema.ecore#//Model/entities"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference erschema.ecore#//Model/relations"/>
@@ -31,7 +18,9 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference erschema.ecore#//Entity/dummyConstraints"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference erschema.ecore#//Entity/keys"/>
     </genClasses>
-    <genClasses ecoreClass="erschema.ecore#//Attribute"/>
+    <genClasses ecoreClass="erschema.ecore#//Attribute">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference erschema.ecore#//Attribute/type"/>
+    </genClasses>
     <genClasses image="false" ecoreClass="erschema.ecore#//Element">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute erschema.ecore#//Element/name"/>
     </genClasses>
@@ -50,10 +39,9 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference erschema.ecore#//Composition/attributes"/>
     </genClasses>
     <genClasses ecoreClass="erschema.ecore#//SimpleConstraint">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute erschema.ecore#//SimpleConstraint/op"/>
-    </genClasses>
-    <genClasses ecoreClass="erschema.ecore#//Term">
-      <genFeatures createChild="false"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference erschema.ecore#//SimpleConstraint/left"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference erschema.ecore#//SimpleConstraint/conn"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference erschema.ecore#//SimpleConstraint/right"/>
     </genClasses>
     <genClasses ecoreClass="erschema.ecore#//DummyConstraint">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute erschema.ecore#//DummyConstraint/constraint"/>
@@ -63,21 +51,60 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference erschema.ecore#//KeyValue/composition"/>
     </genClasses>
     <genClasses ecoreClass="erschema.ecore#//ArithmeticExpression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference erschema.ecore#//ArithmeticExpression/op"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference erschema.ecore#//ArithmeticExpression/left"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference erschema.ecore#//ArithmeticExpression/right"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute erschema.ecore#//ArithmeticExpression/op"/>
-      <genFeatures property="None" children="true" createChild="true"/>
     </genClasses>
-    <genClasses ecoreClass="erschema.ecore#//Datatype">
-      <genFeatures createChild="false"/>
-    </genClasses>
+    <genClasses ecoreClass="erschema.ecore#//Datatype"/>
     <genClasses ecoreClass="erschema.ecore#//Number"/>
-    <genClasses ecoreClass="erschema.ecore#//CharSequence"/>
+    <genClasses ecoreClass="erschema.ecore#//CharSequence">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute erschema.ecore#//CharSequence/value"/>
+    </genClasses>
     <genClasses ecoreClass="erschema.ecore#//Text"/>
     <genClasses ecoreClass="erschema.ecore#//String"/>
-    <genClasses ecoreClass="erschema.ecore#//Integer"/>
-    <genClasses ecoreClass="erschema.ecore#//Boolean"/>
-    <genClasses ecoreClass="erschema.ecore#//Double"/>
-    <genClasses ecoreClass="erschema.ecore#//Date"/>
+    <genClasses ecoreClass="erschema.ecore#//Integer">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute erschema.ecore#//Integer/value"/>
+    </genClasses>
+    <genClasses ecoreClass="erschema.ecore#//Boolean">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute erschema.ecore#//Boolean/value"/>
+    </genClasses>
+    <genClasses ecoreClass="erschema.ecore#//Double">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute erschema.ecore#//Double/value"/>
+    </genClasses>
+    <genClasses ecoreClass="erschema.ecore#//Date">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute erschema.ecore#//Date/value"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="erschema.ecore#//Expression"/>
+    <genClasses image="false" ecoreClass="erschema.ecore#//ArithmeticOperator"/>
+    <genClasses image="false" ecoreClass="erschema.ecore#//LogicalOperator"/>
+    <genClasses ecoreClass="erschema.ecore#//IsNot"/>
+    <genClasses ecoreClass="erschema.ecore#//Equals"/>
+    <genClasses ecoreClass="erschema.ecore#//Add"/>
+    <genClasses ecoreClass="erschema.ecore#//Mul"/>
+    <genClasses ecoreClass="erschema.ecore#//Sub"/>
+    <genClasses ecoreClass="erschema.ecore#//Div"/>
+    <genClasses image="false" ecoreClass="erschema.ecore#//Comparative"/>
+    <genClasses image="false" ecoreClass="erschema.ecore#//Connective"/>
+    <genClasses ecoreClass="erschema.ecore#//And"/>
+    <genClasses ecoreClass="erschema.ecore#//Or"/>
+    <genClasses ecoreClass="erschema.ecore#//Modulo"/>
+    <genClasses ecoreClass="erschema.ecore#//GreaterThan"/>
+    <genClasses ecoreClass="erschema.ecore#//Smaller"/>
+    <genClasses ecoreClass="erschema.ecore#//SmallerThan"/>
+    <genClasses ecoreClass="erschema.ecore#//Greater"/>
+    <genClasses image="false" ecoreClass="erschema.ecore#//StringOperator"/>
+    <genClasses ecoreClass="erschema.ecore#//Like"/>
+    <genClasses ecoreClass="erschema.ecore#//Length"/>
+    <genClasses ecoreClass="erschema.ecore#//Concat"/>
+    <genClasses ecoreClass="erschema.ecore#//UnaryNot"/>
+    <genClasses image="false" ecoreClass="erschema.ecore#//Operator"/>
+    <genClasses ecoreClass="erschema.ecore#//LogicalExpression"/>
+    <genClasses ecoreClass="erschema.ecore#//Term">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference erschema.ecore#//Term/literal"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference erschema.ecore#//Term/attribute"/>
+    </genClasses>
+    <genClasses ecoreClass="erschema.ecore#//Literal">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute erschema.ecore#//Literal/val"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>
