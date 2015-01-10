@@ -5,6 +5,8 @@ START Model
 OPTIONS {
 	reloadGeneratorModel = "true";
 	generateCodeFromGeneratorModel = "true";
+	overrideBuilder = "false";
+ 	additionalDependencies = "org.emftext.runtime.owltext";
 }
 
 RULES {

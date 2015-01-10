@@ -77,6 +77,7 @@ public interface Role extends Element {
 
 	/**
 	 * Returns the value of the '<em><b>Upper Bound</b></em>' attribute.
+	 * The default value is <code>"1"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Upper Bound</em>' attribute isn't clear,
@@ -86,7 +87,7 @@ public interface Role extends Element {
 	 * @return the value of the '<em>Upper Bound</em>' attribute.
 	 * @see #setUpperBound(int)
 	 * @see de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage#getRole_UpperBound()
-	 * @model required="true"
+	 * @model default="1" required="true"
 	 * @generated
 	 */
 	int getUpperBound();

@@ -58,7 +58,7 @@ public interface Relation extends Element {
 
 	/**
 	 * Returns the value of the '<em><b>Constraints</b></em>' containment reference list.
-	 * The list contents are of type {@link de.tu_bs.cs.isf.mbse.erschema.Constraint}.
+	 * The list contents are of type {@link de.tu_bs.cs.isf.mbse.erschema.SimpleConstraint}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Constraints</em>' containment reference list isn't clear,
@@ -70,7 +70,7 @@ public interface Relation extends Element {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Constraint> getConstraints();
+	EList<SimpleConstraint> getConstraints();
 
 	/**
 	 * Returns the value of the '<em><b>Dummy Constraints</b></em>' containment reference list.

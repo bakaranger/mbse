@@ -6,7 +6,13 @@ import de.tu_bs.cs.isf.mbse.erschema.Attribute;
 import de.tu_bs.cs.isf.mbse.erschema.Datatype;
 import de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage;
 
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,24 +29,14 @@ import org.eclipse.emf.ecore.EClass;
  */
 public class AttributeImpl extends ElementImpl implements Attribute {
 	/**
-	 * The default value of the '{@link #getType() <em>Type</em>}' attribute.
+	 * The cached value of the '{@link #getType() <em>Type</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getType()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Datatype TYPE_EDEFAULT = Datatype.INT;
-
-	/**
-	 * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getType()
-	 * @generated
-	 * @ordered
-	 */
-	protected Datatype type = TYPE_EDEFAULT;
+	protected Datatype type;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -75,6 +71,54 @@ public class AttributeImpl extends ElementImpl implements Attribute {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public NotificationChain basicSetType(Datatype newType, NotificationChain msgs) {
+		Datatype oldType = type;
+		type = newType;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ErschemaPackage.ATTRIBUTE__TYPE, oldType, newType);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setType(Datatype newType) {
+		if (newType != type) {
+			NotificationChain msgs = null;
+			if (type != null)
+				msgs = ((InternalEObject)type).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ErschemaPackage.ATTRIBUTE__TYPE, null, msgs);
+			if (newType != null)
+				msgs = ((InternalEObject)newType).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ErschemaPackage.ATTRIBUTE__TYPE, null, msgs);
+			msgs = basicSetType(newType, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ErschemaPackage.ATTRIBUTE__TYPE, newType, newType));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ErschemaPackage.ATTRIBUTE__TYPE:
+				return basicSetType(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -90,12 +134,13 @@ public class AttributeImpl extends ElementImpl implements Attribute {
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
+	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case ErschemaPackage.ATTRIBUTE__TYPE:
-				return type != TYPE_EDEFAULT;
+				setType((Datatype)newValue);
+				return;
 		}
-		return super.eIsSet(featureID);
+		super.eSet(featureID, newValue);
 	}
 
 	/**
@@ -104,14 +149,27 @@ public class AttributeImpl extends ElementImpl implements Attribute {
 	 * @generated
 	 */
 	@Override
-	public String toString() {
-		if (eIsProxy()) return super.toString();
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case ErschemaPackage.ATTRIBUTE__TYPE:
+				setType((Datatype)null);
+				return;
+		}
+		super.eUnset(featureID);
+	}
 
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (type: ");
-		result.append(type);
-		result.append(')');
-		return result.toString();
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case ErschemaPackage.ATTRIBUTE__TYPE:
+				return type != null;
+		}
+		return super.eIsSet(featureID);
 	}
 
 } //AttributeImpl

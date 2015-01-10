@@ -2,57 +2,57 @@
  */
 package de.tu_bs.cs.isf.mbse.erschema.impl;
 
-import de.tu_bs.cs.isf.mbse.erschema.Datatype;
 import de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage;
-import de.tu_bs.cs.isf.mbse.erschema.Term;
+import de.tu_bs.cs.isf.mbse.erschema.Literal;
 
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import org.emftext.runtime.owltext.OWLTextEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Term</b></em>'.
+ * An implementation of the model object '<em><b>Literal</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link de.tu_bs.cs.isf.mbse.erschema.impl.TermImpl#getType <em>Type</em>}</li>
+ *   <li>{@link de.tu_bs.cs.isf.mbse.erschema.impl.LiteralImpl#getVal <em>Val</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class TermImpl extends MinimalEObjectImpl.Container implements Term {
+public class LiteralImpl extends OWLTextEObjectImpl implements Literal {
 	/**
-	 * The default value of the '{@link #getType() <em>Type</em>}' attribute.
+	 * The default value of the '{@link #getVal() <em>Val</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getType()
+	 * @see #getVal()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Datatype TYPE_EDEFAULT = Datatype.INT;
+	protected static final Object VAL_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
+	 * The cached value of the '{@link #getVal() <em>Val</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getType()
+	 * @see #getVal()
 	 * @generated
 	 * @ordered
 	 */
-	protected Datatype type = TYPE_EDEFAULT;
+	protected Object val = VAL_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected TermImpl() {
+	protected LiteralImpl() {
 		super();
 	}
 
@@ -63,7 +63,7 @@ public class TermImpl extends MinimalEObjectImpl.Container implements Term {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ErschemaPackage.Literals.TERM;
+		return ErschemaPackage.Literals.LITERAL;
 	}
 
 	/**
@@ -71,8 +71,8 @@ public class TermImpl extends MinimalEObjectImpl.Container implements Term {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Datatype getType() {
-		return type;
+	public Object getVal() {
+		return val;
 	}
 
 	/**
@@ -80,11 +80,11 @@ public class TermImpl extends MinimalEObjectImpl.Container implements Term {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setType(Datatype newType) {
-		Datatype oldType = type;
-		type = newType == null ? TYPE_EDEFAULT : newType;
+	public void setVal(Object newVal) {
+		Object oldVal = val;
+		val = newVal;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ErschemaPackage.TERM__TYPE, oldType, type));
+			eNotify(new ENotificationImpl(this, Notification.SET, ErschemaPackage.LITERAL__VAL, oldVal, val));
 	}
 
 	/**
@@ -95,8 +95,8 @@ public class TermImpl extends MinimalEObjectImpl.Container implements Term {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ErschemaPackage.TERM__TYPE:
-				return getType();
+			case ErschemaPackage.LITERAL__VAL:
+				return getVal();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -109,8 +109,8 @@ public class TermImpl extends MinimalEObjectImpl.Container implements Term {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ErschemaPackage.TERM__TYPE:
-				setType((Datatype)newValue);
+			case ErschemaPackage.LITERAL__VAL:
+				setVal(newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -124,8 +124,8 @@ public class TermImpl extends MinimalEObjectImpl.Container implements Term {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ErschemaPackage.TERM__TYPE:
-				setType(TYPE_EDEFAULT);
+			case ErschemaPackage.LITERAL__VAL:
+				setVal(VAL_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -139,8 +139,8 @@ public class TermImpl extends MinimalEObjectImpl.Container implements Term {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ErschemaPackage.TERM__TYPE:
-				return type != TYPE_EDEFAULT;
+			case ErschemaPackage.LITERAL__VAL:
+				return VAL_EDEFAULT == null ? val != null : !VAL_EDEFAULT.equals(val);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -155,10 +155,10 @@ public class TermImpl extends MinimalEObjectImpl.Container implements Term {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (type: ");
-		result.append(type);
+		result.append(" (val: ");
+		result.append(val);
 		result.append(')');
 		return result.toString();
 	}
 
-} //TermImpl
+} //LiteralImpl

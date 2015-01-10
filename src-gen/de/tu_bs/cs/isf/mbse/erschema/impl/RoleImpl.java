@@ -6,6 +6,8 @@ import de.tu_bs.cs.isf.mbse.erschema.Entity;
 import de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage;
 import de.tu_bs.cs.isf.mbse.erschema.Role;
 
+import java.lang.Integer;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -68,7 +70,7 @@ public class RoleImpl extends ElementImpl implements Role {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int UPPER_BOUND_EDEFAULT = 0;
+	protected static final int UPPER_BOUND_EDEFAULT = 1;
 
 	/**
 	 * The cached value of the '{@link #getUpperBound() <em>Upper Bound</em>}' attribute.

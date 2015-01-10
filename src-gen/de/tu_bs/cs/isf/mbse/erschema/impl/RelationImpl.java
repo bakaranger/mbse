@@ -3,11 +3,11 @@
 package de.tu_bs.cs.isf.mbse.erschema.impl;
 
 import de.tu_bs.cs.isf.mbse.erschema.Attribute;
-import de.tu_bs.cs.isf.mbse.erschema.Constraint;
 import de.tu_bs.cs.isf.mbse.erschema.DummyConstraint;
 import de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage;
 import de.tu_bs.cs.isf.mbse.erschema.Relation;
 import de.tu_bs.cs.isf.mbse.erschema.Role;
+import de.tu_bs.cs.isf.mbse.erschema.SimpleConstraint;
 
 import java.util.Collection;
 
@@ -66,7 +66,7 @@ public class RelationImpl extends ElementImpl implements Relation {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Constraint> constraints;
+	protected EList<SimpleConstraint> constraints;
 
 	/**
 	 * The cached value of the '{@link #getDummyConstraints() <em>Dummy Constraints</em>}' containment reference list.
@@ -126,9 +126,9 @@ public class RelationImpl extends ElementImpl implements Relation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Constraint> getConstraints() {
+	public EList<SimpleConstraint> getConstraints() {
 		if (constraints == null) {
-			constraints = new EObjectContainmentEList<Constraint>(Constraint.class, this, ErschemaPackage.RELATION__CONSTRAINTS);
+			constraints = new EObjectContainmentEList<SimpleConstraint>(SimpleConstraint.class, this, ErschemaPackage.RELATION__CONSTRAINTS);
 		}
 		return constraints;
 	}
@@ -204,7 +204,7 @@ public class RelationImpl extends ElementImpl implements Relation {
 				return;
 			case ErschemaPackage.RELATION__CONSTRAINTS:
 				getConstraints().clear();
-				getConstraints().addAll((Collection<? extends Constraint>)newValue);
+				getConstraints().addAll((Collection<? extends SimpleConstraint>)newValue);
 				return;
 			case ErschemaPackage.RELATION__DUMMY_CONSTRAINTS:
 				getDummyConstraints().clear();

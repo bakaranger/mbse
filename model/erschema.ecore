@@ -10,6 +10,9 @@
         iD="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Entity" eSuperTypes="#//Element">
+    <eAnnotations source="OWL_DEFINITION">
+      <details key="Entity_attributes_unique_names" value="Entity_attributes min 0 "/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" upperBound="-1"
         eType="#//Attribute" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="compositions" upperBound="-1"

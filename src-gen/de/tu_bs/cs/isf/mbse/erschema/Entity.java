@@ -13,10 +13,10 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * <ul>
  *   <li>{@link de.tu_bs.cs.isf.mbse.erschema.Entity#getAttributes <em>Attributes</em>}</li>
- *   <li>{@link de.tu_bs.cs.isf.mbse.erschema.Entity#getKey <em>Key</em>}</li>
  *   <li>{@link de.tu_bs.cs.isf.mbse.erschema.Entity#getCompositions <em>Compositions</em>}</li>
  *   <li>{@link de.tu_bs.cs.isf.mbse.erschema.Entity#getConstraints <em>Constraints</em>}</li>
  *   <li>{@link de.tu_bs.cs.isf.mbse.erschema.Entity#getDummyConstraints <em>Dummy Constraints</em>}</li>
+ *   <li>{@link de.tu_bs.cs.isf.mbse.erschema.Entity#getKeys <em>Keys</em>}</li>
  * </ul>
  * </p>
  *
@@ -36,26 +36,10 @@ public interface Entity extends Element {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Attributes</em>' containment reference list.
 	 * @see de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage#getEntity_Attributes()
-	 * @model containment="true" required="true"
+	 * @model containment="true"
 	 * @generated
 	 */
 	EList<Attribute> getAttributes();
-
-	/**
-	 * Returns the value of the '<em><b>Key</b></em>' reference list.
-	 * The list contents are of type {@link de.tu_bs.cs.isf.mbse.erschema.Attribute}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Key</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Key</em>' reference list.
-	 * @see de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage#getEntity_Key()
-	 * @model required="true"
-	 * @generated
-	 */
-	EList<Attribute> getKey();
 
 	/**
 	 * Returns the value of the '<em><b>Compositions</b></em>' containment reference list.
@@ -75,7 +59,7 @@ public interface Entity extends Element {
 
 	/**
 	 * Returns the value of the '<em><b>Constraints</b></em>' containment reference list.
-	 * The list contents are of type {@link de.tu_bs.cs.isf.mbse.erschema.Constraint}.
+	 * The list contents are of type {@link de.tu_bs.cs.isf.mbse.erschema.SimpleConstraint}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Constraints</em>' containment reference list isn't clear,
@@ -87,7 +71,7 @@ public interface Entity extends Element {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Constraint> getConstraints();
+	EList<SimpleConstraint> getConstraints();
 
 	/**
 	 * Returns the value of the '<em><b>Dummy Constraints</b></em>' containment reference list.
@@ -104,5 +88,21 @@ public interface Entity extends Element {
 	 * @generated
 	 */
 	EList<DummyConstraint> getDummyConstraints();
+
+	/**
+	 * Returns the value of the '<em><b>Keys</b></em>' containment reference list.
+	 * The list contents are of type {@link de.tu_bs.cs.isf.mbse.erschema.KeyValue}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Keys</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Keys</em>' containment reference list.
+	 * @see de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage#getEntity_Keys()
+	 * @model containment="true" required="true"
+	 * @generated
+	 */
+	EList<KeyValue> getKeys();
 
 } // Entity

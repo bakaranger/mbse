@@ -5,12 +5,15 @@ package de.tu_bs.cs.isf.mbse.erschema.impl;
 import de.tu_bs.cs.isf.mbse.erschema.DummyConstraint;
 import de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage;
 
+import java.lang.String;
+
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import org.emftext.runtime.owltext.OWLTextEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -25,7 +28,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class DummyConstraintImpl extends MinimalEObjectImpl.Container implements DummyConstraint {
+public class DummyConstraintImpl extends OWLTextEObjectImpl implements DummyConstraint {
 	/**
 	 * The default value of the '{@link #getConstraint() <em>Constraint</em>}' attribute.
 	 * <!-- begin-user-doc -->

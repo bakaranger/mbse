@@ -2,10 +2,40 @@
  */
 package de.tu_bs.cs.isf.mbse.erschema.impl;
 
-import de.tu_bs.cs.isf.mbse.erschema.*;
+import de.tu_bs.cs.isf.mbse.erschema.Add;
+import de.tu_bs.cs.isf.mbse.erschema.And;
+import de.tu_bs.cs.isf.mbse.erschema.Attribute;
+import de.tu_bs.cs.isf.mbse.erschema.Composition;
+import de.tu_bs.cs.isf.mbse.erschema.Concat;
+import de.tu_bs.cs.isf.mbse.erschema.Date;
+import de.tu_bs.cs.isf.mbse.erschema.Div;
+import de.tu_bs.cs.isf.mbse.erschema.DummyConstraint;
+import de.tu_bs.cs.isf.mbse.erschema.Entity;
+import de.tu_bs.cs.isf.mbse.erschema.Equals;
+import de.tu_bs.cs.isf.mbse.erschema.ErschemaFactory;
+import de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage;
+import de.tu_bs.cs.isf.mbse.erschema.Expression;
+import de.tu_bs.cs.isf.mbse.erschema.Greater;
+import de.tu_bs.cs.isf.mbse.erschema.GreaterThan;
+import de.tu_bs.cs.isf.mbse.erschema.IsNot;
+import de.tu_bs.cs.isf.mbse.erschema.KeyValue;
+import de.tu_bs.cs.isf.mbse.erschema.Length;
+import de.tu_bs.cs.isf.mbse.erschema.Like;
+import de.tu_bs.cs.isf.mbse.erschema.Literal;
+import de.tu_bs.cs.isf.mbse.erschema.Model;
+import de.tu_bs.cs.isf.mbse.erschema.Modulo;
+import de.tu_bs.cs.isf.mbse.erschema.Mul;
+import de.tu_bs.cs.isf.mbse.erschema.Or;
+import de.tu_bs.cs.isf.mbse.erschema.Relation;
+import de.tu_bs.cs.isf.mbse.erschema.Role;
+import de.tu_bs.cs.isf.mbse.erschema.SimpleConstraint;
+import de.tu_bs.cs.isf.mbse.erschema.Smaller;
+import de.tu_bs.cs.isf.mbse.erschema.SmallerThan;
+import de.tu_bs.cs.isf.mbse.erschema.Sub;
+import de.tu_bs.cs.isf.mbse.erschema.Text;
+import de.tu_bs.cs.isf.mbse.erschema.UnaryNot;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -63,51 +93,36 @@ public class ErschemaFactoryImpl extends EFactoryImpl implements ErschemaFactory
 			case ErschemaPackage.RELATION: return createRelation();
 			case ErschemaPackage.ROLE: return createRole();
 			case ErschemaPackage.COMPOSITION: return createComposition();
-			case ErschemaPackage.CONSTRAINT: return createConstraint();
-			case ErschemaPackage.PREDICATE: return createPredicate();
-			case ErschemaPackage.TERM: return createTerm();
-			case ErschemaPackage.PREDICATE_OPERATOR: return createPredicateOperator();
+			case ErschemaPackage.SIMPLE_CONSTRAINT: return createSimpleConstraint();
 			case ErschemaPackage.DUMMY_CONSTRAINT: return createDummyConstraint();
+			case ErschemaPackage.KEY_VALUE: return createKeyValue();
+			case ErschemaPackage.TEXT: return createText();
+			case ErschemaPackage.STRING: return createString();
+			case ErschemaPackage.INTEGER: return createInteger();
+			case ErschemaPackage.BOOLEAN: return createBoolean();
+			case ErschemaPackage.DOUBLE: return createDouble();
+			case ErschemaPackage.DATE: return createDate();
+			case ErschemaPackage.EXPRESSION: return createExpression();
+			case ErschemaPackage.IS_NOT: return createIsNot();
+			case ErschemaPackage.EQUALS: return createEquals();
+			case ErschemaPackage.ADD: return createAdd();
+			case ErschemaPackage.MUL: return createMul();
+			case ErschemaPackage.SUB: return createSub();
+			case ErschemaPackage.DIV: return createDiv();
+			case ErschemaPackage.AND: return createAnd();
+			case ErschemaPackage.OR: return createOr();
+			case ErschemaPackage.MODULO: return createModulo();
+			case ErschemaPackage.GREATER_THAN: return createGreaterThan();
+			case ErschemaPackage.SMALLER: return createSmaller();
+			case ErschemaPackage.SMALLER_THAN: return createSmallerThan();
+			case ErschemaPackage.GREATER: return createGreater();
+			case ErschemaPackage.LIKE: return createLike();
+			case ErschemaPackage.LENGTH: return createLength();
+			case ErschemaPackage.CONCAT: return createConcat();
+			case ErschemaPackage.UNARY_NOT: return createUnaryNot();
+			case ErschemaPackage.LITERAL: return createLiteral();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
-		}
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object createFromString(EDataType eDataType, String initialValue) {
-		switch (eDataType.getClassifierID()) {
-			case ErschemaPackage.DATATYPE:
-				return createDatatypeFromString(eDataType, initialValue);
-			case ErschemaPackage.LOGICAL_BINARY_OPERATOR:
-				return createLogicalBinaryOperatorFromString(eDataType, initialValue);
-			case ErschemaPackage.BINARY_OPERATOR:
-				return createBinaryOperatorFromString(eDataType, initialValue);
-			default:
-				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
-		}
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String convertToString(EDataType eDataType, Object instanceValue) {
-		switch (eDataType.getClassifierID()) {
-			case ErschemaPackage.DATATYPE:
-				return convertDatatypeToString(eDataType, instanceValue);
-			case ErschemaPackage.LOGICAL_BINARY_OPERATOR:
-				return convertLogicalBinaryOperatorToString(eDataType, instanceValue);
-			case ErschemaPackage.BINARY_OPERATOR:
-				return convertBinaryOperatorToString(eDataType, instanceValue);
-			default:
-				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
 	}
 
@@ -176,39 +191,9 @@ public class ErschemaFactoryImpl extends EFactoryImpl implements ErschemaFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Constraint createConstraint() {
-		ConstraintImpl constraint = new ConstraintImpl();
-		return constraint;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Predicate createPredicate() {
-		PredicateImpl predicate = new PredicateImpl();
-		return predicate;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Term createTerm() {
-		TermImpl term = new TermImpl();
-		return term;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public PredicateOperator createPredicateOperator() {
-		PredicateOperatorImpl predicateOperator = new PredicateOperatorImpl();
-		return predicateOperator;
+	public SimpleConstraint createSimpleConstraint() {
+		SimpleConstraintImpl simpleConstraint = new SimpleConstraintImpl();
+		return simpleConstraint;
 	}
 
 	/**
@@ -226,10 +211,9 @@ public class ErschemaFactoryImpl extends EFactoryImpl implements ErschemaFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Datatype createDatatypeFromString(EDataType eDataType, String initialValue) {
-		Datatype result = Datatype.get(initialValue);
-		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-		return result;
+	public KeyValue createKeyValue() {
+		KeyValueImpl keyValue = new KeyValueImpl();
+		return keyValue;
 	}
 
 	/**
@@ -237,8 +221,9 @@ public class ErschemaFactoryImpl extends EFactoryImpl implements ErschemaFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertDatatypeToString(EDataType eDataType, Object instanceValue) {
-		return instanceValue == null ? null : instanceValue.toString();
+	public Text createText() {
+		TextImpl text = new TextImpl();
+		return text;
 	}
 
 	/**
@@ -246,10 +231,9 @@ public class ErschemaFactoryImpl extends EFactoryImpl implements ErschemaFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public LogicalBinaryOperator createLogicalBinaryOperatorFromString(EDataType eDataType, String initialValue) {
-		LogicalBinaryOperator result = LogicalBinaryOperator.get(initialValue);
-		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-		return result;
+	public de.tu_bs.cs.isf.mbse.erschema.String createString() {
+		StringImpl string = new StringImpl();
+		return string;
 	}
 
 	/**
@@ -257,8 +241,9 @@ public class ErschemaFactoryImpl extends EFactoryImpl implements ErschemaFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertLogicalBinaryOperatorToString(EDataType eDataType, Object instanceValue) {
-		return instanceValue == null ? null : instanceValue.toString();
+	public de.tu_bs.cs.isf.mbse.erschema.Integer createInteger() {
+		IntegerImpl integer = new IntegerImpl();
+		return integer;
 	}
 
 	/**
@@ -266,10 +251,9 @@ public class ErschemaFactoryImpl extends EFactoryImpl implements ErschemaFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public BinaryOperator createBinaryOperatorFromString(EDataType eDataType, String initialValue) {
-		BinaryOperator result = BinaryOperator.get(initialValue);
-		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-		return result;
+	public de.tu_bs.cs.isf.mbse.erschema.Boolean createBoolean() {
+		BooleanImpl boolean_ = new BooleanImpl();
+		return boolean_;
 	}
 
 	/**
@@ -277,8 +261,209 @@ public class ErschemaFactoryImpl extends EFactoryImpl implements ErschemaFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertBinaryOperatorToString(EDataType eDataType, Object instanceValue) {
-		return instanceValue == null ? null : instanceValue.toString();
+	public de.tu_bs.cs.isf.mbse.erschema.Double createDouble() {
+		DoubleImpl double_ = new DoubleImpl();
+		return double_;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Date createDate() {
+		DateImpl date = new DateImpl();
+		return date;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Expression createExpression() {
+		ExpressionImpl expression = new ExpressionImpl();
+		return expression;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public IsNot createIsNot() {
+		IsNotImpl isNot = new IsNotImpl();
+		return isNot;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Equals createEquals() {
+		EqualsImpl equals = new EqualsImpl();
+		return equals;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Add createAdd() {
+		AddImpl add = new AddImpl();
+		return add;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Mul createMul() {
+		MulImpl mul = new MulImpl();
+		return mul;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Sub createSub() {
+		SubImpl sub = new SubImpl();
+		return sub;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Div createDiv() {
+		DivImpl div = new DivImpl();
+		return div;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public And createAnd() {
+		AndImpl and = new AndImpl();
+		return and;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Or createOr() {
+		OrImpl or = new OrImpl();
+		return or;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Modulo createModulo() {
+		ModuloImpl modulo = new ModuloImpl();
+		return modulo;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public GreaterThan createGreaterThan() {
+		GreaterThanImpl greaterThan = new GreaterThanImpl();
+		return greaterThan;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Smaller createSmaller() {
+		SmallerImpl smaller = new SmallerImpl();
+		return smaller;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SmallerThan createSmallerThan() {
+		SmallerThanImpl smallerThan = new SmallerThanImpl();
+		return smallerThan;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Greater createGreater() {
+		GreaterImpl greater = new GreaterImpl();
+		return greater;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Like createLike() {
+		LikeImpl like = new LikeImpl();
+		return like;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Length createLength() {
+		LengthImpl length = new LengthImpl();
+		return length;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Concat createConcat() {
+		ConcatImpl concat = new ConcatImpl();
+		return concat;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public UnaryNot createUnaryNot() {
+		UnaryNotImpl unaryNot = new UnaryNotImpl();
+		return unaryNot;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Literal createLiteral() {
+		LiteralImpl literal = new LiteralImpl();
+		return literal;
 	}
 
 	/**

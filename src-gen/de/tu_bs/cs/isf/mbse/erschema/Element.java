@@ -2,6 +2,8 @@
  */
 package de.tu_bs.cs.isf.mbse.erschema;
 
+import java.lang.String;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**

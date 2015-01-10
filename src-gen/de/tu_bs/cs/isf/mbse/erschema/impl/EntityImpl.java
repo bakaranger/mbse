@@ -4,10 +4,11 @@ package de.tu_bs.cs.isf.mbse.erschema.impl;
 
 import de.tu_bs.cs.isf.mbse.erschema.Attribute;
 import de.tu_bs.cs.isf.mbse.erschema.Composition;
-import de.tu_bs.cs.isf.mbse.erschema.Constraint;
 import de.tu_bs.cs.isf.mbse.erschema.DummyConstraint;
 import de.tu_bs.cs.isf.mbse.erschema.Entity;
 import de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage;
+import de.tu_bs.cs.isf.mbse.erschema.KeyValue;
+import de.tu_bs.cs.isf.mbse.erschema.SimpleConstraint;
 
 import java.util.Collection;
 
@@ -19,7 +20,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -30,10 +30,10 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * <ul>
  *   <li>{@link de.tu_bs.cs.isf.mbse.erschema.impl.EntityImpl#getAttributes <em>Attributes</em>}</li>
- *   <li>{@link de.tu_bs.cs.isf.mbse.erschema.impl.EntityImpl#getKey <em>Key</em>}</li>
  *   <li>{@link de.tu_bs.cs.isf.mbse.erschema.impl.EntityImpl#getCompositions <em>Compositions</em>}</li>
  *   <li>{@link de.tu_bs.cs.isf.mbse.erschema.impl.EntityImpl#getConstraints <em>Constraints</em>}</li>
  *   <li>{@link de.tu_bs.cs.isf.mbse.erschema.impl.EntityImpl#getDummyConstraints <em>Dummy Constraints</em>}</li>
+ *   <li>{@link de.tu_bs.cs.isf.mbse.erschema.impl.EntityImpl#getKeys <em>Keys</em>}</li>
  * </ul>
  * </p>
  *
@@ -49,16 +49,6 @@ public class EntityImpl extends ElementImpl implements Entity {
 	 * @ordered
 	 */
 	protected EList<Attribute> attributes;
-
-	/**
-	 * The cached value of the '{@link #getKey() <em>Key</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getKey()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Attribute> key;
 
 	/**
 	 * The cached value of the '{@link #getCompositions() <em>Compositions</em>}' containment reference list.
@@ -78,7 +68,7 @@ public class EntityImpl extends ElementImpl implements Entity {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Constraint> constraints;
+	protected EList<SimpleConstraint> constraints;
 
 	/**
 	 * The cached value of the '{@link #getDummyConstraints() <em>Dummy Constraints</em>}' containment reference list.
@@ -89,6 +79,16 @@ public class EntityImpl extends ElementImpl implements Entity {
 	 * @ordered
 	 */
 	protected EList<DummyConstraint> dummyConstraints;
+
+	/**
+	 * The cached value of the '{@link #getKeys() <em>Keys</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getKeys()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<KeyValue> keys;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -126,18 +126,6 @@ public class EntityImpl extends ElementImpl implements Entity {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Attribute> getKey() {
-		if (key == null) {
-			key = new EObjectResolvingEList<Attribute>(Attribute.class, this, ErschemaPackage.ENTITY__KEY);
-		}
-		return key;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EList<Composition> getCompositions() {
 		if (compositions == null) {
 			compositions = new EObjectContainmentEList<Composition>(Composition.class, this, ErschemaPackage.ENTITY__COMPOSITIONS);
@@ -150,9 +138,9 @@ public class EntityImpl extends ElementImpl implements Entity {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Constraint> getConstraints() {
+	public EList<SimpleConstraint> getConstraints() {
 		if (constraints == null) {
-			constraints = new EObjectContainmentEList<Constraint>(Constraint.class, this, ErschemaPackage.ENTITY__CONSTRAINTS);
+			constraints = new EObjectContainmentEList<SimpleConstraint>(SimpleConstraint.class, this, ErschemaPackage.ENTITY__CONSTRAINTS);
 		}
 		return constraints;
 	}
@@ -174,6 +162,18 @@ public class EntityImpl extends ElementImpl implements Entity {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<KeyValue> getKeys() {
+		if (keys == null) {
+			keys = new EObjectContainmentEList<KeyValue>(KeyValue.class, this, ErschemaPackage.ENTITY__KEYS);
+		}
+		return keys;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -185,6 +185,8 @@ public class EntityImpl extends ElementImpl implements Entity {
 				return ((InternalEList<?>)getConstraints()).basicRemove(otherEnd, msgs);
 			case ErschemaPackage.ENTITY__DUMMY_CONSTRAINTS:
 				return ((InternalEList<?>)getDummyConstraints()).basicRemove(otherEnd, msgs);
+			case ErschemaPackage.ENTITY__KEYS:
+				return ((InternalEList<?>)getKeys()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -199,14 +201,14 @@ public class EntityImpl extends ElementImpl implements Entity {
 		switch (featureID) {
 			case ErschemaPackage.ENTITY__ATTRIBUTES:
 				return getAttributes();
-			case ErschemaPackage.ENTITY__KEY:
-				return getKey();
 			case ErschemaPackage.ENTITY__COMPOSITIONS:
 				return getCompositions();
 			case ErschemaPackage.ENTITY__CONSTRAINTS:
 				return getConstraints();
 			case ErschemaPackage.ENTITY__DUMMY_CONSTRAINTS:
 				return getDummyConstraints();
+			case ErschemaPackage.ENTITY__KEYS:
+				return getKeys();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -224,21 +226,21 @@ public class EntityImpl extends ElementImpl implements Entity {
 				getAttributes().clear();
 				getAttributes().addAll((Collection<? extends Attribute>)newValue);
 				return;
-			case ErschemaPackage.ENTITY__KEY:
-				getKey().clear();
-				getKey().addAll((Collection<? extends Attribute>)newValue);
-				return;
 			case ErschemaPackage.ENTITY__COMPOSITIONS:
 				getCompositions().clear();
 				getCompositions().addAll((Collection<? extends Composition>)newValue);
 				return;
 			case ErschemaPackage.ENTITY__CONSTRAINTS:
 				getConstraints().clear();
-				getConstraints().addAll((Collection<? extends Constraint>)newValue);
+				getConstraints().addAll((Collection<? extends SimpleConstraint>)newValue);
 				return;
 			case ErschemaPackage.ENTITY__DUMMY_CONSTRAINTS:
 				getDummyConstraints().clear();
 				getDummyConstraints().addAll((Collection<? extends DummyConstraint>)newValue);
+				return;
+			case ErschemaPackage.ENTITY__KEYS:
+				getKeys().clear();
+				getKeys().addAll((Collection<? extends KeyValue>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -255,9 +257,6 @@ public class EntityImpl extends ElementImpl implements Entity {
 			case ErschemaPackage.ENTITY__ATTRIBUTES:
 				getAttributes().clear();
 				return;
-			case ErschemaPackage.ENTITY__KEY:
-				getKey().clear();
-				return;
 			case ErschemaPackage.ENTITY__COMPOSITIONS:
 				getCompositions().clear();
 				return;
@@ -266,6 +265,9 @@ public class EntityImpl extends ElementImpl implements Entity {
 				return;
 			case ErschemaPackage.ENTITY__DUMMY_CONSTRAINTS:
 				getDummyConstraints().clear();
+				return;
+			case ErschemaPackage.ENTITY__KEYS:
+				getKeys().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -281,14 +283,14 @@ public class EntityImpl extends ElementImpl implements Entity {
 		switch (featureID) {
 			case ErschemaPackage.ENTITY__ATTRIBUTES:
 				return attributes != null && !attributes.isEmpty();
-			case ErschemaPackage.ENTITY__KEY:
-				return key != null && !key.isEmpty();
 			case ErschemaPackage.ENTITY__COMPOSITIONS:
 				return compositions != null && !compositions.isEmpty();
 			case ErschemaPackage.ENTITY__CONSTRAINTS:
 				return constraints != null && !constraints.isEmpty();
 			case ErschemaPackage.ENTITY__DUMMY_CONSTRAINTS:
 				return dummyConstraints != null && !dummyConstraints.isEmpty();
+			case ErschemaPackage.ENTITY__KEYS:
+				return keys != null && !keys.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

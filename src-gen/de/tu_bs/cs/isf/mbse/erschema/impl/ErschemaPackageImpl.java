@@ -2,27 +2,50 @@
  */
 package de.tu_bs.cs.isf.mbse.erschema.impl;
 
+import de.tu_bs.cs.isf.mbse.erschema.Add;
+import de.tu_bs.cs.isf.mbse.erschema.And;
+import de.tu_bs.cs.isf.mbse.erschema.ArithmeticOperator;
 import de.tu_bs.cs.isf.mbse.erschema.Attribute;
-import de.tu_bs.cs.isf.mbse.erschema.BinaryOperator;
+import de.tu_bs.cs.isf.mbse.erschema.CharSequence;
+import de.tu_bs.cs.isf.mbse.erschema.Comparative;
 import de.tu_bs.cs.isf.mbse.erschema.Composition;
-import de.tu_bs.cs.isf.mbse.erschema.Constraint;
+import de.tu_bs.cs.isf.mbse.erschema.Concat;
+import de.tu_bs.cs.isf.mbse.erschema.Connective;
 import de.tu_bs.cs.isf.mbse.erschema.Datatype;
+import de.tu_bs.cs.isf.mbse.erschema.Date;
+import de.tu_bs.cs.isf.mbse.erschema.Div;
 import de.tu_bs.cs.isf.mbse.erschema.DummyConstraint;
 import de.tu_bs.cs.isf.mbse.erschema.Element;
 import de.tu_bs.cs.isf.mbse.erschema.Entity;
+import de.tu_bs.cs.isf.mbse.erschema.Equals;
 import de.tu_bs.cs.isf.mbse.erschema.ErschemaFactory;
 import de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage;
-import de.tu_bs.cs.isf.mbse.erschema.LogicalBinaryOperator;
+import de.tu_bs.cs.isf.mbse.erschema.Expression;
+import de.tu_bs.cs.isf.mbse.erschema.Greater;
+import de.tu_bs.cs.isf.mbse.erschema.GreaterThan;
+import de.tu_bs.cs.isf.mbse.erschema.IsNot;
+import de.tu_bs.cs.isf.mbse.erschema.KeyValue;
+import de.tu_bs.cs.isf.mbse.erschema.Length;
+import de.tu_bs.cs.isf.mbse.erschema.Like;
+import de.tu_bs.cs.isf.mbse.erschema.Literal;
+import de.tu_bs.cs.isf.mbse.erschema.LogicalOperator;
 import de.tu_bs.cs.isf.mbse.erschema.Model;
-import de.tu_bs.cs.isf.mbse.erschema.Predicate;
-import de.tu_bs.cs.isf.mbse.erschema.PredicateOperator;
+import de.tu_bs.cs.isf.mbse.erschema.Modulo;
+import de.tu_bs.cs.isf.mbse.erschema.Mul;
+import de.tu_bs.cs.isf.mbse.erschema.Operator;
+import de.tu_bs.cs.isf.mbse.erschema.Or;
 import de.tu_bs.cs.isf.mbse.erschema.Relation;
 import de.tu_bs.cs.isf.mbse.erschema.Role;
-import de.tu_bs.cs.isf.mbse.erschema.Term;
+import de.tu_bs.cs.isf.mbse.erschema.SimpleConstraint;
+import de.tu_bs.cs.isf.mbse.erschema.Smaller;
+import de.tu_bs.cs.isf.mbse.erschema.SmallerThan;
+import de.tu_bs.cs.isf.mbse.erschema.StringOperator;
+import de.tu_bs.cs.isf.mbse.erschema.Sub;
+import de.tu_bs.cs.isf.mbse.erschema.Text;
+import de.tu_bs.cs.isf.mbse.erschema.UnaryNot;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -89,28 +112,7 @@ public class ErschemaPackageImpl extends EPackageImpl implements ErschemaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass constraintEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass predicateEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass termEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass predicateOperatorEClass = null;
+	private EClass simpleConstraintEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -124,21 +126,245 @@ public class ErschemaPackageImpl extends EPackageImpl implements ErschemaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EEnum datatypeEEnum = null;
+	private EClass keyValueEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EEnum logicalBinaryOperatorEEnum = null;
+	private EClass datatypeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EEnum binaryOperatorEEnum = null;
+	private EClass numberEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass charSequenceEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass textEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass stringEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass integerEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass booleanEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass doubleEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass dateEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass expressionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass arithmeticOperatorEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass logicalOperatorEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass isNotEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass equalsEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass addEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass mulEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass subEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass divEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass comparativeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass connectiveEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass andEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass orEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass moduloEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass greaterThanEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass smallerEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass smallerThanEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass greaterEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass stringOperatorEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass likeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass lengthEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass concatEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass unaryNotEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass operatorEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass literalEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -260,7 +486,7 @@ public class ErschemaPackageImpl extends EPackageImpl implements ErschemaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getEntity_Key() {
+	public EReference getEntity_Compositions() {
 		return (EReference)entityEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -269,7 +495,7 @@ public class ErschemaPackageImpl extends EPackageImpl implements ErschemaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getEntity_Compositions() {
+	public EReference getEntity_Constraints() {
 		return (EReference)entityEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -278,7 +504,7 @@ public class ErschemaPackageImpl extends EPackageImpl implements ErschemaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getEntity_Constraints() {
+	public EReference getEntity_DummyConstraints() {
 		return (EReference)entityEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -287,7 +513,7 @@ public class ErschemaPackageImpl extends EPackageImpl implements ErschemaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getEntity_DummyConstraints() {
+	public EReference getEntity_Keys() {
 		return (EReference)entityEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -305,8 +531,8 @@ public class ErschemaPackageImpl extends EPackageImpl implements ErschemaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getAttribute_Type() {
-		return (EAttribute)attributeEClass.getEStructuralFeatures().get(0);
+	public EReference getAttribute_Type() {
+		return (EReference)attributeEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -431,8 +657,8 @@ public class ErschemaPackageImpl extends EPackageImpl implements ErschemaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getConstraint() {
-		return constraintEClass;
+	public EClass getSimpleConstraint() {
+		return simpleConstraintEClass;
 	}
 
 	/**
@@ -440,8 +666,8 @@ public class ErschemaPackageImpl extends EPackageImpl implements ErschemaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getConstraint_Predicates() {
-		return (EReference)constraintEClass.getEStructuralFeatures().get(0);
+	public EReference getSimpleConstraint_Left() {
+		return (EReference)simpleConstraintEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -449,8 +675,8 @@ public class ErschemaPackageImpl extends EPackageImpl implements ErschemaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getConstraint_Operators() {
-		return (EReference)constraintEClass.getEStructuralFeatures().get(1);
+	public EReference getSimpleConstraint_Compare() {
+		return (EReference)simpleConstraintEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -458,71 +684,8 @@ public class ErschemaPackageImpl extends EPackageImpl implements ErschemaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getPredicate() {
-		return predicateEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getPredicate_Terms() {
-		return (EReference)predicateEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getPredicate_Lop() {
-		return (EAttribute)predicateEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getPredicate_Bop() {
-		return (EAttribute)predicateEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getTerm() {
-		return termEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getTerm_Type() {
-		return (EAttribute)termEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getPredicateOperator() {
-		return predicateOperatorEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getPredicateOperator_Type() {
-		return (EAttribute)predicateOperatorEClass.getEStructuralFeatures().get(0);
+	public EReference getSimpleConstraint_Right() {
+		return (EReference)simpleConstraintEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -548,8 +711,8 @@ public class ErschemaPackageImpl extends EPackageImpl implements ErschemaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EEnum getDatatype() {
-		return datatypeEEnum;
+	public EClass getKeyValue() {
+		return keyValueEClass;
 	}
 
 	/**
@@ -557,8 +720,8 @@ public class ErschemaPackageImpl extends EPackageImpl implements ErschemaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EEnum getLogicalBinaryOperator() {
-		return logicalBinaryOperatorEEnum;
+	public EReference getKeyValue_Attribute() {
+		return (EReference)keyValueEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -566,8 +729,350 @@ public class ErschemaPackageImpl extends EPackageImpl implements ErschemaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EEnum getBinaryOperator() {
-		return binaryOperatorEEnum;
+	public EReference getKeyValue_Composition() {
+		return (EReference)keyValueEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getDatatype() {
+		return datatypeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getNumber() {
+		return numberEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getCharSequence() {
+		return charSequenceEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getText() {
+		return textEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getString() {
+		return stringEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getInteger() {
+		return integerEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getBoolean() {
+		return booleanEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getDouble() {
+		return doubleEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getDate() {
+		return dateEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getExpression() {
+		return expressionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getExpression_Operators() {
+		return (EReference)expressionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getArithmeticOperator() {
+		return arithmeticOperatorEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getLogicalOperator() {
+		return logicalOperatorEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getIsNot() {
+		return isNotEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getEquals() {
+		return equalsEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getAdd() {
+		return addEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMul() {
+		return mulEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getSub() {
+		return subEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getDiv() {
+		return divEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getComparative() {
+		return comparativeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getConnective() {
+		return connectiveEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getAnd() {
+		return andEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getOr() {
+		return orEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getModulo() {
+		return moduloEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getGreaterThan() {
+		return greaterThanEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getSmaller() {
+		return smallerEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getSmallerThan() {
+		return smallerThanEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getGreater() {
+		return greaterEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getStringOperator() {
+		return stringOperatorEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getLike() {
+		return likeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getLength() {
+		return lengthEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getConcat() {
+		return concatEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getUnaryNot() {
+		return unaryNotEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getOperator() {
+		return operatorEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getOperator_Attributes() {
+		return (EReference)operatorEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getOperator_Literals() {
+		return (EReference)operatorEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getLiteral() {
+		return literalEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getLiteral_Val() {
+		return (EAttribute)literalEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -605,13 +1110,13 @@ public class ErschemaPackageImpl extends EPackageImpl implements ErschemaPackage
 
 		entityEClass = createEClass(ENTITY);
 		createEReference(entityEClass, ENTITY__ATTRIBUTES);
-		createEReference(entityEClass, ENTITY__KEY);
 		createEReference(entityEClass, ENTITY__COMPOSITIONS);
 		createEReference(entityEClass, ENTITY__CONSTRAINTS);
 		createEReference(entityEClass, ENTITY__DUMMY_CONSTRAINTS);
+		createEReference(entityEClass, ENTITY__KEYS);
 
 		attributeEClass = createEClass(ATTRIBUTE);
-		createEAttribute(attributeEClass, ATTRIBUTE__TYPE);
+		createEReference(attributeEClass, ATTRIBUTE__TYPE);
 
 		elementEClass = createEClass(ELEMENT);
 		createEAttribute(elementEClass, ELEMENT__NAME);
@@ -630,28 +1135,89 @@ public class ErschemaPackageImpl extends EPackageImpl implements ErschemaPackage
 		compositionEClass = createEClass(COMPOSITION);
 		createEReference(compositionEClass, COMPOSITION__ATTRIBUTES);
 
-		constraintEClass = createEClass(CONSTRAINT);
-		createEReference(constraintEClass, CONSTRAINT__PREDICATES);
-		createEReference(constraintEClass, CONSTRAINT__OPERATORS);
-
-		predicateEClass = createEClass(PREDICATE);
-		createEReference(predicateEClass, PREDICATE__TERMS);
-		createEAttribute(predicateEClass, PREDICATE__LOP);
-		createEAttribute(predicateEClass, PREDICATE__BOP);
-
-		termEClass = createEClass(TERM);
-		createEAttribute(termEClass, TERM__TYPE);
-
-		predicateOperatorEClass = createEClass(PREDICATE_OPERATOR);
-		createEAttribute(predicateOperatorEClass, PREDICATE_OPERATOR__TYPE);
+		simpleConstraintEClass = createEClass(SIMPLE_CONSTRAINT);
+		createEReference(simpleConstraintEClass, SIMPLE_CONSTRAINT__LEFT);
+		createEReference(simpleConstraintEClass, SIMPLE_CONSTRAINT__COMPARE);
+		createEReference(simpleConstraintEClass, SIMPLE_CONSTRAINT__RIGHT);
 
 		dummyConstraintEClass = createEClass(DUMMY_CONSTRAINT);
 		createEAttribute(dummyConstraintEClass, DUMMY_CONSTRAINT__CONSTRAINT);
 
-		// Create enums
-		datatypeEEnum = createEEnum(DATATYPE);
-		logicalBinaryOperatorEEnum = createEEnum(LOGICAL_BINARY_OPERATOR);
-		binaryOperatorEEnum = createEEnum(BINARY_OPERATOR);
+		keyValueEClass = createEClass(KEY_VALUE);
+		createEReference(keyValueEClass, KEY_VALUE__ATTRIBUTE);
+		createEReference(keyValueEClass, KEY_VALUE__COMPOSITION);
+
+		datatypeEClass = createEClass(DATATYPE);
+
+		numberEClass = createEClass(NUMBER);
+
+		charSequenceEClass = createEClass(CHAR_SEQUENCE);
+
+		textEClass = createEClass(TEXT);
+
+		stringEClass = createEClass(STRING);
+
+		integerEClass = createEClass(INTEGER);
+
+		booleanEClass = createEClass(BOOLEAN);
+
+		doubleEClass = createEClass(DOUBLE);
+
+		dateEClass = createEClass(DATE);
+
+		expressionEClass = createEClass(EXPRESSION);
+		createEReference(expressionEClass, EXPRESSION__OPERATORS);
+
+		arithmeticOperatorEClass = createEClass(ARITHMETIC_OPERATOR);
+
+		logicalOperatorEClass = createEClass(LOGICAL_OPERATOR);
+
+		isNotEClass = createEClass(IS_NOT);
+
+		equalsEClass = createEClass(EQUALS);
+
+		addEClass = createEClass(ADD);
+
+		mulEClass = createEClass(MUL);
+
+		subEClass = createEClass(SUB);
+
+		divEClass = createEClass(DIV);
+
+		comparativeEClass = createEClass(COMPARATIVE);
+
+		connectiveEClass = createEClass(CONNECTIVE);
+
+		andEClass = createEClass(AND);
+
+		orEClass = createEClass(OR);
+
+		moduloEClass = createEClass(MODULO);
+
+		greaterThanEClass = createEClass(GREATER_THAN);
+
+		smallerEClass = createEClass(SMALLER);
+
+		smallerThanEClass = createEClass(SMALLER_THAN);
+
+		greaterEClass = createEClass(GREATER);
+
+		stringOperatorEClass = createEClass(STRING_OPERATOR);
+
+		likeEClass = createEClass(LIKE);
+
+		lengthEClass = createEClass(LENGTH);
+
+		concatEClass = createEClass(CONCAT);
+
+		unaryNotEClass = createEClass(UNARY_NOT);
+
+		operatorEClass = createEClass(OPERATOR);
+		createEReference(operatorEClass, OPERATOR__ATTRIBUTES);
+		createEReference(operatorEClass, OPERATOR__LITERALS);
+
+		literalEClass = createEClass(LITERAL);
+		createEAttribute(literalEClass, LITERAL__VAL);
 	}
 
 	/**
@@ -687,6 +1253,36 @@ public class ErschemaPackageImpl extends EPackageImpl implements ErschemaPackage
 		relationEClass.getESuperTypes().add(this.getElement());
 		roleEClass.getESuperTypes().add(this.getElement());
 		compositionEClass.getESuperTypes().add(this.getElement());
+		numberEClass.getESuperTypes().add(this.getDatatype());
+		charSequenceEClass.getESuperTypes().add(this.getDatatype());
+		textEClass.getESuperTypes().add(this.getCharSequence());
+		stringEClass.getESuperTypes().add(this.getCharSequence());
+		integerEClass.getESuperTypes().add(this.getNumber());
+		booleanEClass.getESuperTypes().add(this.getDatatype());
+		doubleEClass.getESuperTypes().add(this.getNumber());
+		dateEClass.getESuperTypes().add(this.getDatatype());
+		arithmeticOperatorEClass.getESuperTypes().add(this.getOperator());
+		logicalOperatorEClass.getESuperTypes().add(this.getOperator());
+		isNotEClass.getESuperTypes().add(this.getComparative());
+		equalsEClass.getESuperTypes().add(this.getComparative());
+		addEClass.getESuperTypes().add(this.getArithmeticOperator());
+		mulEClass.getESuperTypes().add(this.getArithmeticOperator());
+		subEClass.getESuperTypes().add(this.getArithmeticOperator());
+		divEClass.getESuperTypes().add(this.getArithmeticOperator());
+		comparativeEClass.getESuperTypes().add(this.getLogicalOperator());
+		connectiveEClass.getESuperTypes().add(this.getLogicalOperator());
+		andEClass.getESuperTypes().add(this.getConnective());
+		orEClass.getESuperTypes().add(this.getConnective());
+		moduloEClass.getESuperTypes().add(this.getArithmeticOperator());
+		greaterThanEClass.getESuperTypes().add(this.getComparative());
+		smallerEClass.getESuperTypes().add(this.getComparative());
+		smallerThanEClass.getESuperTypes().add(this.getComparative());
+		greaterEClass.getESuperTypes().add(this.getComparative());
+		stringOperatorEClass.getESuperTypes().add(this.getOperator());
+		likeEClass.getESuperTypes().add(this.getStringOperator());
+		lengthEClass.getESuperTypes().add(this.getStringOperator());
+		concatEClass.getESuperTypes().add(this.getStringOperator());
+		unaryNotEClass.getESuperTypes().add(this.getConnective());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(modelEClass, Model.class, "Model", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -695,14 +1291,14 @@ public class ErschemaPackageImpl extends EPackageImpl implements ErschemaPackage
 		initEAttribute(getModel_Name(), ecorePackage.getEString(), "name", null, 1, 1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(entityEClass, Entity.class, "Entity", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getEntity_Attributes(), this.getAttribute(), null, "attributes", null, 1, -1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getEntity_Key(), this.getAttribute(), null, "key", null, 1, -1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEntity_Attributes(), this.getAttribute(), null, "attributes", null, 0, -1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEntity_Compositions(), this.getComposition(), null, "compositions", null, 0, -1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getEntity_Constraints(), this.getConstraint(), null, "constraints", null, 0, -1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEntity_Constraints(), this.getSimpleConstraint(), null, "constraints", null, 0, -1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEntity_DummyConstraints(), this.getDummyConstraint(), null, "dummyConstraints", null, 0, -1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEntity_Keys(), this.getKeyValue(), null, "keys", null, 1, -1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(attributeEClass, Attribute.class, "Attribute", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getAttribute_Type(), this.getDatatype(), "type", null, 1, 1, Attribute.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAttribute_Type(), this.getDatatype(), null, "type", null, 1, 1, Attribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(elementEClass, Element.class, "Element", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getElement_Name(), ecorePackage.getEString(), "name", null, 1, 1, Element.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -710,56 +1306,100 @@ public class ErschemaPackageImpl extends EPackageImpl implements ErschemaPackage
 		initEClass(relationEClass, Relation.class, "Relation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getRelation_Roles(), this.getRole(), null, "roles", null, 2, -1, Relation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getRelation_Attributes(), this.getAttribute(), null, "attributes", null, 0, -1, Relation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getRelation_Constraints(), this.getConstraint(), null, "constraints", null, 0, -1, Relation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRelation_Constraints(), this.getSimpleConstraint(), null, "constraints", null, 0, -1, Relation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getRelation_DummyConstraints(), this.getDummyConstraint(), null, "dummyConstraints", null, 0, -1, Relation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(roleEClass, Role.class, "Role", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getRole_LowerBound(), ecorePackage.getEInt(), "lowerBound", "0", 1, 1, Role.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getRole_Entity(), this.getEntity(), null, "entity", null, 1, 1, Role.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getRole_UpperBound(), ecorePackage.getEInt(), "upperBound", null, 1, 1, Role.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRole_UpperBound(), ecorePackage.getEInt(), "upperBound", "1", 1, 1, Role.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(compositionEClass, Composition.class, "Composition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getComposition_Attributes(), this.getAttribute(), null, "attributes", null, 2, -1, Composition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(constraintEClass, Constraint.class, "Constraint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getConstraint_Predicates(), this.getPredicate(), null, "predicates", null, 1, -1, Constraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getConstraint_Operators(), this.getPredicateOperator(), null, "operators", null, 0, -1, Constraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(predicateEClass, Predicate.class, "Predicate", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPredicate_Terms(), this.getTerm(), null, "terms", null, 1, -1, Predicate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getPredicate_Lop(), this.getLogicalBinaryOperator(), "lop", "or", 0, 1, Predicate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getPredicate_Bop(), this.getBinaryOperator(), "bop", null, 0, -1, Predicate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(termEClass, Term.class, "Term", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getTerm_Type(), this.getDatatype(), "type", null, 0, 1, Term.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(predicateOperatorEClass, PredicateOperator.class, "PredicateOperator", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getPredicateOperator_Type(), this.getLogicalBinaryOperator(), "type", null, 0, 1, PredicateOperator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(simpleConstraintEClass, SimpleConstraint.class, "SimpleConstraint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getSimpleConstraint_Left(), this.getExpression(), null, "left", null, 0, 1, SimpleConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSimpleConstraint_Compare(), this.getComparative(), null, "compare", null, 1, -1, SimpleConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSimpleConstraint_Right(), this.getExpression(), null, "right", null, 1, 1, SimpleConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(dummyConstraintEClass, DummyConstraint.class, "DummyConstraint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getDummyConstraint_Constraint(), ecorePackage.getEString(), "constraint", null, 1, 1, DummyConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		// Initialize enums and add enum literals
-		initEEnum(datatypeEEnum, Datatype.class, "Datatype");
-		addEEnumLiteral(datatypeEEnum, Datatype.INT);
-		addEEnumLiteral(datatypeEEnum, Datatype.DOUBLE);
-		addEEnumLiteral(datatypeEEnum, Datatype.STRING);
-		addEEnumLiteral(datatypeEEnum, Datatype.BOOL);
-		addEEnumLiteral(datatypeEEnum, Datatype.DATE);
-		addEEnumLiteral(datatypeEEnum, Datatype.TIME);
-		addEEnumLiteral(datatypeEEnum, Datatype.TEXT);
+		initEClass(keyValueEClass, KeyValue.class, "KeyValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getKeyValue_Attribute(), this.getAttribute(), null, "attribute", null, 0, 1, KeyValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getKeyValue_Composition(), this.getComposition(), null, "composition", null, 0, 1, KeyValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEEnum(logicalBinaryOperatorEEnum, LogicalBinaryOperator.class, "LogicalBinaryOperator");
-		addEEnumLiteral(logicalBinaryOperatorEEnum, LogicalBinaryOperator.OR);
-		addEEnumLiteral(logicalBinaryOperatorEEnum, LogicalBinaryOperator.AND);
+		initEClass(datatypeEClass, Datatype.class, "Datatype", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEEnum(binaryOperatorEEnum, BinaryOperator.class, "BinaryOperator");
-		addEEnumLiteral(binaryOperatorEEnum, BinaryOperator.ADD);
-		addEEnumLiteral(binaryOperatorEEnum, BinaryOperator.MUL);
-		addEEnumLiteral(binaryOperatorEEnum, BinaryOperator.SUB);
-		addEEnumLiteral(binaryOperatorEEnum, BinaryOperator.DIV);
-		addEEnumLiteral(binaryOperatorEEnum, BinaryOperator.EQ);
-		addEEnumLiteral(binaryOperatorEEnum, BinaryOperator.GT);
+		initEClass(numberEClass, de.tu_bs.cs.isf.mbse.erschema.Number.class, "Number", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(charSequenceEClass, CharSequence.class, "CharSequence", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(textEClass, Text.class, "Text", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(stringEClass, de.tu_bs.cs.isf.mbse.erschema.String.class, "String", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(integerEClass, de.tu_bs.cs.isf.mbse.erschema.Integer.class, "Integer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(booleanEClass, de.tu_bs.cs.isf.mbse.erschema.Boolean.class, "Boolean", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(doubleEClass, de.tu_bs.cs.isf.mbse.erschema.Double.class, "Double", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(dateEClass, Date.class, "Date", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(expressionEClass, Expression.class, "Expression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getExpression_Operators(), this.getOperator(), null, "operators", null, 1, -1, Expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(arithmeticOperatorEClass, ArithmeticOperator.class, "ArithmeticOperator", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(logicalOperatorEClass, LogicalOperator.class, "LogicalOperator", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(isNotEClass, IsNot.class, "IsNot", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(equalsEClass, Equals.class, "Equals", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(addEClass, Add.class, "Add", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(mulEClass, Mul.class, "Mul", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(subEClass, Sub.class, "Sub", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(divEClass, Div.class, "Div", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(comparativeEClass, Comparative.class, "Comparative", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(connectiveEClass, Connective.class, "Connective", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(andEClass, And.class, "And", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(orEClass, Or.class, "Or", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(moduloEClass, Modulo.class, "Modulo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(greaterThanEClass, GreaterThan.class, "GreaterThan", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(smallerEClass, Smaller.class, "Smaller", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(smallerThanEClass, SmallerThan.class, "SmallerThan", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(greaterEClass, Greater.class, "Greater", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(stringOperatorEClass, StringOperator.class, "StringOperator", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(likeEClass, Like.class, "Like", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(lengthEClass, Length.class, "Length", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(concatEClass, Concat.class, "Concat", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(unaryNotEClass, UnaryNot.class, "UnaryNot", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(operatorEClass, Operator.class, "Operator", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getOperator_Attributes(), this.getAttribute(), null, "attributes", null, 0, 2, Operator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getOperator_Literals(), this.getLiteral(), null, "literals", null, 0, 2, Operator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(literalEClass, Literal.class, "Literal", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getLiteral_Val(), ecorePackage.getEJavaObject(), "val", null, 1, 1, Literal.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);
