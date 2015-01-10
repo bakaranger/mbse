@@ -8,9 +8,9 @@ OPTIONS {
 }
 
 RULES {
-	Model   ::= "model" name['"', '"'] "{" entities* relations* "}";   
+	Model   ::= "model" name[] "{" entities* relations* "}";   
 	
-	Entity ::= "entity" name['"', '"'] "{" keys+ attributes* compositions* dummyConstraints* "}"; 
+	Entity ::= "entity" name[] "{" keys+ attributes* compositions* dummyConstraints* "}"; 
  	
 	Relation ::= "relation" name[] "{" attributes* roles(roles+) dummyConstraints* "}";	
 	
