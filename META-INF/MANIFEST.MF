@@ -1,15 +1,15 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: ERSchema;singleton:=true
+Bundle-SymbolicName: erschema_branch;singleton:=true
 Bundle-Version: 0.1.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
-Export-Package: de.tu_bs.cs.isf.mbse.erschema,
- de.tu_bs.cs.isf.mbse.erschema.impl,
- de.tu_bs.cs.isf.mbse.erschema.util
+Export-Package: de.tu_bs.cs.isf.mbse.erschema_branch,
+ de.tu_bs.cs.isf.mbse.erschema_branch.impl,
+ de.tu_bs.cs.isf.mbse.erschema_branch.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.emftext.runtime.owltext;bundle-version="1.2.6"
