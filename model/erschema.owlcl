@@ -1,8 +1,0 @@
-import "erschema.ecore"
-
-
-refinements: {
- 	type Entity_attributes_unique_names refines Entity 
- 		: Entity_attributes min 0
-}
-						

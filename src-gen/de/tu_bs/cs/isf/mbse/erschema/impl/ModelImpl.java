@@ -6,25 +6,17 @@ import de.tu_bs.cs.isf.mbse.erschema.Entity;
 import de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage;
 import de.tu_bs.cs.isf.mbse.erschema.Model;
 import de.tu_bs.cs.isf.mbse.erschema.Relation;
-
 import java.lang.String;
-
 import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-
-import org.emftext.runtime.owltext.OWLTextEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -41,7 +33,7 @@ import org.emftext.runtime.owltext.OWLTextEObjectImpl;
  *
  * @generated
  */
-public class ModelImpl extends OWLTextEObjectImpl implements Model {
+public class ModelImpl extends MinimalEObjectImpl.Container implements Model {
 	/**
 	 * The cached value of the '{@link #getEntities() <em>Entities</em>}' containment reference list.
 	 * <!-- begin-user-doc -->

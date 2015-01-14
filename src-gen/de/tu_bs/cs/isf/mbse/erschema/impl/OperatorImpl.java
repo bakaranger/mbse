@@ -6,20 +6,14 @@ import de.tu_bs.cs.isf.mbse.erschema.Attribute;
 import de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage;
 import de.tu_bs.cs.isf.mbse.erschema.Literal;
 import de.tu_bs.cs.isf.mbse.erschema.Operator;
-
 import java.util.Collection;
-
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-
-import org.emftext.runtime.owltext.OWLTextEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -35,7 +29,7 @@ import org.emftext.runtime.owltext.OWLTextEObjectImpl;
  *
  * @generated
  */
-public abstract class OperatorImpl extends OWLTextEObjectImpl implements Operator {
+public abstract class OperatorImpl extends MinimalEObjectImpl.Container implements Operator {
 	/**
 	 * The cached value of the '{@link #getAttributes() <em>Attributes</em>}' containment reference list.
 	 * <!-- begin-user-doc -->

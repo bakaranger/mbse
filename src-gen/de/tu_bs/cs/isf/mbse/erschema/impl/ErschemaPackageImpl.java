@@ -34,6 +34,7 @@ import de.tu_bs.cs.isf.mbse.erschema.Modulo;
 import de.tu_bs.cs.isf.mbse.erschema.Mul;
 import de.tu_bs.cs.isf.mbse.erschema.Operator;
 import de.tu_bs.cs.isf.mbse.erschema.Or;
+import de.tu_bs.cs.isf.mbse.erschema.Primitive;
 import de.tu_bs.cs.isf.mbse.erschema.Relation;
 import de.tu_bs.cs.isf.mbse.erschema.Role;
 import de.tu_bs.cs.isf.mbse.erschema.SimpleConstraint;
@@ -45,6 +46,7 @@ import de.tu_bs.cs.isf.mbse.erschema.Text;
 import de.tu_bs.cs.isf.mbse.erschema.UnaryNot;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
@@ -365,6 +367,13 @@ public class ErschemaPackageImpl extends EPackageImpl implements ErschemaPackage
 	private EClass literalEClass = null;
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum primitiveEEnum = null;
+
+	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
 	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
 	 * package URI value.
@@ -529,15 +538,6 @@ public class ErschemaPackageImpl extends EPackageImpl implements ErschemaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getAttribute_Type() {
-		return (EReference)attributeEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getElement() {
 		return elementEClass;
 	}
@@ -691,17 +691,8 @@ public class ErschemaPackageImpl extends EPackageImpl implements ErschemaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSimpleConstraint_Entity() {
+	public EReference getSimpleConstraint_Expression() {
 		return (EReference)simpleConstraintEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getSimpleConstraint_Attributes() {
-		return (EReference)simpleConstraintEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -1096,6 +1087,15 @@ public class ErschemaPackageImpl extends EPackageImpl implements ErschemaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EEnum getPrimitive() {
+		return primitiveEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public ErschemaFactory getErschemaFactory() {
 		return (ErschemaFactory)getEFactoryInstance();
 	}
@@ -1132,7 +1132,6 @@ public class ErschemaPackageImpl extends EPackageImpl implements ErschemaPackage
 		createEReference(entityEClass, ENTITY__KEYS);
 
 		attributeEClass = createEClass(ATTRIBUTE);
-		createEReference(attributeEClass, ATTRIBUTE__TYPE);
 
 		elementEClass = createEClass(ELEMENT);
 		createEAttribute(elementEClass, ELEMENT__NAME);
@@ -1155,8 +1154,7 @@ public class ErschemaPackageImpl extends EPackageImpl implements ErschemaPackage
 		createEReference(simpleConstraintEClass, SIMPLE_CONSTRAINT__LEFT);
 		createEReference(simpleConstraintEClass, SIMPLE_CONSTRAINT__COMPARE);
 		createEReference(simpleConstraintEClass, SIMPLE_CONSTRAINT__RIGHT);
-		createEReference(simpleConstraintEClass, SIMPLE_CONSTRAINT__ENTITY);
-		createEReference(simpleConstraintEClass, SIMPLE_CONSTRAINT__ATTRIBUTES);
+		createEReference(simpleConstraintEClass, SIMPLE_CONSTRAINT__EXPRESSION);
 
 		dummyConstraintEClass = createEClass(DUMMY_CONSTRAINT);
 		createEAttribute(dummyConstraintEClass, DUMMY_CONSTRAINT__CONSTRAINT);
@@ -1236,6 +1234,9 @@ public class ErschemaPackageImpl extends EPackageImpl implements ErschemaPackage
 
 		literalEClass = createEClass(LITERAL);
 		createEAttribute(literalEClass, LITERAL__VAL);
+
+		// Create enums
+		primitiveEEnum = createEEnum(PRIMITIVE);
 	}
 
 	/**
@@ -1316,7 +1317,6 @@ public class ErschemaPackageImpl extends EPackageImpl implements ErschemaPackage
 		initEReference(getEntity_Keys(), this.getKeyValue(), null, "keys", null, 1, -1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(attributeEClass, Attribute.class, "Attribute", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getAttribute_Type(), this.getDatatype(), null, "type", null, 1, 1, Attribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(elementEClass, Element.class, "Element", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getElement_Name(), ecorePackage.getEString(), "name", null, 1, 1, Element.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1339,8 +1339,7 @@ public class ErschemaPackageImpl extends EPackageImpl implements ErschemaPackage
 		initEReference(getSimpleConstraint_Left(), this.getExpression(), null, "left", null, 0, 1, SimpleConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSimpleConstraint_Compare(), this.getComparative(), null, "compare", null, 1, -1, SimpleConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSimpleConstraint_Right(), this.getExpression(), null, "right", null, 1, 1, SimpleConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSimpleConstraint_Entity(), this.getEntity(), null, "entity", null, 2, -1, SimpleConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSimpleConstraint_Attributes(), this.getAttribute(), null, "attributes", null, 2, -1, SimpleConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSimpleConstraint_Expression(), this.getExpression(), null, "expression", null, 0, -1, SimpleConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(dummyConstraintEClass, DummyConstraint.class, "DummyConstraint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getDummyConstraint_Constraint(), ecorePackage.getEString(), "constraint", null, 1, 1, DummyConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1420,6 +1419,15 @@ public class ErschemaPackageImpl extends EPackageImpl implements ErschemaPackage
 
 		initEClass(literalEClass, Literal.class, "Literal", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getLiteral_Val(), ecorePackage.getEJavaObject(), "val", null, 1, 1, Literal.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		// Initialize enums and add enum literals
+		initEEnum(primitiveEEnum, Primitive.class, "Primitive");
+		addEEnumLiteral(primitiveEEnum, Primitive.INT);
+		addEEnumLiteral(primitiveEEnum, Primitive.DOUBLE);
+		addEEnumLiteral(primitiveEEnum, Primitive.STRING);
+		addEEnumLiteral(primitiveEEnum, Primitive.BOOL);
+		addEEnumLiteral(primitiveEEnum, Primitive.DATE);
+		addEEnumLiteral(primitiveEEnum, Primitive.TEXT);
 
 		// Create resource
 		createResource(eNS_URI);

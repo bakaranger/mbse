@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
     xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/ERSchema/src-gen" modelPluginID="ERSchema" modelName="Erschema"
-    rootExtendsClass="org.emftext.runtime.owltext.OWLTextEObjectImpl" rootImplementsInterface=""
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" rootImplementsInterface=""
     importerID="org.eclipse.emf.importer.ecore" complianceLevel="7.0" copyrightFields="false"
     operationReflection="true" importOrganizing="true">
   <foreignModel>erschema.ecore</foreignModel>
   <genPackages prefix="Erschema" basePackage="de.tu_bs.cs.isf.mbse" disposableProviderFactory="true"
       ecorePackage="erschema.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="erschema.ecore#//Primitive">
+      <genEnumLiterals ecoreEnumLiteral="erschema.ecore#//Primitive/int"/>
+      <genEnumLiterals ecoreEnumLiteral="erschema.ecore#//Primitive/double"/>
+      <genEnumLiterals ecoreEnumLiteral="erschema.ecore#//Primitive/string"/>
+      <genEnumLiterals ecoreEnumLiteral="erschema.ecore#//Primitive/bool"/>
+      <genEnumLiterals ecoreEnumLiteral="erschema.ecore#//Primitive/date"/>
+      <genEnumLiterals ecoreEnumLiteral="erschema.ecore#//Primitive/text"/>
+    </genEnums>
     <genClasses ecoreClass="erschema.ecore#//Model">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference erschema.ecore#//Model/entities"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference erschema.ecore#//Model/relations"/>

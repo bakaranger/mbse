@@ -17,8 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link de.tu_bs.cs.isf.mbse.erschema.SimpleConstraint#getLeft <em>Left</em>}</li>
  *   <li>{@link de.tu_bs.cs.isf.mbse.erschema.SimpleConstraint#getCompare <em>Compare</em>}</li>
  *   <li>{@link de.tu_bs.cs.isf.mbse.erschema.SimpleConstraint#getRight <em>Right</em>}</li>
- *   <li>{@link de.tu_bs.cs.isf.mbse.erschema.SimpleConstraint#getEntity <em>Entity</em>}</li>
- *   <li>{@link de.tu_bs.cs.isf.mbse.erschema.SimpleConstraint#getAttributes <em>Attributes</em>}</li>
+ *   <li>{@link de.tu_bs.cs.isf.mbse.erschema.SimpleConstraint#getExpression <em>Expression</em>}</li>
  * </ul>
  * </p>
  *
@@ -96,35 +95,19 @@ public interface SimpleConstraint extends EObject {
 	void setRight(Expression value);
 
 	/**
-	 * Returns the value of the '<em><b>Entity</b></em>' reference list.
-	 * The list contents are of type {@link de.tu_bs.cs.isf.mbse.erschema.Entity}.
+	 * Returns the value of the '<em><b>Expression</b></em>' containment reference list.
+	 * The list contents are of type {@link de.tu_bs.cs.isf.mbse.erschema.Expression}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Entity</em>' reference isn't clear,
+	 * If the meaning of the '<em>Expression</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Entity</em>' reference list.
-	 * @see de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage#getSimpleConstraint_Entity()
-	 * @model lower="2"
+	 * @return the value of the '<em>Expression</em>' containment reference list.
+	 * @see de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage#getSimpleConstraint_Expression()
+	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Entity> getEntity();
-
-	/**
-	 * Returns the value of the '<em><b>Attributes</b></em>' reference list.
-	 * The list contents are of type {@link de.tu_bs.cs.isf.mbse.erschema.Attribute}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Attributes</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Attributes</em>' reference list.
-	 * @see de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage#getSimpleConstraint_Attributes()
-	 * @model lower="2"
-	 * @generated
-	 */
-	EList<Attribute> getAttributes();
+	EList<Expression> getExpression();
 
 } // SimpleConstraint

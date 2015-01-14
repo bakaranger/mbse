@@ -4,14 +4,10 @@ package de.tu_bs.cs.isf.mbse.erschema.impl;
 
 import de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage;
 import de.tu_bs.cs.isf.mbse.erschema.Literal;
-
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
-import org.emftext.runtime.owltext.OWLTextEObjectImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -26,7 +22,7 @@ import org.emftext.runtime.owltext.OWLTextEObjectImpl;
  *
  * @generated
  */
-public class LiteralImpl extends OWLTextEObjectImpl implements Literal {
+public class LiteralImpl extends MinimalEObjectImpl.Container implements Literal {
 	/**
 	 * The default value of the '{@link #getVal() <em>Val</em>}' attribute.
 	 * <!-- begin-user-doc -->

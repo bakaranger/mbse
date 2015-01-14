@@ -6,16 +6,12 @@ import de.tu_bs.cs.isf.mbse.erschema.Attribute;
 import de.tu_bs.cs.isf.mbse.erschema.Composition;
 import de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage;
 import de.tu_bs.cs.isf.mbse.erschema.KeyValue;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
-import org.emftext.runtime.owltext.OWLTextEObjectImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -31,7 +27,7 @@ import org.emftext.runtime.owltext.OWLTextEObjectImpl;
  *
  * @generated
  */
-public class KeyValueImpl extends OWLTextEObjectImpl implements KeyValue {
+public class KeyValueImpl extends MinimalEObjectImpl.Container implements KeyValue {
 	/**
 	 * The cached value of the '{@link #getAttribute() <em>Attribute</em>}' containment reference.
 	 * <!-- begin-user-doc -->

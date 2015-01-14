@@ -1,4 +1,3 @@
-@SuppressWarnings
 SYNTAXDEF erm
 FOR <http://tu-bs.de/cs/isf/mbse/erschema> <erschema.genmodel>
 START Model
@@ -6,8 +5,6 @@ START Model
 OPTIONS {
 	reloadGeneratorModel = "true";
 	generateCodeFromGeneratorModel = "true";
-	overrideBuilder = "false";
-	additionalDependencies = "org.emftext.runtime.owltext";
 }
 
 TOKENS {
@@ -17,7 +14,7 @@ TOKENS {
 }
 
 TOKENSTYLES {
-	"COMMENT" COLOR #00bb00, ITALIC ; 
+	"COMMENT" COLOR #00bb00, ITALIC; 
 	"BOUNDS" COLOR #FF8c00;
 	
 	"model"	COLOR #200080, BOLD;
@@ -36,14 +33,14 @@ TOKENSTYLES {
 
 	"int" COLOR #7779bb;
 	"double" COLOR #7779bb;
-	"String" COLOR #7779bb;
+	"string" COLOR #7779bb;
 	"text" COLOR #7779bb;
-	"boolean" COLOR #7779bb;
+	"bool" COLOR #7779bb;
 	"date" COLOR #7779bb;
 		
 	"and" COLOR #308080;
 	"or" COLOR #308080;
-	"!"  COLOR #308080;
+	"not"  COLOR #308080;
 	"<=" COLOR #308080;
 	"<"	 COLOR #308080;
 	"!=" COLOR #308080;
@@ -60,57 +57,57 @@ TOKENSTYLES {
 
 RULES {
 
-	Model   ::= "model"#1 name['"', '"'] !1"{"!1 entities* relations* "}"!0;   
-	@Foldable
-	Entity ::= "entity"#1 name['"', '"'] !1"{"!1 keys+ attributes* compositions* dummyConstraints* constraints*"}"!0; 
-	@SuppressWarnings
-	@Foldable
-	Relation ::= "relation"#1 name[] !0"{" !1 attributes* roles(roles+) dummyConstraints* "}"!0;	
-	Composition ::= "composition"#1name[] "{"attributes(attributes+)"}"!0;
-	Attribute ::= "val"#1name[] ":" type!0;
-	@SuppressWarnings
-	KeyValue::="key"#1(composition|attribute)|(attribute|composition);
-	Role ::= "role"#1name[] "references" entity[] "[" lowerBound[BOUNDS] "," upperBound[BOUNDS] "]"!0;
+	//erschema/Model   ::= "model"; 
+	// #1 //erschema/Model/name[] !1"{"!1 //erschema/Model/entities* //erschema/Model/relations* "}"!0;   
+	//@Foldable
+	//erschema/Entity ::= "entity"#1 //erschema/Element/name[] !1"{"!1 //erschema/Entity/keys+ //erschema/Entity/attributes* //erschema/Entity/compositions* //erschema/Entity/dummyConstraints* //erschema/Entity/constraints*"}"!0; 
+	
+	//@Foldable
+	//erschema/Relation ::= "relation"#1 //erschema/Element/name[] !0"{" !1 //erschema/Relation/attributes* //erschema/Relation/roles(//erschema/Relation/roles+) //erschema/Relation/dummyConstraints* "}"!0;	
+	//erschema/Composition ::= "composition"#1//erschema/Element/name[] "{"//erschema/Composition/attributes(//erschema/Composition/attributes+)"}"!0;
+	//erschema/Attribute ::= "val"#1//erschema/Element/name[] ":" //erschema/Attribute/type!0;
+	
+	//erschema/KeyValue::="key"#1(//erschema/KeyValue/composition|//erschema/KeyValue/attribute)|(//erschema/KeyValue/attribute|//erschema/KeyValue/composition);
+	//erschema/Role ::= "role"#1//erschema/Element/name[] "references" //erschema/Role/entity[] "[" //erschema/Role/lowerBound[] "," //erschema/Role/upperBound[] "]"!0;
 
-	DummyConstraint  ::= "constraint" "(" constraint[] ")";
-	@SuppressWarnings
-	SimpleConstraint ::= "check" "(" entity[]"."attributes[] (entity[]"."attributes[])*  compare+ (entity[]"."attributes[])+ ")";
+	//erschema/DummyConstraint  ::= "constraint" "(" //erschema/DummyConstraint/constraint[] ")";
+	
+	//erschema/SimpleConstraint ::= "check" "(" //erschema/SimpleConstraint/entity[]"."//erschema/SimpleConstraint/attributes[] (//erschema/SimpleConstraint/entity[]"."//erschema/SimpleConstraint/attributes[])*  //erschema/SimpleConstraint/compare+ (//erschema/SimpleConstraint/entity[]"."//erschema/SimpleConstraint/attributes[])+ ")";
 	
 	// Datentypen	
-	Text 	::= "text";
-	String 	::= "String";
-	Boolean ::= "boolean";
-	Integer ::= "int";
-	Double 	::= "double";	
-	Date 	::= "date";
+	//erschema/Text 	::= "text";
+	//erschema/String 	::= "string";
+	//erschema/Boolean ::= "bool";
+	//erschema/Integer ::= "int";
+	//erschema/Double 	::= "double";	
+	//erschema/Date 	::= "date";
 	
-	// Operatoren
-	@SuppressWarnings
-	SmallerThan ::= "<=";	
-	@SuppressWarnings
-	Smaller ::= "<";
-	@SuppressWarnings
-	IsNot ::= "!=";
-	@SuppressWarnings
-	Equals ::= "==";
-	@SuppressWarnings
-	Greater ::= ">";
-	@SuppressWarnings
-	GreaterThan ::= ">=";
-	@SuppressWarnings
-	And ::= "and";
-	@SuppressWarnings
-	Or  ::= "or";
-	@SuppressWarnings
-	Add ::= "+";
-	@SuppressWarnings
-	Sub ::= "-";
-	@SuppressWarnings
-	Modulo ::= "%";
-	@SuppressWarnings
-	Div ::= "/";
-	@SuppressWarnings
-	Mul ::= "*";
-	@SuppressWarnings
-	UnaryNot ::="!";
+	// Operatoren	
+	//erschema/SmallerThan ::= "<=";	
+	
+	//erschema/Smaller ::= "<";
+	
+	//erschema/IsNot ::= "!=";
+	
+	//erschema/Equals ::= "==";
+	
+	//erschema/Greater ::= ">";
+	
+	//erschema/GreaterThan ::= ">=";
+	
+	//erschema/And ::= "and";
+	
+	//erschema/Or  ::= "or";
+	
+	//erschema/UnaryNot ::="not";
+	
+	//erschema/Add ::= "+";
+	
+	//erschema/Sub ::= "-";
+	
+	//erschema/Modulo ::= "%";
+	
+	//erschema/Div ::= "/";
+	
+	//erschema/Mul ::= "*";	
 }

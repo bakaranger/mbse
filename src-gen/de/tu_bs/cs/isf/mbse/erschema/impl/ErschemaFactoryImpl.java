@@ -26,6 +26,7 @@ import de.tu_bs.cs.isf.mbse.erschema.Model;
 import de.tu_bs.cs.isf.mbse.erschema.Modulo;
 import de.tu_bs.cs.isf.mbse.erschema.Mul;
 import de.tu_bs.cs.isf.mbse.erschema.Or;
+import de.tu_bs.cs.isf.mbse.erschema.Primitive;
 import de.tu_bs.cs.isf.mbse.erschema.Relation;
 import de.tu_bs.cs.isf.mbse.erschema.Role;
 import de.tu_bs.cs.isf.mbse.erschema.SimpleConstraint;
@@ -36,6 +37,7 @@ import de.tu_bs.cs.isf.mbse.erschema.Text;
 import de.tu_bs.cs.isf.mbse.erschema.UnaryNot;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -123,6 +125,36 @@ public class ErschemaFactoryImpl extends EFactoryImpl implements ErschemaFactory
 			case ErschemaPackage.LITERAL: return createLiteral();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object createFromString(EDataType eDataType, String initialValue) {
+		switch (eDataType.getClassifierID()) {
+			case ErschemaPackage.PRIMITIVE:
+				return createPrimitiveFromString(eDataType, initialValue);
+			default:
+				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String convertToString(EDataType eDataType, Object instanceValue) {
+		switch (eDataType.getClassifierID()) {
+			case ErschemaPackage.PRIMITIVE:
+				return convertPrimitiveToString(eDataType, instanceValue);
+			default:
+				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
 	}
 
@@ -464,6 +496,26 @@ public class ErschemaFactoryImpl extends EFactoryImpl implements ErschemaFactory
 	public Literal createLiteral() {
 		LiteralImpl literal = new LiteralImpl();
 		return literal;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Primitive createPrimitiveFromString(EDataType eDataType, String initialValue) {
+		Primitive result = Primitive.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertPrimitiveToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
 	}
 
 	/**

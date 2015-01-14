@@ -2,30 +2,20 @@
  */
 package de.tu_bs.cs.isf.mbse.erschema.impl;
 
-import de.tu_bs.cs.isf.mbse.erschema.Attribute;
 import de.tu_bs.cs.isf.mbse.erschema.Comparative;
-import de.tu_bs.cs.isf.mbse.erschema.Entity;
 import de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage;
 import de.tu_bs.cs.isf.mbse.erschema.Expression;
 import de.tu_bs.cs.isf.mbse.erschema.SimpleConstraint;
-
 import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-
-import org.emftext.runtime.owltext.OWLTextEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -37,14 +27,13 @@ import org.emftext.runtime.owltext.OWLTextEObjectImpl;
  *   <li>{@link de.tu_bs.cs.isf.mbse.erschema.impl.SimpleConstraintImpl#getLeft <em>Left</em>}</li>
  *   <li>{@link de.tu_bs.cs.isf.mbse.erschema.impl.SimpleConstraintImpl#getCompare <em>Compare</em>}</li>
  *   <li>{@link de.tu_bs.cs.isf.mbse.erschema.impl.SimpleConstraintImpl#getRight <em>Right</em>}</li>
- *   <li>{@link de.tu_bs.cs.isf.mbse.erschema.impl.SimpleConstraintImpl#getEntity <em>Entity</em>}</li>
- *   <li>{@link de.tu_bs.cs.isf.mbse.erschema.impl.SimpleConstraintImpl#getAttributes <em>Attributes</em>}</li>
+ *   <li>{@link de.tu_bs.cs.isf.mbse.erschema.impl.SimpleConstraintImpl#getExpression <em>Expression</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class SimpleConstraintImpl extends OWLTextEObjectImpl implements SimpleConstraint {
+public class SimpleConstraintImpl extends MinimalEObjectImpl.Container implements SimpleConstraint {
 	/**
 	 * The cached value of the '{@link #getLeft() <em>Left</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -76,24 +65,14 @@ public class SimpleConstraintImpl extends OWLTextEObjectImpl implements SimpleCo
 	protected Expression right;
 
 	/**
-	 * The cached value of the '{@link #getEntity() <em>Entity</em>}' reference list.
+	 * The cached value of the '{@link #getExpression() <em>Expression</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getEntity()
+	 * @see #getExpression()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Entity> entity;
-
-	/**
-	 * The cached value of the '{@link #getAttributes() <em>Attributes</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getAttributes()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Attribute> attributes;
+	protected EList<Expression> expression;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -217,23 +196,11 @@ public class SimpleConstraintImpl extends OWLTextEObjectImpl implements SimpleCo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Entity> getEntity() {
-		if (entity == null) {
-			entity = new EObjectResolvingEList<Entity>(Entity.class, this, ErschemaPackage.SIMPLE_CONSTRAINT__ENTITY);
+	public EList<Expression> getExpression() {
+		if (expression == null) {
+			expression = new EObjectContainmentEList<Expression>(Expression.class, this, ErschemaPackage.SIMPLE_CONSTRAINT__EXPRESSION);
 		}
-		return entity;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<Attribute> getAttributes() {
-		if (attributes == null) {
-			attributes = new EObjectResolvingEList<Attribute>(Attribute.class, this, ErschemaPackage.SIMPLE_CONSTRAINT__ATTRIBUTES);
-		}
-		return attributes;
+		return expression;
 	}
 
 	/**
@@ -250,6 +217,8 @@ public class SimpleConstraintImpl extends OWLTextEObjectImpl implements SimpleCo
 				return ((InternalEList<?>)getCompare()).basicRemove(otherEnd, msgs);
 			case ErschemaPackage.SIMPLE_CONSTRAINT__RIGHT:
 				return basicSetRight(null, msgs);
+			case ErschemaPackage.SIMPLE_CONSTRAINT__EXPRESSION:
+				return ((InternalEList<?>)getExpression()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -268,10 +237,8 @@ public class SimpleConstraintImpl extends OWLTextEObjectImpl implements SimpleCo
 				return getCompare();
 			case ErschemaPackage.SIMPLE_CONSTRAINT__RIGHT:
 				return getRight();
-			case ErschemaPackage.SIMPLE_CONSTRAINT__ENTITY:
-				return getEntity();
-			case ErschemaPackage.SIMPLE_CONSTRAINT__ATTRIBUTES:
-				return getAttributes();
+			case ErschemaPackage.SIMPLE_CONSTRAINT__EXPRESSION:
+				return getExpression();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -295,13 +262,9 @@ public class SimpleConstraintImpl extends OWLTextEObjectImpl implements SimpleCo
 			case ErschemaPackage.SIMPLE_CONSTRAINT__RIGHT:
 				setRight((Expression)newValue);
 				return;
-			case ErschemaPackage.SIMPLE_CONSTRAINT__ENTITY:
-				getEntity().clear();
-				getEntity().addAll((Collection<? extends Entity>)newValue);
-				return;
-			case ErschemaPackage.SIMPLE_CONSTRAINT__ATTRIBUTES:
-				getAttributes().clear();
-				getAttributes().addAll((Collection<? extends Attribute>)newValue);
+			case ErschemaPackage.SIMPLE_CONSTRAINT__EXPRESSION:
+				getExpression().clear();
+				getExpression().addAll((Collection<? extends Expression>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -324,11 +287,8 @@ public class SimpleConstraintImpl extends OWLTextEObjectImpl implements SimpleCo
 			case ErschemaPackage.SIMPLE_CONSTRAINT__RIGHT:
 				setRight((Expression)null);
 				return;
-			case ErschemaPackage.SIMPLE_CONSTRAINT__ENTITY:
-				getEntity().clear();
-				return;
-			case ErschemaPackage.SIMPLE_CONSTRAINT__ATTRIBUTES:
-				getAttributes().clear();
+			case ErschemaPackage.SIMPLE_CONSTRAINT__EXPRESSION:
+				getExpression().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -348,10 +308,8 @@ public class SimpleConstraintImpl extends OWLTextEObjectImpl implements SimpleCo
 				return compare != null && !compare.isEmpty();
 			case ErschemaPackage.SIMPLE_CONSTRAINT__RIGHT:
 				return right != null;
-			case ErschemaPackage.SIMPLE_CONSTRAINT__ENTITY:
-				return entity != null && !entity.isEmpty();
-			case ErschemaPackage.SIMPLE_CONSTRAINT__ATTRIBUTES:
-				return attributes != null && !attributes.isEmpty();
+			case ErschemaPackage.SIMPLE_CONSTRAINT__EXPRESSION:
+				return expression != null && !expression.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

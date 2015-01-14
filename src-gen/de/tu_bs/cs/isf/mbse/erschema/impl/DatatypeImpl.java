@@ -4,10 +4,8 @@ package de.tu_bs.cs.isf.mbse.erschema.impl;
 
 import de.tu_bs.cs.isf.mbse.erschema.Datatype;
 import de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage;
-
 import org.eclipse.emf.ecore.EClass;
-
-import org.emftext.runtime.owltext.OWLTextEObjectImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,7 +16,7 @@ import org.emftext.runtime.owltext.OWLTextEObjectImpl;
  *
  * @generated
  */
-public abstract class DatatypeImpl extends OWLTextEObjectImpl implements Datatype {
+public abstract class DatatypeImpl extends MinimalEObjectImpl.Container implements Datatype {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

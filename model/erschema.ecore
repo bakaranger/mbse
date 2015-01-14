@@ -122,4 +122,12 @@
   <eClassifiers xsi:type="ecore:EClass" name="Literal">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="val" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Primitive">
+    <eLiterals name="int"/>
+    <eLiterals name="double"/>
+    <eLiterals name="string"/>
+    <eLiterals name="bool"/>
+    <eLiterals name="date"/>
+    <eLiterals name="text"/>
+  </eClassifiers>
 </ecore:EPackage>
