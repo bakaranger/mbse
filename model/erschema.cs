@@ -1,3 +1,4 @@
+@SuppressWarnings
 SYNTAXDEF erm
 FOR <http://tu-bs.de/cs/isf/mbse/erschema> <erschema.genmodel>
 START Model
@@ -58,16 +59,22 @@ TOKENSTYLES {
 
 
 RULES {
+
 	Model   ::= "model"#1 name['"', '"'] !1"{"!1 entities* relations* "}"!0;   
+	@Foldable
 	Entity ::= "entity"#1 name['"', '"'] !1"{"!1 keys+ attributes* compositions* dummyConstraints* constraints*"}"!0; 
+	@SuppressWarnings
+	@Foldable
 	Relation ::= "relation"#1 name[] !0"{" !1 attributes* roles(roles+) dummyConstraints* "}"!0;	
 	Composition ::= "composition"#1name[] "{"attributes(attributes+)"}"!0;
 	Attribute ::= "val"#1name[] ":" type!0;
+	@SuppressWarnings
 	KeyValue::="key"#1(composition|attribute)|(attribute|composition);
 	Role ::= "role"#1name[] "references" entity[] "[" lowerBound[BOUNDS] "," upperBound[BOUNDS] "]"!0;
 
 	DummyConstraint  ::= "constraint" "(" constraint[] ")";
-	SimpleConstraint ::= "check" "("  compare*  ")";
+	@SuppressWarnings
+	SimpleConstraint ::= "check" "(" entity[]"."attributes[] (entity[]"."attributes[])*  compare+ (entity[]"."attributes[])+ ")";
 	
 	// Datentypen	
 	Text 	::= "text";
@@ -78,18 +85,32 @@ RULES {
 	Date 	::= "date";
 	
 	// Operatoren
+	@SuppressWarnings
 	SmallerThan ::= "<=";	
+	@SuppressWarnings
 	Smaller ::= "<";
+	@SuppressWarnings
 	IsNot ::= "!=";
+	@SuppressWarnings
 	Equals ::= "==";
+	@SuppressWarnings
 	Greater ::= ">";
+	@SuppressWarnings
 	GreaterThan ::= ">=";
+	@SuppressWarnings
 	And ::= "and";
+	@SuppressWarnings
 	Or  ::= "or";
+	@SuppressWarnings
 	Add ::= "+";
+	@SuppressWarnings
 	Sub ::= "-";
+	@SuppressWarnings
 	Modulo ::= "%";
+	@SuppressWarnings
 	Div ::= "/";
+	@SuppressWarnings
 	Mul ::= "*";
+	@SuppressWarnings
 	UnaryNot ::="!";
 }
