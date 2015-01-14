@@ -9,7 +9,6 @@
 
 >>>>>>> 6e8d2da19183b770651b54c2c6ed3cac896b1e38
 # Package Files #
-*.jar
 *.war
 *.ear
 <<<<<<< HEAD
