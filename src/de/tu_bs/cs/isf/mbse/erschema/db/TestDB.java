@@ -1,4 +1,4 @@
-package de.tu_bs.cs.isf.mbse.erschema_branch.db;
+package de.tu_bs.cs.isf.mbse.erschema.db;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

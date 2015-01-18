@@ -5,6 +5,7 @@ START Model
 OPTIONS {
 	reloadGeneratorModel = "true";
 	generateCodeFromGeneratorModel = "true";
+	overrideBuilder = "false";
 }
 
 TOKENS {
@@ -57,7 +58,7 @@ TOKENSTYLES {
 
 RULES {
 
-	//erschema/Model   ::= "model"; 
+	Model   ::= "model"; 
 	// #1 //erschema/Model/name[] !1"{"!1 //erschema/Model/entities* //erschema/Model/relations* "}"!0;   
 	//@Foldable
 	//erschema/Entity ::= "entity"#1 //erschema/Element/name[] !1"{"!1 //erschema/Entity/keys+ //erschema/Entity/attributes* //erschema/Entity/compositions* //erschema/Entity/dummyConstraints* //erschema/Entity/constraints*"}"!0; 
