@@ -2,7 +2,9 @@
  */
 package de.tu_bs.cs.isf.mbse.erschema.impl;
 
+import de.tu_bs.cs.isf.mbse.erschema.Attribute;
 import de.tu_bs.cs.isf.mbse.erschema.Comparative;
+import de.tu_bs.cs.isf.mbse.erschema.Entity;
 import de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage;
 import de.tu_bs.cs.isf.mbse.erschema.Expression;
 import de.tu_bs.cs.isf.mbse.erschema.SimpleConstraint;
@@ -15,6 +17,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -27,6 +30,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link de.tu_bs.cs.isf.mbse.erschema.impl.SimpleConstraintImpl#getLeft <em>Left</em>}</li>
  *   <li>{@link de.tu_bs.cs.isf.mbse.erschema.impl.SimpleConstraintImpl#getCompare <em>Compare</em>}</li>
  *   <li>{@link de.tu_bs.cs.isf.mbse.erschema.impl.SimpleConstraintImpl#getRight <em>Right</em>}</li>
+ *   <li>{@link de.tu_bs.cs.isf.mbse.erschema.impl.SimpleConstraintImpl#getEntity <em>Entity</em>}</li>
+ *   <li>{@link de.tu_bs.cs.isf.mbse.erschema.impl.SimpleConstraintImpl#getAttributes <em>Attributes</em>}</li>
  *   <li>{@link de.tu_bs.cs.isf.mbse.erschema.impl.SimpleConstraintImpl#getExpression <em>Expression</em>}</li>
  * </ul>
  * </p>
@@ -63,6 +68,26 @@ public class SimpleConstraintImpl extends MinimalEObjectImpl.Container implement
 	 * @ordered
 	 */
 	protected Expression right;
+
+	/**
+	 * The cached value of the '{@link #getEntity() <em>Entity</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEntity()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Entity> entity;
+
+	/**
+	 * The cached value of the '{@link #getAttributes() <em>Attributes</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAttributes()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Attribute> attributes;
 
 	/**
 	 * The cached value of the '{@link #getExpression() <em>Expression</em>}' containment reference list.
@@ -196,6 +221,30 @@ public class SimpleConstraintImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<Entity> getEntity() {
+		if (entity == null) {
+			entity = new EObjectResolvingEList<Entity>(Entity.class, this, ErschemaPackage.SIMPLE_CONSTRAINT__ENTITY);
+		}
+		return entity;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Attribute> getAttributes() {
+		if (attributes == null) {
+			attributes = new EObjectResolvingEList<Attribute>(Attribute.class, this, ErschemaPackage.SIMPLE_CONSTRAINT__ATTRIBUTES);
+		}
+		return attributes;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EList<Expression> getExpression() {
 		if (expression == null) {
 			expression = new EObjectContainmentEList<Expression>(Expression.class, this, ErschemaPackage.SIMPLE_CONSTRAINT__EXPRESSION);
@@ -237,6 +286,10 @@ public class SimpleConstraintImpl extends MinimalEObjectImpl.Container implement
 				return getCompare();
 			case ErschemaPackage.SIMPLE_CONSTRAINT__RIGHT:
 				return getRight();
+			case ErschemaPackage.SIMPLE_CONSTRAINT__ENTITY:
+				return getEntity();
+			case ErschemaPackage.SIMPLE_CONSTRAINT__ATTRIBUTES:
+				return getAttributes();
 			case ErschemaPackage.SIMPLE_CONSTRAINT__EXPRESSION:
 				return getExpression();
 		}
@@ -261,6 +314,14 @@ public class SimpleConstraintImpl extends MinimalEObjectImpl.Container implement
 				return;
 			case ErschemaPackage.SIMPLE_CONSTRAINT__RIGHT:
 				setRight((Expression)newValue);
+				return;
+			case ErschemaPackage.SIMPLE_CONSTRAINT__ENTITY:
+				getEntity().clear();
+				getEntity().addAll((Collection<? extends Entity>)newValue);
+				return;
+			case ErschemaPackage.SIMPLE_CONSTRAINT__ATTRIBUTES:
+				getAttributes().clear();
+				getAttributes().addAll((Collection<? extends Attribute>)newValue);
 				return;
 			case ErschemaPackage.SIMPLE_CONSTRAINT__EXPRESSION:
 				getExpression().clear();
@@ -287,6 +348,12 @@ public class SimpleConstraintImpl extends MinimalEObjectImpl.Container implement
 			case ErschemaPackage.SIMPLE_CONSTRAINT__RIGHT:
 				setRight((Expression)null);
 				return;
+			case ErschemaPackage.SIMPLE_CONSTRAINT__ENTITY:
+				getEntity().clear();
+				return;
+			case ErschemaPackage.SIMPLE_CONSTRAINT__ATTRIBUTES:
+				getAttributes().clear();
+				return;
 			case ErschemaPackage.SIMPLE_CONSTRAINT__EXPRESSION:
 				getExpression().clear();
 				return;
@@ -308,6 +375,10 @@ public class SimpleConstraintImpl extends MinimalEObjectImpl.Container implement
 				return compare != null && !compare.isEmpty();
 			case ErschemaPackage.SIMPLE_CONSTRAINT__RIGHT:
 				return right != null;
+			case ErschemaPackage.SIMPLE_CONSTRAINT__ENTITY:
+				return entity != null && !entity.isEmpty();
+			case ErschemaPackage.SIMPLE_CONSTRAINT__ATTRIBUTES:
+				return attributes != null && !attributes.isEmpty();
 			case ErschemaPackage.SIMPLE_CONSTRAINT__EXPRESSION:
 				return expression != null && !expression.isEmpty();
 		}

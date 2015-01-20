@@ -34,7 +34,7 @@ public interface Role extends Element {
 	 * @return the value of the '<em>Lower Bound</em>' attribute.
 	 * @see #setLowerBound(char)
 	 * @see de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage#getRole_LowerBound()
-	 * @model default="\'0\'" required="true"
+	 * @model default="\'0\'"
 	 * @generated
 	 */
 	char getLowerBound();
@@ -61,7 +61,7 @@ public interface Role extends Element {
 	 * @return the value of the '<em>Upper Bound</em>' attribute.
 	 * @see #setUpperBound(char)
 	 * @see de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage#getRole_UpperBound()
-	 * @model default="\'1\'" required="true"
+	 * @model default="\'1\'"
 	 * @generated
 	 */
 	char getUpperBound();

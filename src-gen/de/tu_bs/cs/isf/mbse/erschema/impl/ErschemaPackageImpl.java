@@ -538,6 +538,15 @@ public class ErschemaPackageImpl extends EPackageImpl implements ErschemaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getAttribute_Type() {
+		return (EReference)attributeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getElement() {
 		return elementEClass;
 	}
@@ -691,8 +700,26 @@ public class ErschemaPackageImpl extends EPackageImpl implements ErschemaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSimpleConstraint_Expression() {
+	public EReference getSimpleConstraint_Entity() {
 		return (EReference)simpleConstraintEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getSimpleConstraint_Attributes() {
+		return (EReference)simpleConstraintEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getSimpleConstraint_Expression() {
+		return (EReference)simpleConstraintEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -1132,6 +1159,7 @@ public class ErschemaPackageImpl extends EPackageImpl implements ErschemaPackage
 		createEReference(entityEClass, ENTITY__KEYS);
 
 		attributeEClass = createEClass(ATTRIBUTE);
+		createEReference(attributeEClass, ATTRIBUTE__TYPE);
 
 		elementEClass = createEClass(ELEMENT);
 		createEAttribute(elementEClass, ELEMENT__NAME);
@@ -1154,6 +1182,8 @@ public class ErschemaPackageImpl extends EPackageImpl implements ErschemaPackage
 		createEReference(simpleConstraintEClass, SIMPLE_CONSTRAINT__LEFT);
 		createEReference(simpleConstraintEClass, SIMPLE_CONSTRAINT__COMPARE);
 		createEReference(simpleConstraintEClass, SIMPLE_CONSTRAINT__RIGHT);
+		createEReference(simpleConstraintEClass, SIMPLE_CONSTRAINT__ENTITY);
+		createEReference(simpleConstraintEClass, SIMPLE_CONSTRAINT__ATTRIBUTES);
 		createEReference(simpleConstraintEClass, SIMPLE_CONSTRAINT__EXPRESSION);
 
 		dummyConstraintEClass = createEClass(DUMMY_CONSTRAINT);
@@ -1317,6 +1347,7 @@ public class ErschemaPackageImpl extends EPackageImpl implements ErschemaPackage
 		initEReference(getEntity_Keys(), this.getKeyValue(), null, "keys", null, 1, -1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(attributeEClass, Attribute.class, "Attribute", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getAttribute_Type(), this.getDatatype(), null, "type", null, 1, 1, Attribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(elementEClass, Element.class, "Element", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getElement_Name(), ecorePackage.getEString(), "name", null, 1, 1, Element.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1328,8 +1359,8 @@ public class ErschemaPackageImpl extends EPackageImpl implements ErschemaPackage
 		initEReference(getRelation_DummyConstraints(), this.getDummyConstraint(), null, "dummyConstraints", null, 0, -1, Relation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(roleEClass, Role.class, "Role", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getRole_LowerBound(), ecorePackage.getEChar(), "lowerBound", "\'0\'", 1, 1, Role.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getRole_UpperBound(), ecorePackage.getEChar(), "upperBound", "\'1\'", 1, 1, Role.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRole_LowerBound(), ecorePackage.getEChar(), "lowerBound", "\'0\'", 0, 1, Role.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRole_UpperBound(), ecorePackage.getEChar(), "upperBound", "\'1\'", 0, 1, Role.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getRole_Entity(), this.getEntity(), null, "entity", null, 1, 1, Role.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(compositionEClass, Composition.class, "Composition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1339,6 +1370,8 @@ public class ErschemaPackageImpl extends EPackageImpl implements ErschemaPackage
 		initEReference(getSimpleConstraint_Left(), this.getExpression(), null, "left", null, 0, 1, SimpleConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSimpleConstraint_Compare(), this.getComparative(), null, "compare", null, 1, -1, SimpleConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSimpleConstraint_Right(), this.getExpression(), null, "right", null, 1, 1, SimpleConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSimpleConstraint_Entity(), this.getEntity(), null, "entity", null, 2, -1, SimpleConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSimpleConstraint_Attributes(), this.getAttribute(), null, "attributes", null, 2, -1, SimpleConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSimpleConstraint_Expression(), this.getExpression(), null, "expression", null, 0, -1, SimpleConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(dummyConstraintEClass, DummyConstraint.class, "DummyConstraint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

@@ -58,57 +58,56 @@ TOKENSTYLES {
 
 RULES {
 
-	Model   ::= "model"; 
-	// #1 //erschema/Model/name[] !1"{"!1 //erschema/Model/entities* //erschema/Model/relations* "}"!0;   
+	Model  ::= "model" #1 name[] !1"{"!1 entities* relations* "}"!0;   
 	//@Foldable
-	//erschema/Entity ::= "entity"#1 //erschema/Element/name[] !1"{"!1 //erschema/Entity/keys+ //erschema/Entity/attributes* //erschema/Entity/compositions* //erschema/Entity/dummyConstraints* //erschema/Entity/constraints*"}"!0; 
+	Entity ::= "entity"#1 name[] !1"{"!1 keys+ attributes* compositions* dummyConstraints* constraints*"}"!0; 
 	
 	//@Foldable
-	//erschema/Relation ::= "relation"#1 //erschema/Element/name[] !0"{" !1 //erschema/Relation/attributes* //erschema/Relation/roles(//erschema/Relation/roles+) //erschema/Relation/dummyConstraints* "}"!0;	
-	//erschema/Composition ::= "composition"#1//erschema/Element/name[] "{"//erschema/Composition/attributes(//erschema/Composition/attributes+)"}"!0;
-	//erschema/Attribute ::= "val"#1//erschema/Element/name[] ":" //erschema/Attribute/type!0;
+	Relation ::= "relation"#1 name[] !0"{" !1 attributes* roles(roles+) dummyConstraints* constraints* "}"!0;	
+	Composition ::= "composition"#1name[] "{"attributes(attributes+)"}"!0;
+	Attribute ::= "val"#1name[] ":" type!0;
 	
-	//erschema/KeyValue::="key"#1(//erschema/KeyValue/composition|//erschema/KeyValue/attribute)|(//erschema/KeyValue/attribute|//erschema/KeyValue/composition);
-	//erschema/Role ::= "role"#1//erschema/Element/name[] "references" //erschema/Role/entity[] "[" //erschema/Role/lowerBound[] "," //erschema/Role/upperBound[] "]"!0;
+	KeyValue::="key"#1(composition|attribute)|(attribute|composition);
+	Role ::= "role"#1name[] "references" entity[] ("[" lowerBound[BOUNDS] "," upperBound[BOUNDS] "]")? !0;
 
-	//erschema/DummyConstraint  ::= "constraint" "(" //erschema/DummyConstraint/constraint[] ")";
+	DummyConstraint  ::= "constraint" "(" constraint[] ")";
 	
-	//erschema/SimpleConstraint ::= "check" "(" //erschema/SimpleConstraint/entity[]"."//erschema/SimpleConstraint/attributes[] (//erschema/SimpleConstraint/entity[]"."//erschema/SimpleConstraint/attributes[])*  //erschema/SimpleConstraint/compare+ (//erschema/SimpleConstraint/entity[]"."//erschema/SimpleConstraint/attributes[])+ ")";
+	SimpleConstraint ::= "check" "(" entity[]"."attributes[] (entity[]"."attributes[])*  compare+ (entity[]"."attributes[])+ ")";
 	
 	// Datentypen	
-	//erschema/Text 	::= "text";
-	//erschema/String 	::= "string";
-	//erschema/Boolean ::= "bool";
-	//erschema/Integer ::= "int";
-	//erschema/Double 	::= "double";	
-	//erschema/Date 	::= "date";
+	Text 	::= "text";
+	String 	::= "string";
+	Boolean ::= "bool";
+	Integer ::= "int";
+	Double 	::= "double";	
+	Date 	::= "date";
 	
 	// Operatoren	
-	//erschema/SmallerThan ::= "<=";	
+	SmallerThan ::= "<=";	
 	
-	//erschema/Smaller ::= "<";
+	Smaller ::= "<";
 	
-	//erschema/IsNot ::= "!=";
+	IsNot ::= "!=";
 	
-	//erschema/Equals ::= "==";
+	Equals ::= "==";
 	
-	//erschema/Greater ::= ">";
+	Greater ::= ">";
 	
-	//erschema/GreaterThan ::= ">=";
+	GreaterThan ::= ">=";
 	
-	//erschema/And ::= "and";
+	And ::= "and";
 	
-	//erschema/Or  ::= "or";
+	Or  ::= "or";
 	
-	//erschema/UnaryNot ::="not";
+	UnaryNot ::="not";
 	
-	//erschema/Add ::= "+";
+	Add ::= "+";
 	
-	//erschema/Sub ::= "-";
+	Sub ::= "-";
 	
-	//erschema/Modulo ::= "%";
+	Modulo ::= "%";
 	
-	//erschema/Div ::= "/";
+	Div ::= "/";
 	
-	//erschema/Mul ::= "*";	
+	Mul ::= "*";	
 }

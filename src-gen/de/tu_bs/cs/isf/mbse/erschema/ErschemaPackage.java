@@ -253,13 +253,22 @@ public interface ErschemaPackage extends EPackage {
 	int ATTRIBUTE__NAME = ELEMENT__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Type</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATTRIBUTE__TYPE = ELEMENT_FEATURE_COUNT + 0;
+
+	/**
 	 * The number of structural features of the '<em>Attribute</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ATTRIBUTE_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 0;
+	int ATTRIBUTE_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Attribute</em>' class.
@@ -491,13 +500,31 @@ public interface ErschemaPackage extends EPackage {
 	int SIMPLE_CONSTRAINT__RIGHT = 2;
 
 	/**
+	 * The feature id for the '<em><b>Entity</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_CONSTRAINT__ENTITY = 3;
+
+	/**
+	 * The feature id for the '<em><b>Attributes</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_CONSTRAINT__ATTRIBUTES = 4;
+
+	/**
 	 * The feature id for the '<em><b>Expression</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_CONSTRAINT__EXPRESSION = 3;
+	int SIMPLE_CONSTRAINT__EXPRESSION = 5;
 
 	/**
 	 * The number of structural features of the '<em>Simple Constraint</em>' class.
@@ -506,7 +533,7 @@ public interface ErschemaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_CONSTRAINT_FEATURE_COUNT = 4;
+	int SIMPLE_CONSTRAINT_FEATURE_COUNT = 6;
 
 	/**
 	 * The number of operations of the '<em>Simple Constraint</em>' class.
@@ -2114,6 +2141,17 @@ public interface ErschemaPackage extends EPackage {
 	EClass getAttribute();
 
 	/**
+	 * Returns the meta object for the containment reference '{@link de.tu_bs.cs.isf.mbse.erschema.Attribute#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Type</em>'.
+	 * @see de.tu_bs.cs.isf.mbse.erschema.Attribute#getType()
+	 * @see #getAttribute()
+	 * @generated
+	 */
+	EReference getAttribute_Type();
+
+	/**
 	 * Returns the meta object for class '{@link de.tu_bs.cs.isf.mbse.erschema.Element <em>Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2294,6 +2332,28 @@ public interface ErschemaPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getSimpleConstraint_Right();
+
+	/**
+	 * Returns the meta object for the reference list '{@link de.tu_bs.cs.isf.mbse.erschema.SimpleConstraint#getEntity <em>Entity</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Entity</em>'.
+	 * @see de.tu_bs.cs.isf.mbse.erschema.SimpleConstraint#getEntity()
+	 * @see #getSimpleConstraint()
+	 * @generated
+	 */
+	EReference getSimpleConstraint_Entity();
+
+	/**
+	 * Returns the meta object for the reference list '{@link de.tu_bs.cs.isf.mbse.erschema.SimpleConstraint#getAttributes <em>Attributes</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Attributes</em>'.
+	 * @see de.tu_bs.cs.isf.mbse.erschema.SimpleConstraint#getAttributes()
+	 * @see #getSimpleConstraint()
+	 * @generated
+	 */
+	EReference getSimpleConstraint_Attributes();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link de.tu_bs.cs.isf.mbse.erschema.SimpleConstraint#getExpression <em>Expression</em>}'.
@@ -2871,6 +2931,14 @@ public interface ErschemaPackage extends EPackage {
 		EClass ATTRIBUTE = eINSTANCE.getAttribute();
 
 		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ATTRIBUTE__TYPE = eINSTANCE.getAttribute_Type();
+
+		/**
 		 * The meta object literal for the '{@link de.tu_bs.cs.isf.mbse.erschema.impl.ElementImpl <em>Element</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3015,6 +3083,22 @@ public interface ErschemaPackage extends EPackage {
 		 * @generated
 		 */
 		EReference SIMPLE_CONSTRAINT__RIGHT = eINSTANCE.getSimpleConstraint_Right();
+
+		/**
+		 * The meta object literal for the '<em><b>Entity</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SIMPLE_CONSTRAINT__ENTITY = eINSTANCE.getSimpleConstraint_Entity();
+
+		/**
+		 * The meta object literal for the '<em><b>Attributes</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SIMPLE_CONSTRAINT__ATTRIBUTES = eINSTANCE.getSimpleConstraint_Attributes();
 
 		/**
 		 * The meta object literal for the '<em><b>Expression</b></em>' containment reference list feature.
