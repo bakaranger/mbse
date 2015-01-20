@@ -473,31 +473,13 @@ public interface ErschemaPackage extends EPackage {
 	int SIMPLE_CONSTRAINT = 7;
 
 	/**
-	 * The feature id for the '<em><b>Left</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_CONSTRAINT__LEFT = 0;
-
-	/**
 	 * The feature id for the '<em><b>Compare</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_CONSTRAINT__COMPARE = 1;
-
-	/**
-	 * The feature id for the '<em><b>Right</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_CONSTRAINT__RIGHT = 2;
+	int SIMPLE_CONSTRAINT__COMPARE = 0;
 
 	/**
 	 * The feature id for the '<em><b>Entity</b></em>' reference list.
@@ -506,7 +488,7 @@ public interface ErschemaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_CONSTRAINT__ENTITY = 3;
+	int SIMPLE_CONSTRAINT__ENTITY = 1;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' reference list.
@@ -515,16 +497,34 @@ public interface ErschemaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_CONSTRAINT__ATTRIBUTES = 4;
+	int SIMPLE_CONSTRAINT__ATTRIBUTES = 2;
 
 	/**
-	 * The feature id for the '<em><b>Expression</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Connect</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_CONSTRAINT__EXPRESSION = 5;
+	int SIMPLE_CONSTRAINT__CONNECT = 3;
+
+	/**
+	 * The feature id for the '<em><b>Stringop</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_CONSTRAINT__STRINGOP = 4;
+
+	/**
+	 * The feature id for the '<em><b>Arithmeticop</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_CONSTRAINT__ARITHMETICOP = 5;
 
 	/**
 	 * The number of structural features of the '<em>Simple Constraint</em>' class.
@@ -880,43 +880,6 @@ public interface ErschemaPackage extends EPackage {
 	int DATE_OPERATION_COUNT = DATATYPE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link de.tu_bs.cs.isf.mbse.erschema.impl.ExpressionImpl <em>Expression</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ExpressionImpl
-	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getExpression()
-	 * @generated
-	 */
-	int EXPRESSION = 19;
-
-	/**
-	 * The feature id for the '<em><b>Operators</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXPRESSION__OPERATORS = 0;
-
-	/**
-	 * The number of structural features of the '<em>Expression</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXPRESSION_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>Expression</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXPRESSION_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link de.tu_bs.cs.isf.mbse.erschema.impl.OperatorImpl <em>Operator</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -924,25 +887,25 @@ public interface ErschemaPackage extends EPackage {
 	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getOperator()
 	 * @generated
 	 */
-	int OPERATOR = 42;
+	int OPERATOR = 41;
 
 	/**
-	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Attribute</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATOR__ATTRIBUTES = 0;
+	int OPERATOR__ATTRIBUTE = 0;
 
 	/**
-	 * The feature id for the '<em><b>Literals</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Entity</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATOR__LITERALS = 1;
+	int OPERATOR__ENTITY = 1;
 
 	/**
 	 * The number of structural features of the '<em>Operator</em>' class.
@@ -970,25 +933,25 @@ public interface ErschemaPackage extends EPackage {
 	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getArithmeticOperator()
 	 * @generated
 	 */
-	int ARITHMETIC_OPERATOR = 20;
+	int ARITHMETIC_OPERATOR = 19;
 
 	/**
-	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Attribute</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ARITHMETIC_OPERATOR__ATTRIBUTES = OPERATOR__ATTRIBUTES;
+	int ARITHMETIC_OPERATOR__ATTRIBUTE = OPERATOR__ATTRIBUTE;
 
 	/**
-	 * The feature id for the '<em><b>Literals</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Entity</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ARITHMETIC_OPERATOR__LITERALS = OPERATOR__LITERALS;
+	int ARITHMETIC_OPERATOR__ENTITY = OPERATOR__ENTITY;
 
 	/**
 	 * The number of structural features of the '<em>Arithmetic Operator</em>' class.
@@ -1016,25 +979,25 @@ public interface ErschemaPackage extends EPackage {
 	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getLogicalOperator()
 	 * @generated
 	 */
-	int LOGICAL_OPERATOR = 21;
+	int LOGICAL_OPERATOR = 20;
 
 	/**
-	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Attribute</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOGICAL_OPERATOR__ATTRIBUTES = OPERATOR__ATTRIBUTES;
+	int LOGICAL_OPERATOR__ATTRIBUTE = OPERATOR__ATTRIBUTE;
 
 	/**
-	 * The feature id for the '<em><b>Literals</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Entity</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOGICAL_OPERATOR__LITERALS = OPERATOR__LITERALS;
+	int LOGICAL_OPERATOR__ENTITY = OPERATOR__ENTITY;
 
 	/**
 	 * The number of structural features of the '<em>Logical Operator</em>' class.
@@ -1062,25 +1025,25 @@ public interface ErschemaPackage extends EPackage {
 	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getComparative()
 	 * @generated
 	 */
-	int COMPARATIVE = 28;
+	int COMPARATIVE = 27;
 
 	/**
-	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Attribute</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPARATIVE__ATTRIBUTES = LOGICAL_OPERATOR__ATTRIBUTES;
+	int COMPARATIVE__ATTRIBUTE = LOGICAL_OPERATOR__ATTRIBUTE;
 
 	/**
-	 * The feature id for the '<em><b>Literals</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Entity</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPARATIVE__LITERALS = LOGICAL_OPERATOR__LITERALS;
+	int COMPARATIVE__ENTITY = LOGICAL_OPERATOR__ENTITY;
 
 	/**
 	 * The number of structural features of the '<em>Comparative</em>' class.
@@ -1108,25 +1071,43 @@ public interface ErschemaPackage extends EPackage {
 	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getIsNot()
 	 * @generated
 	 */
-	int IS_NOT = 22;
+	int IS_NOT = 21;
 
 	/**
-	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Attribute</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IS_NOT__ATTRIBUTES = COMPARATIVE__ATTRIBUTES;
+	int IS_NOT__ATTRIBUTE = COMPARATIVE__ATTRIBUTE;
 
 	/**
-	 * The feature id for the '<em><b>Literals</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Entity</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IS_NOT__LITERALS = COMPARATIVE__LITERALS;
+	int IS_NOT__ENTITY = COMPARATIVE__ENTITY;
+
+	/**
+	 * The feature id for the '<em><b>Value Int</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IS_NOT__VALUE_INT = COMPARATIVE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IS_NOT__VALUE = COMPARATIVE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Is Not</em>' class.
@@ -1135,7 +1116,7 @@ public interface ErschemaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IS_NOT_FEATURE_COUNT = COMPARATIVE_FEATURE_COUNT + 0;
+	int IS_NOT_FEATURE_COUNT = COMPARATIVE_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Is Not</em>' class.
@@ -1154,25 +1135,43 @@ public interface ErschemaPackage extends EPackage {
 	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getEquals()
 	 * @generated
 	 */
-	int EQUALS = 23;
+	int EQUALS = 22;
 
 	/**
-	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Attribute</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EQUALS__ATTRIBUTES = COMPARATIVE__ATTRIBUTES;
+	int EQUALS__ATTRIBUTE = COMPARATIVE__ATTRIBUTE;
 
 	/**
-	 * The feature id for the '<em><b>Literals</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Entity</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EQUALS__LITERALS = COMPARATIVE__LITERALS;
+	int EQUALS__ENTITY = COMPARATIVE__ENTITY;
+
+	/**
+	 * The feature id for the '<em><b>Value Int</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EQUALS__VALUE_INT = COMPARATIVE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EQUALS__VALUE = COMPARATIVE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Equals</em>' class.
@@ -1181,7 +1180,7 @@ public interface ErschemaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EQUALS_FEATURE_COUNT = COMPARATIVE_FEATURE_COUNT + 0;
+	int EQUALS_FEATURE_COUNT = COMPARATIVE_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Equals</em>' class.
@@ -1200,25 +1199,34 @@ public interface ErschemaPackage extends EPackage {
 	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getAdd()
 	 * @generated
 	 */
-	int ADD = 24;
+	int ADD = 23;
 
 	/**
-	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Attribute</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ADD__ATTRIBUTES = ARITHMETIC_OPERATOR__ATTRIBUTES;
+	int ADD__ATTRIBUTE = ARITHMETIC_OPERATOR__ATTRIBUTE;
 
 	/**
-	 * The feature id for the '<em><b>Literals</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Entity</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ADD__LITERALS = ARITHMETIC_OPERATOR__LITERALS;
+	int ADD__ENTITY = ARITHMETIC_OPERATOR__ENTITY;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADD__VALUE = ARITHMETIC_OPERATOR_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Add</em>' class.
@@ -1227,7 +1235,7 @@ public interface ErschemaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ADD_FEATURE_COUNT = ARITHMETIC_OPERATOR_FEATURE_COUNT + 0;
+	int ADD_FEATURE_COUNT = ARITHMETIC_OPERATOR_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Add</em>' class.
@@ -1246,25 +1254,34 @@ public interface ErschemaPackage extends EPackage {
 	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getMul()
 	 * @generated
 	 */
-	int MUL = 25;
+	int MUL = 24;
 
 	/**
-	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Attribute</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MUL__ATTRIBUTES = ARITHMETIC_OPERATOR__ATTRIBUTES;
+	int MUL__ATTRIBUTE = ARITHMETIC_OPERATOR__ATTRIBUTE;
 
 	/**
-	 * The feature id for the '<em><b>Literals</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Entity</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MUL__LITERALS = ARITHMETIC_OPERATOR__LITERALS;
+	int MUL__ENTITY = ARITHMETIC_OPERATOR__ENTITY;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MUL__VALUE = ARITHMETIC_OPERATOR_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Mul</em>' class.
@@ -1273,7 +1290,7 @@ public interface ErschemaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MUL_FEATURE_COUNT = ARITHMETIC_OPERATOR_FEATURE_COUNT + 0;
+	int MUL_FEATURE_COUNT = ARITHMETIC_OPERATOR_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Mul</em>' class.
@@ -1292,25 +1309,34 @@ public interface ErschemaPackage extends EPackage {
 	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getSub()
 	 * @generated
 	 */
-	int SUB = 26;
+	int SUB = 25;
 
 	/**
-	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Attribute</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SUB__ATTRIBUTES = ARITHMETIC_OPERATOR__ATTRIBUTES;
+	int SUB__ATTRIBUTE = ARITHMETIC_OPERATOR__ATTRIBUTE;
 
 	/**
-	 * The feature id for the '<em><b>Literals</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Entity</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SUB__LITERALS = ARITHMETIC_OPERATOR__LITERALS;
+	int SUB__ENTITY = ARITHMETIC_OPERATOR__ENTITY;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUB__VALUE = ARITHMETIC_OPERATOR_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Sub</em>' class.
@@ -1319,7 +1345,7 @@ public interface ErschemaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SUB_FEATURE_COUNT = ARITHMETIC_OPERATOR_FEATURE_COUNT + 0;
+	int SUB_FEATURE_COUNT = ARITHMETIC_OPERATOR_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Sub</em>' class.
@@ -1338,25 +1364,34 @@ public interface ErschemaPackage extends EPackage {
 	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getDiv()
 	 * @generated
 	 */
-	int DIV = 27;
+	int DIV = 26;
 
 	/**
-	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Attribute</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DIV__ATTRIBUTES = ARITHMETIC_OPERATOR__ATTRIBUTES;
+	int DIV__ATTRIBUTE = ARITHMETIC_OPERATOR__ATTRIBUTE;
 
 	/**
-	 * The feature id for the '<em><b>Literals</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Entity</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DIV__LITERALS = ARITHMETIC_OPERATOR__LITERALS;
+	int DIV__ENTITY = ARITHMETIC_OPERATOR__ENTITY;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DIV__VALUE = ARITHMETIC_OPERATOR_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Div</em>' class.
@@ -1365,7 +1400,7 @@ public interface ErschemaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DIV_FEATURE_COUNT = ARITHMETIC_OPERATOR_FEATURE_COUNT + 0;
+	int DIV_FEATURE_COUNT = ARITHMETIC_OPERATOR_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Div</em>' class.
@@ -1384,25 +1419,25 @@ public interface ErschemaPackage extends EPackage {
 	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getConnective()
 	 * @generated
 	 */
-	int CONNECTIVE = 29;
+	int CONNECTIVE = 28;
 
 	/**
-	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Attribute</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTIVE__ATTRIBUTES = LOGICAL_OPERATOR__ATTRIBUTES;
+	int CONNECTIVE__ATTRIBUTE = LOGICAL_OPERATOR__ATTRIBUTE;
 
 	/**
-	 * The feature id for the '<em><b>Literals</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Entity</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTIVE__LITERALS = LOGICAL_OPERATOR__LITERALS;
+	int CONNECTIVE__ENTITY = LOGICAL_OPERATOR__ENTITY;
 
 	/**
 	 * The number of structural features of the '<em>Connective</em>' class.
@@ -1430,25 +1465,25 @@ public interface ErschemaPackage extends EPackage {
 	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getAnd()
 	 * @generated
 	 */
-	int AND = 30;
+	int AND = 29;
 
 	/**
-	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Attribute</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int AND__ATTRIBUTES = CONNECTIVE__ATTRIBUTES;
+	int AND__ATTRIBUTE = CONNECTIVE__ATTRIBUTE;
 
 	/**
-	 * The feature id for the '<em><b>Literals</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Entity</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int AND__LITERALS = CONNECTIVE__LITERALS;
+	int AND__ENTITY = CONNECTIVE__ENTITY;
 
 	/**
 	 * The number of structural features of the '<em>And</em>' class.
@@ -1476,25 +1511,25 @@ public interface ErschemaPackage extends EPackage {
 	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getOr()
 	 * @generated
 	 */
-	int OR = 31;
+	int OR = 30;
 
 	/**
-	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Attribute</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OR__ATTRIBUTES = CONNECTIVE__ATTRIBUTES;
+	int OR__ATTRIBUTE = CONNECTIVE__ATTRIBUTE;
 
 	/**
-	 * The feature id for the '<em><b>Literals</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Entity</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OR__LITERALS = CONNECTIVE__LITERALS;
+	int OR__ENTITY = CONNECTIVE__ENTITY;
 
 	/**
 	 * The number of structural features of the '<em>Or</em>' class.
@@ -1522,25 +1557,34 @@ public interface ErschemaPackage extends EPackage {
 	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getModulo()
 	 * @generated
 	 */
-	int MODULO = 32;
+	int MODULO = 31;
 
 	/**
-	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Attribute</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MODULO__ATTRIBUTES = ARITHMETIC_OPERATOR__ATTRIBUTES;
+	int MODULO__ATTRIBUTE = ARITHMETIC_OPERATOR__ATTRIBUTE;
 
 	/**
-	 * The feature id for the '<em><b>Literals</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Entity</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MODULO__LITERALS = ARITHMETIC_OPERATOR__LITERALS;
+	int MODULO__ENTITY = ARITHMETIC_OPERATOR__ENTITY;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODULO__VALUE = ARITHMETIC_OPERATOR_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Modulo</em>' class.
@@ -1549,7 +1593,7 @@ public interface ErschemaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULO_FEATURE_COUNT = ARITHMETIC_OPERATOR_FEATURE_COUNT + 0;
+	int MODULO_FEATURE_COUNT = ARITHMETIC_OPERATOR_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Modulo</em>' class.
@@ -1568,25 +1612,34 @@ public interface ErschemaPackage extends EPackage {
 	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getGreaterThan()
 	 * @generated
 	 */
-	int GREATER_THAN = 33;
+	int GREATER_THAN = 32;
 
 	/**
-	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Attribute</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GREATER_THAN__ATTRIBUTES = COMPARATIVE__ATTRIBUTES;
+	int GREATER_THAN__ATTRIBUTE = COMPARATIVE__ATTRIBUTE;
 
 	/**
-	 * The feature id for the '<em><b>Literals</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Entity</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GREATER_THAN__LITERALS = COMPARATIVE__LITERALS;
+	int GREATER_THAN__ENTITY = COMPARATIVE__ENTITY;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GREATER_THAN__VALUE = COMPARATIVE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Greater Than</em>' class.
@@ -1595,7 +1648,7 @@ public interface ErschemaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GREATER_THAN_FEATURE_COUNT = COMPARATIVE_FEATURE_COUNT + 0;
+	int GREATER_THAN_FEATURE_COUNT = COMPARATIVE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Greater Than</em>' class.
@@ -1614,25 +1667,34 @@ public interface ErschemaPackage extends EPackage {
 	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getSmaller()
 	 * @generated
 	 */
-	int SMALLER = 34;
+	int SMALLER = 33;
 
 	/**
-	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Attribute</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SMALLER__ATTRIBUTES = COMPARATIVE__ATTRIBUTES;
+	int SMALLER__ATTRIBUTE = COMPARATIVE__ATTRIBUTE;
 
 	/**
-	 * The feature id for the '<em><b>Literals</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Entity</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SMALLER__LITERALS = COMPARATIVE__LITERALS;
+	int SMALLER__ENTITY = COMPARATIVE__ENTITY;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SMALLER__VALUE = COMPARATIVE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Smaller</em>' class.
@@ -1641,7 +1703,7 @@ public interface ErschemaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SMALLER_FEATURE_COUNT = COMPARATIVE_FEATURE_COUNT + 0;
+	int SMALLER_FEATURE_COUNT = COMPARATIVE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Smaller</em>' class.
@@ -1660,25 +1722,34 @@ public interface ErschemaPackage extends EPackage {
 	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getSmallerThan()
 	 * @generated
 	 */
-	int SMALLER_THAN = 35;
+	int SMALLER_THAN = 34;
 
 	/**
-	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Attribute</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SMALLER_THAN__ATTRIBUTES = COMPARATIVE__ATTRIBUTES;
+	int SMALLER_THAN__ATTRIBUTE = COMPARATIVE__ATTRIBUTE;
 
 	/**
-	 * The feature id for the '<em><b>Literals</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Entity</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SMALLER_THAN__LITERALS = COMPARATIVE__LITERALS;
+	int SMALLER_THAN__ENTITY = COMPARATIVE__ENTITY;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SMALLER_THAN__VALUE = COMPARATIVE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Smaller Than</em>' class.
@@ -1687,7 +1758,7 @@ public interface ErschemaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SMALLER_THAN_FEATURE_COUNT = COMPARATIVE_FEATURE_COUNT + 0;
+	int SMALLER_THAN_FEATURE_COUNT = COMPARATIVE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Smaller Than</em>' class.
@@ -1706,25 +1777,34 @@ public interface ErschemaPackage extends EPackage {
 	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getGreater()
 	 * @generated
 	 */
-	int GREATER = 36;
+	int GREATER = 35;
 
 	/**
-	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Attribute</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GREATER__ATTRIBUTES = COMPARATIVE__ATTRIBUTES;
+	int GREATER__ATTRIBUTE = COMPARATIVE__ATTRIBUTE;
 
 	/**
-	 * The feature id for the '<em><b>Literals</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Entity</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GREATER__LITERALS = COMPARATIVE__LITERALS;
+	int GREATER__ENTITY = COMPARATIVE__ENTITY;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GREATER__VALUE = COMPARATIVE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Greater</em>' class.
@@ -1733,7 +1813,7 @@ public interface ErschemaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GREATER_FEATURE_COUNT = COMPARATIVE_FEATURE_COUNT + 0;
+	int GREATER_FEATURE_COUNT = COMPARATIVE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Greater</em>' class.
@@ -1752,25 +1832,25 @@ public interface ErschemaPackage extends EPackage {
 	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getStringOperator()
 	 * @generated
 	 */
-	int STRING_OPERATOR = 37;
+	int STRING_OPERATOR = 36;
 
 	/**
-	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Attribute</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STRING_OPERATOR__ATTRIBUTES = OPERATOR__ATTRIBUTES;
+	int STRING_OPERATOR__ATTRIBUTE = OPERATOR__ATTRIBUTE;
 
 	/**
-	 * The feature id for the '<em><b>Literals</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Entity</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STRING_OPERATOR__LITERALS = OPERATOR__LITERALS;
+	int STRING_OPERATOR__ENTITY = OPERATOR__ENTITY;
 
 	/**
 	 * The number of structural features of the '<em>String Operator</em>' class.
@@ -1798,25 +1878,34 @@ public interface ErschemaPackage extends EPackage {
 	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getLike()
 	 * @generated
 	 */
-	int LIKE = 38;
+	int LIKE = 37;
 
 	/**
-	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Attribute</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LIKE__ATTRIBUTES = STRING_OPERATOR__ATTRIBUTES;
+	int LIKE__ATTRIBUTE = STRING_OPERATOR__ATTRIBUTE;
 
 	/**
-	 * The feature id for the '<em><b>Literals</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Entity</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LIKE__LITERALS = STRING_OPERATOR__LITERALS;
+	int LIKE__ENTITY = STRING_OPERATOR__ENTITY;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIKE__VALUE = STRING_OPERATOR_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Like</em>' class.
@@ -1825,7 +1914,7 @@ public interface ErschemaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LIKE_FEATURE_COUNT = STRING_OPERATOR_FEATURE_COUNT + 0;
+	int LIKE_FEATURE_COUNT = STRING_OPERATOR_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Like</em>' class.
@@ -1844,25 +1933,34 @@ public interface ErschemaPackage extends EPackage {
 	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getLength()
 	 * @generated
 	 */
-	int LENGTH = 39;
+	int LENGTH = 38;
 
 	/**
-	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Attribute</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LENGTH__ATTRIBUTES = STRING_OPERATOR__ATTRIBUTES;
+	int LENGTH__ATTRIBUTE = STRING_OPERATOR__ATTRIBUTE;
 
 	/**
-	 * The feature id for the '<em><b>Literals</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Entity</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LENGTH__LITERALS = STRING_OPERATOR__LITERALS;
+	int LENGTH__ENTITY = STRING_OPERATOR__ENTITY;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LENGTH__VALUE = STRING_OPERATOR_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Length</em>' class.
@@ -1871,7 +1969,7 @@ public interface ErschemaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LENGTH_FEATURE_COUNT = STRING_OPERATOR_FEATURE_COUNT + 0;
+	int LENGTH_FEATURE_COUNT = STRING_OPERATOR_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Length</em>' class.
@@ -1890,25 +1988,34 @@ public interface ErschemaPackage extends EPackage {
 	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getConcat()
 	 * @generated
 	 */
-	int CONCAT = 40;
+	int CONCAT = 39;
 
 	/**
-	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Attribute</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONCAT__ATTRIBUTES = STRING_OPERATOR__ATTRIBUTES;
+	int CONCAT__ATTRIBUTE = STRING_OPERATOR__ATTRIBUTE;
 
 	/**
-	 * The feature id for the '<em><b>Literals</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Entity</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONCAT__LITERALS = STRING_OPERATOR__LITERALS;
+	int CONCAT__ENTITY = STRING_OPERATOR__ENTITY;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONCAT__VALUE = STRING_OPERATOR_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Concat</em>' class.
@@ -1917,7 +2024,7 @@ public interface ErschemaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONCAT_FEATURE_COUNT = STRING_OPERATOR_FEATURE_COUNT + 0;
+	int CONCAT_FEATURE_COUNT = STRING_OPERATOR_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Concat</em>' class.
@@ -1936,25 +2043,25 @@ public interface ErschemaPackage extends EPackage {
 	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getUnaryNot()
 	 * @generated
 	 */
-	int UNARY_NOT = 41;
+	int UNARY_NOT = 40;
 
 	/**
-	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Attribute</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UNARY_NOT__ATTRIBUTES = CONNECTIVE__ATTRIBUTES;
+	int UNARY_NOT__ATTRIBUTE = CONNECTIVE__ATTRIBUTE;
 
 	/**
-	 * The feature id for the '<em><b>Literals</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Entity</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UNARY_NOT__LITERALS = CONNECTIVE__LITERALS;
+	int UNARY_NOT__ENTITY = CONNECTIVE__ENTITY;
 
 	/**
 	 * The number of structural features of the '<em>Unary Not</em>' class.
@@ -1982,7 +2089,25 @@ public interface ErschemaPackage extends EPackage {
 	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getLiteral()
 	 * @generated
 	 */
-	int LITERAL = 43;
+	int LITERAL = 42;
+
+	/**
+	 * The feature id for the '<em><b>Attribute</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LITERAL__ATTRIBUTE = OPERATOR__ATTRIBUTE;
+
+	/**
+	 * The feature id for the '<em><b>Entity</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LITERAL__ENTITY = OPERATOR__ENTITY;
 
 	/**
 	 * The feature id for the '<em><b>Val</b></em>' attribute.
@@ -1991,7 +2116,7 @@ public interface ErschemaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LITERAL__VAL = 0;
+	int LITERAL__VAL = OPERATOR_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Literal</em>' class.
@@ -2000,7 +2125,7 @@ public interface ErschemaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LITERAL_FEATURE_COUNT = 1;
+	int LITERAL_FEATURE_COUNT = OPERATOR_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Literal</em>' class.
@@ -2009,7 +2134,7 @@ public interface ErschemaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LITERAL_OPERATION_COUNT = 0;
+	int LITERAL_OPERATION_COUNT = OPERATOR_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.tu_bs.cs.isf.mbse.erschema.Primitive <em>Primitive</em>}' enum.
@@ -2019,7 +2144,7 @@ public interface ErschemaPackage extends EPackage {
 	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getPrimitive()
 	 * @generated
 	 */
-	int PRIMITIVE = 44;
+	int PRIMITIVE = 43;
 
 
 	/**
@@ -2301,17 +2426,6 @@ public interface ErschemaPackage extends EPackage {
 	EClass getSimpleConstraint();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link de.tu_bs.cs.isf.mbse.erschema.SimpleConstraint#getLeft <em>Left</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Left</em>'.
-	 * @see de.tu_bs.cs.isf.mbse.erschema.SimpleConstraint#getLeft()
-	 * @see #getSimpleConstraint()
-	 * @generated
-	 */
-	EReference getSimpleConstraint_Left();
-
-	/**
 	 * Returns the meta object for the containment reference list '{@link de.tu_bs.cs.isf.mbse.erschema.SimpleConstraint#getCompare <em>Compare</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2321,17 +2435,6 @@ public interface ErschemaPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getSimpleConstraint_Compare();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link de.tu_bs.cs.isf.mbse.erschema.SimpleConstraint#getRight <em>Right</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Right</em>'.
-	 * @see de.tu_bs.cs.isf.mbse.erschema.SimpleConstraint#getRight()
-	 * @see #getSimpleConstraint()
-	 * @generated
-	 */
-	EReference getSimpleConstraint_Right();
 
 	/**
 	 * Returns the meta object for the reference list '{@link de.tu_bs.cs.isf.mbse.erschema.SimpleConstraint#getEntity <em>Entity</em>}'.
@@ -2356,15 +2459,37 @@ public interface ErschemaPackage extends EPackage {
 	EReference getSimpleConstraint_Attributes();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link de.tu_bs.cs.isf.mbse.erschema.SimpleConstraint#getExpression <em>Expression</em>}'.
+	 * Returns the meta object for the containment reference list '{@link de.tu_bs.cs.isf.mbse.erschema.SimpleConstraint#getConnect <em>Connect</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Expression</em>'.
-	 * @see de.tu_bs.cs.isf.mbse.erschema.SimpleConstraint#getExpression()
+	 * @return the meta object for the containment reference list '<em>Connect</em>'.
+	 * @see de.tu_bs.cs.isf.mbse.erschema.SimpleConstraint#getConnect()
 	 * @see #getSimpleConstraint()
 	 * @generated
 	 */
-	EReference getSimpleConstraint_Expression();
+	EReference getSimpleConstraint_Connect();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link de.tu_bs.cs.isf.mbse.erschema.SimpleConstraint#getStringop <em>Stringop</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Stringop</em>'.
+	 * @see de.tu_bs.cs.isf.mbse.erschema.SimpleConstraint#getStringop()
+	 * @see #getSimpleConstraint()
+	 * @generated
+	 */
+	EReference getSimpleConstraint_Stringop();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link de.tu_bs.cs.isf.mbse.erschema.SimpleConstraint#getArithmeticop <em>Arithmeticop</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Arithmeticop</em>'.
+	 * @see de.tu_bs.cs.isf.mbse.erschema.SimpleConstraint#getArithmeticop()
+	 * @see #getSimpleConstraint()
+	 * @generated
+	 */
+	EReference getSimpleConstraint_Arithmeticop();
 
 	/**
 	 * Returns the meta object for class '{@link de.tu_bs.cs.isf.mbse.erschema.DummyConstraint <em>Dummy Constraint</em>}'.
@@ -2510,27 +2635,6 @@ public interface ErschemaPackage extends EPackage {
 	EClass getDate();
 
 	/**
-	 * Returns the meta object for class '{@link de.tu_bs.cs.isf.mbse.erschema.Expression <em>Expression</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Expression</em>'.
-	 * @see de.tu_bs.cs.isf.mbse.erschema.Expression
-	 * @generated
-	 */
-	EClass getExpression();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link de.tu_bs.cs.isf.mbse.erschema.Expression#getOperators <em>Operators</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Operators</em>'.
-	 * @see de.tu_bs.cs.isf.mbse.erschema.Expression#getOperators()
-	 * @see #getExpression()
-	 * @generated
-	 */
-	EReference getExpression_Operators();
-
-	/**
 	 * Returns the meta object for class '{@link de.tu_bs.cs.isf.mbse.erschema.ArithmeticOperator <em>Arithmetic Operator</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2561,6 +2665,28 @@ public interface ErschemaPackage extends EPackage {
 	EClass getIsNot();
 
 	/**
+	 * Returns the meta object for the attribute list '{@link de.tu_bs.cs.isf.mbse.erschema.IsNot#getValueInt <em>Value Int</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Value Int</em>'.
+	 * @see de.tu_bs.cs.isf.mbse.erschema.IsNot#getValueInt()
+	 * @see #getIsNot()
+	 * @generated
+	 */
+	EAttribute getIsNot_ValueInt();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.tu_bs.cs.isf.mbse.erschema.IsNot#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see de.tu_bs.cs.isf.mbse.erschema.IsNot#getValue()
+	 * @see #getIsNot()
+	 * @generated
+	 */
+	EAttribute getIsNot_Value();
+
+	/**
 	 * Returns the meta object for class '{@link de.tu_bs.cs.isf.mbse.erschema.Equals <em>Equals</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2569,6 +2695,28 @@ public interface ErschemaPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getEquals();
+
+	/**
+	 * Returns the meta object for the attribute list '{@link de.tu_bs.cs.isf.mbse.erschema.Equals#getValueInt <em>Value Int</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Value Int</em>'.
+	 * @see de.tu_bs.cs.isf.mbse.erschema.Equals#getValueInt()
+	 * @see #getEquals()
+	 * @generated
+	 */
+	EAttribute getEquals_ValueInt();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.tu_bs.cs.isf.mbse.erschema.Equals#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see de.tu_bs.cs.isf.mbse.erschema.Equals#getValue()
+	 * @see #getEquals()
+	 * @generated
+	 */
+	EAttribute getEquals_Value();
 
 	/**
 	 * Returns the meta object for class '{@link de.tu_bs.cs.isf.mbse.erschema.Add <em>Add</em>}'.
@@ -2581,6 +2729,17 @@ public interface ErschemaPackage extends EPackage {
 	EClass getAdd();
 
 	/**
+	 * Returns the meta object for the attribute list '{@link de.tu_bs.cs.isf.mbse.erschema.Add#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Value</em>'.
+	 * @see de.tu_bs.cs.isf.mbse.erschema.Add#getValue()
+	 * @see #getAdd()
+	 * @generated
+	 */
+	EAttribute getAdd_Value();
+
+	/**
 	 * Returns the meta object for class '{@link de.tu_bs.cs.isf.mbse.erschema.Mul <em>Mul</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2589,6 +2748,17 @@ public interface ErschemaPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getMul();
+
+	/**
+	 * Returns the meta object for the attribute list '{@link de.tu_bs.cs.isf.mbse.erschema.Mul#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Value</em>'.
+	 * @see de.tu_bs.cs.isf.mbse.erschema.Mul#getValue()
+	 * @see #getMul()
+	 * @generated
+	 */
+	EAttribute getMul_Value();
 
 	/**
 	 * Returns the meta object for class '{@link de.tu_bs.cs.isf.mbse.erschema.Sub <em>Sub</em>}'.
@@ -2601,6 +2771,17 @@ public interface ErschemaPackage extends EPackage {
 	EClass getSub();
 
 	/**
+	 * Returns the meta object for the attribute list '{@link de.tu_bs.cs.isf.mbse.erschema.Sub#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Value</em>'.
+	 * @see de.tu_bs.cs.isf.mbse.erschema.Sub#getValue()
+	 * @see #getSub()
+	 * @generated
+	 */
+	EAttribute getSub_Value();
+
+	/**
 	 * Returns the meta object for class '{@link de.tu_bs.cs.isf.mbse.erschema.Div <em>Div</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2609,6 +2790,17 @@ public interface ErschemaPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getDiv();
+
+	/**
+	 * Returns the meta object for the attribute list '{@link de.tu_bs.cs.isf.mbse.erschema.Div#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Value</em>'.
+	 * @see de.tu_bs.cs.isf.mbse.erschema.Div#getValue()
+	 * @see #getDiv()
+	 * @generated
+	 */
+	EAttribute getDiv_Value();
 
 	/**
 	 * Returns the meta object for class '{@link de.tu_bs.cs.isf.mbse.erschema.Comparative <em>Comparative</em>}'.
@@ -2661,6 +2853,17 @@ public interface ErschemaPackage extends EPackage {
 	EClass getModulo();
 
 	/**
+	 * Returns the meta object for the attribute list '{@link de.tu_bs.cs.isf.mbse.erschema.Modulo#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Value</em>'.
+	 * @see de.tu_bs.cs.isf.mbse.erschema.Modulo#getValue()
+	 * @see #getModulo()
+	 * @generated
+	 */
+	EAttribute getModulo_Value();
+
+	/**
 	 * Returns the meta object for class '{@link de.tu_bs.cs.isf.mbse.erschema.GreaterThan <em>Greater Than</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2669,6 +2872,17 @@ public interface ErschemaPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getGreaterThan();
+
+	/**
+	 * Returns the meta object for the attribute list '{@link de.tu_bs.cs.isf.mbse.erschema.GreaterThan#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Value</em>'.
+	 * @see de.tu_bs.cs.isf.mbse.erschema.GreaterThan#getValue()
+	 * @see #getGreaterThan()
+	 * @generated
+	 */
+	EAttribute getGreaterThan_Value();
 
 	/**
 	 * Returns the meta object for class '{@link de.tu_bs.cs.isf.mbse.erschema.Smaller <em>Smaller</em>}'.
@@ -2681,6 +2895,17 @@ public interface ErschemaPackage extends EPackage {
 	EClass getSmaller();
 
 	/**
+	 * Returns the meta object for the attribute list '{@link de.tu_bs.cs.isf.mbse.erschema.Smaller#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Value</em>'.
+	 * @see de.tu_bs.cs.isf.mbse.erschema.Smaller#getValue()
+	 * @see #getSmaller()
+	 * @generated
+	 */
+	EAttribute getSmaller_Value();
+
+	/**
 	 * Returns the meta object for class '{@link de.tu_bs.cs.isf.mbse.erschema.SmallerThan <em>Smaller Than</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2691,6 +2916,17 @@ public interface ErschemaPackage extends EPackage {
 	EClass getSmallerThan();
 
 	/**
+	 * Returns the meta object for the attribute list '{@link de.tu_bs.cs.isf.mbse.erschema.SmallerThan#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Value</em>'.
+	 * @see de.tu_bs.cs.isf.mbse.erschema.SmallerThan#getValue()
+	 * @see #getSmallerThan()
+	 * @generated
+	 */
+	EAttribute getSmallerThan_Value();
+
+	/**
 	 * Returns the meta object for class '{@link de.tu_bs.cs.isf.mbse.erschema.Greater <em>Greater</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2699,6 +2935,17 @@ public interface ErschemaPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getGreater();
+
+	/**
+	 * Returns the meta object for the attribute list '{@link de.tu_bs.cs.isf.mbse.erschema.Greater#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Value</em>'.
+	 * @see de.tu_bs.cs.isf.mbse.erschema.Greater#getValue()
+	 * @see #getGreater()
+	 * @generated
+	 */
+	EAttribute getGreater_Value();
 
 	/**
 	 * Returns the meta object for class '{@link de.tu_bs.cs.isf.mbse.erschema.StringOperator <em>String Operator</em>}'.
@@ -2721,6 +2968,17 @@ public interface ErschemaPackage extends EPackage {
 	EClass getLike();
 
 	/**
+	 * Returns the meta object for the attribute '{@link de.tu_bs.cs.isf.mbse.erschema.Like#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see de.tu_bs.cs.isf.mbse.erschema.Like#getValue()
+	 * @see #getLike()
+	 * @generated
+	 */
+	EAttribute getLike_Value();
+
+	/**
 	 * Returns the meta object for class '{@link de.tu_bs.cs.isf.mbse.erschema.Length <em>Length</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2731,6 +2989,17 @@ public interface ErschemaPackage extends EPackage {
 	EClass getLength();
 
 	/**
+	 * Returns the meta object for the attribute '{@link de.tu_bs.cs.isf.mbse.erschema.Length#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see de.tu_bs.cs.isf.mbse.erschema.Length#getValue()
+	 * @see #getLength()
+	 * @generated
+	 */
+	EAttribute getLength_Value();
+
+	/**
 	 * Returns the meta object for class '{@link de.tu_bs.cs.isf.mbse.erschema.Concat <em>Concat</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2739,6 +3008,17 @@ public interface ErschemaPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getConcat();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.tu_bs.cs.isf.mbse.erschema.Concat#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see de.tu_bs.cs.isf.mbse.erschema.Concat#getValue()
+	 * @see #getConcat()
+	 * @generated
+	 */
+	EAttribute getConcat_Value();
 
 	/**
 	 * Returns the meta object for class '{@link de.tu_bs.cs.isf.mbse.erschema.UnaryNot <em>Unary Not</em>}'.
@@ -2761,26 +3041,26 @@ public interface ErschemaPackage extends EPackage {
 	EClass getOperator();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link de.tu_bs.cs.isf.mbse.erschema.Operator#getAttributes <em>Attributes</em>}'.
+	 * Returns the meta object for the reference list '{@link de.tu_bs.cs.isf.mbse.erschema.Operator#getAttribute <em>Attribute</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Attributes</em>'.
-	 * @see de.tu_bs.cs.isf.mbse.erschema.Operator#getAttributes()
+	 * @return the meta object for the reference list '<em>Attribute</em>'.
+	 * @see de.tu_bs.cs.isf.mbse.erschema.Operator#getAttribute()
 	 * @see #getOperator()
 	 * @generated
 	 */
-	EReference getOperator_Attributes();
+	EReference getOperator_Attribute();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link de.tu_bs.cs.isf.mbse.erschema.Operator#getLiterals <em>Literals</em>}'.
+	 * Returns the meta object for the reference list '{@link de.tu_bs.cs.isf.mbse.erschema.Operator#getEntity <em>Entity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Literals</em>'.
-	 * @see de.tu_bs.cs.isf.mbse.erschema.Operator#getLiterals()
+	 * @return the meta object for the reference list '<em>Entity</em>'.
+	 * @see de.tu_bs.cs.isf.mbse.erschema.Operator#getEntity()
 	 * @see #getOperator()
 	 * @generated
 	 */
-	EReference getOperator_Literals();
+	EReference getOperator_Entity();
 
 	/**
 	 * Returns the meta object for class '{@link de.tu_bs.cs.isf.mbse.erschema.Literal <em>Literal</em>}'.
@@ -3061,28 +3341,12 @@ public interface ErschemaPackage extends EPackage {
 		EClass SIMPLE_CONSTRAINT = eINSTANCE.getSimpleConstraint();
 
 		/**
-		 * The meta object literal for the '<em><b>Left</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SIMPLE_CONSTRAINT__LEFT = eINSTANCE.getSimpleConstraint_Left();
-
-		/**
 		 * The meta object literal for the '<em><b>Compare</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference SIMPLE_CONSTRAINT__COMPARE = eINSTANCE.getSimpleConstraint_Compare();
-
-		/**
-		 * The meta object literal for the '<em><b>Right</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SIMPLE_CONSTRAINT__RIGHT = eINSTANCE.getSimpleConstraint_Right();
 
 		/**
 		 * The meta object literal for the '<em><b>Entity</b></em>' reference list feature.
@@ -3101,12 +3365,28 @@ public interface ErschemaPackage extends EPackage {
 		EReference SIMPLE_CONSTRAINT__ATTRIBUTES = eINSTANCE.getSimpleConstraint_Attributes();
 
 		/**
-		 * The meta object literal for the '<em><b>Expression</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Connect</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference SIMPLE_CONSTRAINT__EXPRESSION = eINSTANCE.getSimpleConstraint_Expression();
+		EReference SIMPLE_CONSTRAINT__CONNECT = eINSTANCE.getSimpleConstraint_Connect();
+
+		/**
+		 * The meta object literal for the '<em><b>Stringop</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SIMPLE_CONSTRAINT__STRINGOP = eINSTANCE.getSimpleConstraint_Stringop();
+
+		/**
+		 * The meta object literal for the '<em><b>Arithmeticop</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SIMPLE_CONSTRAINT__ARITHMETICOP = eINSTANCE.getSimpleConstraint_Arithmeticop();
 
 		/**
 		 * The meta object literal for the '{@link de.tu_bs.cs.isf.mbse.erschema.impl.DummyConstraintImpl <em>Dummy Constraint</em>}' class.
@@ -3243,24 +3523,6 @@ public interface ErschemaPackage extends EPackage {
 		EClass DATE = eINSTANCE.getDate();
 
 		/**
-		 * The meta object literal for the '{@link de.tu_bs.cs.isf.mbse.erschema.impl.ExpressionImpl <em>Expression</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ExpressionImpl
-		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getExpression()
-		 * @generated
-		 */
-		EClass EXPRESSION = eINSTANCE.getExpression();
-
-		/**
-		 * The meta object literal for the '<em><b>Operators</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference EXPRESSION__OPERATORS = eINSTANCE.getExpression_Operators();
-
-		/**
 		 * The meta object literal for the '{@link de.tu_bs.cs.isf.mbse.erschema.impl.ArithmeticOperatorImpl <em>Arithmetic Operator</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3291,6 +3553,22 @@ public interface ErschemaPackage extends EPackage {
 		EClass IS_NOT = eINSTANCE.getIsNot();
 
 		/**
+		 * The meta object literal for the '<em><b>Value Int</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute IS_NOT__VALUE_INT = eINSTANCE.getIsNot_ValueInt();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute IS_NOT__VALUE = eINSTANCE.getIsNot_Value();
+
+		/**
 		 * The meta object literal for the '{@link de.tu_bs.cs.isf.mbse.erschema.impl.EqualsImpl <em>Equals</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3299,6 +3577,22 @@ public interface ErschemaPackage extends EPackage {
 		 * @generated
 		 */
 		EClass EQUALS = eINSTANCE.getEquals();
+
+		/**
+		 * The meta object literal for the '<em><b>Value Int</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EQUALS__VALUE_INT = eINSTANCE.getEquals_ValueInt();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EQUALS__VALUE = eINSTANCE.getEquals_Value();
 
 		/**
 		 * The meta object literal for the '{@link de.tu_bs.cs.isf.mbse.erschema.impl.AddImpl <em>Add</em>}' class.
@@ -3311,6 +3605,14 @@ public interface ErschemaPackage extends EPackage {
 		EClass ADD = eINSTANCE.getAdd();
 
 		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ADD__VALUE = eINSTANCE.getAdd_Value();
+
+		/**
 		 * The meta object literal for the '{@link de.tu_bs.cs.isf.mbse.erschema.impl.MulImpl <em>Mul</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3319,6 +3621,14 @@ public interface ErschemaPackage extends EPackage {
 		 * @generated
 		 */
 		EClass MUL = eINSTANCE.getMul();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MUL__VALUE = eINSTANCE.getMul_Value();
 
 		/**
 		 * The meta object literal for the '{@link de.tu_bs.cs.isf.mbse.erschema.impl.SubImpl <em>Sub</em>}' class.
@@ -3331,6 +3641,14 @@ public interface ErschemaPackage extends EPackage {
 		EClass SUB = eINSTANCE.getSub();
 
 		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SUB__VALUE = eINSTANCE.getSub_Value();
+
+		/**
 		 * The meta object literal for the '{@link de.tu_bs.cs.isf.mbse.erschema.impl.DivImpl <em>Div</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3339,6 +3657,14 @@ public interface ErschemaPackage extends EPackage {
 		 * @generated
 		 */
 		EClass DIV = eINSTANCE.getDiv();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DIV__VALUE = eINSTANCE.getDiv_Value();
 
 		/**
 		 * The meta object literal for the '{@link de.tu_bs.cs.isf.mbse.erschema.impl.ComparativeImpl <em>Comparative</em>}' class.
@@ -3391,6 +3717,14 @@ public interface ErschemaPackage extends EPackage {
 		EClass MODULO = eINSTANCE.getModulo();
 
 		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MODULO__VALUE = eINSTANCE.getModulo_Value();
+
+		/**
 		 * The meta object literal for the '{@link de.tu_bs.cs.isf.mbse.erschema.impl.GreaterThanImpl <em>Greater Than</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3399,6 +3733,14 @@ public interface ErschemaPackage extends EPackage {
 		 * @generated
 		 */
 		EClass GREATER_THAN = eINSTANCE.getGreaterThan();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GREATER_THAN__VALUE = eINSTANCE.getGreaterThan_Value();
 
 		/**
 		 * The meta object literal for the '{@link de.tu_bs.cs.isf.mbse.erschema.impl.SmallerImpl <em>Smaller</em>}' class.
@@ -3411,6 +3753,14 @@ public interface ErschemaPackage extends EPackage {
 		EClass SMALLER = eINSTANCE.getSmaller();
 
 		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SMALLER__VALUE = eINSTANCE.getSmaller_Value();
+
+		/**
 		 * The meta object literal for the '{@link de.tu_bs.cs.isf.mbse.erschema.impl.SmallerThanImpl <em>Smaller Than</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3421,6 +3771,14 @@ public interface ErschemaPackage extends EPackage {
 		EClass SMALLER_THAN = eINSTANCE.getSmallerThan();
 
 		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SMALLER_THAN__VALUE = eINSTANCE.getSmallerThan_Value();
+
+		/**
 		 * The meta object literal for the '{@link de.tu_bs.cs.isf.mbse.erschema.impl.GreaterImpl <em>Greater</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3429,6 +3787,14 @@ public interface ErschemaPackage extends EPackage {
 		 * @generated
 		 */
 		EClass GREATER = eINSTANCE.getGreater();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GREATER__VALUE = eINSTANCE.getGreater_Value();
 
 		/**
 		 * The meta object literal for the '{@link de.tu_bs.cs.isf.mbse.erschema.impl.StringOperatorImpl <em>String Operator</em>}' class.
@@ -3451,6 +3817,14 @@ public interface ErschemaPackage extends EPackage {
 		EClass LIKE = eINSTANCE.getLike();
 
 		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute LIKE__VALUE = eINSTANCE.getLike_Value();
+
+		/**
 		 * The meta object literal for the '{@link de.tu_bs.cs.isf.mbse.erschema.impl.LengthImpl <em>Length</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3461,6 +3835,14 @@ public interface ErschemaPackage extends EPackage {
 		EClass LENGTH = eINSTANCE.getLength();
 
 		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute LENGTH__VALUE = eINSTANCE.getLength_Value();
+
+		/**
 		 * The meta object literal for the '{@link de.tu_bs.cs.isf.mbse.erschema.impl.ConcatImpl <em>Concat</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3469,6 +3851,14 @@ public interface ErschemaPackage extends EPackage {
 		 * @generated
 		 */
 		EClass CONCAT = eINSTANCE.getConcat();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CONCAT__VALUE = eINSTANCE.getConcat_Value();
 
 		/**
 		 * The meta object literal for the '{@link de.tu_bs.cs.isf.mbse.erschema.impl.UnaryNotImpl <em>Unary Not</em>}' class.
@@ -3491,20 +3881,20 @@ public interface ErschemaPackage extends EPackage {
 		EClass OPERATOR = eINSTANCE.getOperator();
 
 		/**
-		 * The meta object literal for the '<em><b>Attributes</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Attribute</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference OPERATOR__ATTRIBUTES = eINSTANCE.getOperator_Attributes();
+		EReference OPERATOR__ATTRIBUTE = eINSTANCE.getOperator_Attribute();
 
 		/**
-		 * The meta object literal for the '<em><b>Literals</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Entity</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference OPERATOR__LITERALS = eINSTANCE.getOperator_Literals();
+		EReference OPERATOR__ENTITY = eINSTANCE.getOperator_Entity();
 
 		/**
 		 * The meta object literal for the '{@link de.tu_bs.cs.isf.mbse.erschema.impl.LiteralImpl <em>Literal</em>}' class.

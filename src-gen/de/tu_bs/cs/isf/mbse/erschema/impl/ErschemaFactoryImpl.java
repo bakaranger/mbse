@@ -14,7 +14,6 @@ import de.tu_bs.cs.isf.mbse.erschema.Entity;
 import de.tu_bs.cs.isf.mbse.erschema.Equals;
 import de.tu_bs.cs.isf.mbse.erschema.ErschemaFactory;
 import de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage;
-import de.tu_bs.cs.isf.mbse.erschema.Expression;
 import de.tu_bs.cs.isf.mbse.erschema.Greater;
 import de.tu_bs.cs.isf.mbse.erschema.GreaterThan;
 import de.tu_bs.cs.isf.mbse.erschema.IsNot;
@@ -35,14 +34,11 @@ import de.tu_bs.cs.isf.mbse.erschema.SmallerThan;
 import de.tu_bs.cs.isf.mbse.erschema.Sub;
 import de.tu_bs.cs.isf.mbse.erschema.Text;
 import de.tu_bs.cs.isf.mbse.erschema.UnaryNot;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
-
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
 /**
@@ -104,7 +100,6 @@ public class ErschemaFactoryImpl extends EFactoryImpl implements ErschemaFactory
 			case ErschemaPackage.BOOLEAN: return createBoolean();
 			case ErschemaPackage.DOUBLE: return createDouble();
 			case ErschemaPackage.DATE: return createDate();
-			case ErschemaPackage.EXPRESSION: return createExpression();
 			case ErschemaPackage.IS_NOT: return createIsNot();
 			case ErschemaPackage.EQUALS: return createEquals();
 			case ErschemaPackage.ADD: return createAdd();
@@ -306,16 +301,6 @@ public class ErschemaFactoryImpl extends EFactoryImpl implements ErschemaFactory
 	public Date createDate() {
 		DateImpl date = new DateImpl();
 		return date;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Expression createExpression() {
-		ExpressionImpl expression = new ExpressionImpl();
-		return expression;
 	}
 
 	/**

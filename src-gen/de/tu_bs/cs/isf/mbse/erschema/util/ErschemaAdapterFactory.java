@@ -19,7 +19,6 @@ import de.tu_bs.cs.isf.mbse.erschema.Element;
 import de.tu_bs.cs.isf.mbse.erschema.Entity;
 import de.tu_bs.cs.isf.mbse.erschema.Equals;
 import de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage;
-import de.tu_bs.cs.isf.mbse.erschema.Expression;
 import de.tu_bs.cs.isf.mbse.erschema.Greater;
 import de.tu_bs.cs.isf.mbse.erschema.GreaterThan;
 import de.tu_bs.cs.isf.mbse.erschema.IsNot;
@@ -42,12 +41,9 @@ import de.tu_bs.cs.isf.mbse.erschema.StringOperator;
 import de.tu_bs.cs.isf.mbse.erschema.Sub;
 import de.tu_bs.cs.isf.mbse.erschema.Text;
 import de.tu_bs.cs.isf.mbse.erschema.UnaryNot;
-
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
-
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -181,10 +177,6 @@ public class ErschemaAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseDate(Date object) {
 				return createDateAdapter();
-			}
-			@Override
-			public Adapter caseExpression(Expression object) {
-				return createExpressionAdapter();
 			}
 			@Override
 			public Adapter caseArithmeticOperator(ArithmeticOperator object) {
@@ -565,20 +557,6 @@ public class ErschemaAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createDateAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link de.tu_bs.cs.isf.mbse.erschema.Expression <em>Expression</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see de.tu_bs.cs.isf.mbse.erschema.Expression
-	 * @generated
-	 */
-	public Adapter createExpressionAdapter() {
 		return null;
 	}
 

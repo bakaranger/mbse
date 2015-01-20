@@ -7,7 +7,6 @@ import de.tu_bs.cs.isf.mbse.erschema.Literal;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,7 +21,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class LiteralImpl extends MinimalEObjectImpl.Container implements Literal {
+public class LiteralImpl extends OperatorImpl implements Literal {
 	/**
 	 * The default value of the '{@link #getVal() <em>Val</em>}' attribute.
 	 * <!-- begin-user-doc -->

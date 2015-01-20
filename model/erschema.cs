@@ -6,12 +6,18 @@ OPTIONS {
 	reloadGeneratorModel = "true";
 	generateCodeFromGeneratorModel = "true";
 	overrideBuilder = "false";
+	usePredefinedTokens = "false";
 }
 
 TOKENS {
 	DEFINE COMMENT $'//'(~('\n'|'\r'|'\uffff'))*$;
-	DEFINE BOUNDS $ ( '#' | ('0'..'9')+ )$; 
-   // DEFINE INTEGER_LITERAL $('0'..'9')+$;
+	DEFINE BOUNDS $ ( '"''*''"' | ('"''0'..'9''"')+ )$; 
+    DEFINE INTEGER_LITERAL $('1'..'9')('0'..'9')|'0'$;
+    DEFINE REAL_LITERAL $ (('1'..'9') ('0'..'9')* | '0') '.' ('0'..'9')+ (('e'|'E') ('+'|'-')? ('0'..'9')*)?$;
+    
+    DEFINE WHITESPACE $(' '|'\t'|'\f')$;
+    DEFINE LINEBREAKS $('\r\n'|'\r'|'\n')$;
+    DEFINE TEXT $ ('A'..'Z'|'a'..'z'|'0'..'9'|'_'|'-')+$;
 }
 
 TOKENSTYLES {
@@ -72,8 +78,11 @@ RULES {
 
 	DummyConstraint  ::= "constraint" "(" constraint[] ")";
 	
-	SimpleConstraint ::= "check" "(" entity[]"."attributes[] (entity[]"."attributes[])*  compare+ (entity[]"."attributes[])+ ")";
+	SimpleConstraint ::= "check" "(" ((entity[]"."attributes[] (arithmeticop* | (connect : And , Or)* | (stringop : Concat , Length)*) compare entity[]"."attributes[] (arithmeticop* | (connect : And , Or)* | (stringop : Concat , Length)*)) | stringop : Like | connect : UnaryNot )   ")";
 	
+	//entity[]"."attributes[] (entity[]"."attributes[])*
+	// (entity[]"."attributes[])+
+	// (connect|compare|stringop|arithmeticop)* | attributes[]
 	// Datentypen	
 	Text 	::= "text";
 	String 	::= "string";
@@ -84,30 +93,26 @@ RULES {
 	
 	// Operatoren	
 	SmallerThan ::= "<=";	
-	
-	Smaller ::= "<";
-	
+	Smaller ::= "<"; 
 	IsNot ::= "!=";
-	
 	Equals ::= "==";
-	
 	Greater ::= ">";
-	
 	GreaterThan ::= ">=";
+		
+	And ::= "and" entity[]"."attribute[];
+	Or  ::= "or" entity[]"."attribute[];
 	
-	And ::= "and";
+	UnaryNot ::= "!" entity[]"."attribute[];
 	
-	Or  ::= "or";
+	Add ::= "+" (entity[]"."attribute[]|value[REAL_LITERAL]);
+	Sub ::= "-" (entity[]"."attribute[]|value[REAL_LITERAL]);
+	Modulo ::= "%" (entity[]"."attribute[]|value[REAL_LITERAL]);
+	Div ::= "/" (entity[]"."attribute[]|value[REAL_LITERAL]);
+	Mul ::= "*" (entity[]"."attribute[]|value[REAL_LITERAL]);
 	
-	UnaryNot ::="not";
+	Concat ::= "con" (entity[]"."attribute[]|value[]);
+	Like ::= entity[]"."attribute[] "like" value[] ; // TODO
+	Length ::= ".length()";
 	
-	Add ::= "+";
-	
-	Sub ::= "-";
-	
-	Modulo ::= "%";
-	
-	Div ::= "/";
-	
-	Mul ::= "*";	
+	Literal ::= entity[]"."attribute[];		
 }

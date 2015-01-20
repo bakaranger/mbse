@@ -48,12 +48,12 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference erschema.ecore#//Composition/attributes"/>
     </genClasses>
     <genClasses ecoreClass="erschema.ecore#//SimpleConstraint">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference erschema.ecore#//SimpleConstraint/left"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference erschema.ecore#//SimpleConstraint/compare"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference erschema.ecore#//SimpleConstraint/right"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference erschema.ecore#//SimpleConstraint/entity"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference erschema.ecore#//SimpleConstraint/attributes"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference erschema.ecore#//SimpleConstraint/expression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference erschema.ecore#//SimpleConstraint/connect"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference erschema.ecore#//SimpleConstraint/stringop"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference erschema.ecore#//SimpleConstraint/arithmeticop"/>
     </genClasses>
     <genClasses ecoreClass="erschema.ecore#//DummyConstraint">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute erschema.ecore#//DummyConstraint/constraint"/>
@@ -71,34 +71,61 @@
     <genClasses ecoreClass="erschema.ecore#//Boolean"/>
     <genClasses ecoreClass="erschema.ecore#//Double"/>
     <genClasses ecoreClass="erschema.ecore#//Date"/>
-    <genClasses image="false" ecoreClass="erschema.ecore#//Expression">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference erschema.ecore#//Expression/operators"/>
-    </genClasses>
     <genClasses image="false" ecoreClass="erschema.ecore#//ArithmeticOperator"/>
     <genClasses image="false" ecoreClass="erschema.ecore#//LogicalOperator"/>
-    <genClasses ecoreClass="erschema.ecore#//IsNot"/>
-    <genClasses ecoreClass="erschema.ecore#//Equals"/>
-    <genClasses ecoreClass="erschema.ecore#//Add"/>
-    <genClasses ecoreClass="erschema.ecore#//Mul"/>
-    <genClasses ecoreClass="erschema.ecore#//Sub"/>
-    <genClasses ecoreClass="erschema.ecore#//Div"/>
+    <genClasses ecoreClass="erschema.ecore#//IsNot">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute erschema.ecore#//IsNot/valueInt"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute erschema.ecore#//IsNot/value"/>
+    </genClasses>
+    <genClasses ecoreClass="erschema.ecore#//Equals">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute erschema.ecore#//Equals/valueInt"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute erschema.ecore#//Equals/value"/>
+    </genClasses>
+    <genClasses ecoreClass="erschema.ecore#//Add">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute erschema.ecore#//Add/value"/>
+    </genClasses>
+    <genClasses ecoreClass="erschema.ecore#//Mul">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute erschema.ecore#//Mul/value"/>
+    </genClasses>
+    <genClasses ecoreClass="erschema.ecore#//Sub">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute erschema.ecore#//Sub/value"/>
+    </genClasses>
+    <genClasses ecoreClass="erschema.ecore#//Div">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute erschema.ecore#//Div/value"/>
+    </genClasses>
     <genClasses image="false" ecoreClass="erschema.ecore#//Comparative"/>
     <genClasses image="false" ecoreClass="erschema.ecore#//Connective"/>
     <genClasses ecoreClass="erschema.ecore#//And"/>
     <genClasses ecoreClass="erschema.ecore#//Or"/>
-    <genClasses ecoreClass="erschema.ecore#//Modulo"/>
-    <genClasses ecoreClass="erschema.ecore#//GreaterThan"/>
-    <genClasses ecoreClass="erschema.ecore#//Smaller"/>
-    <genClasses ecoreClass="erschema.ecore#//SmallerThan"/>
-    <genClasses ecoreClass="erschema.ecore#//Greater"/>
+    <genClasses ecoreClass="erschema.ecore#//Modulo">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute erschema.ecore#//Modulo/value"/>
+    </genClasses>
+    <genClasses ecoreClass="erschema.ecore#//GreaterThan">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute erschema.ecore#//GreaterThan/value"/>
+    </genClasses>
+    <genClasses ecoreClass="erschema.ecore#//Smaller">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute erschema.ecore#//Smaller/value"/>
+    </genClasses>
+    <genClasses ecoreClass="erschema.ecore#//SmallerThan">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute erschema.ecore#//SmallerThan/value"/>
+    </genClasses>
+    <genClasses ecoreClass="erschema.ecore#//Greater">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute erschema.ecore#//Greater/value"/>
+    </genClasses>
     <genClasses image="false" ecoreClass="erschema.ecore#//StringOperator"/>
-    <genClasses ecoreClass="erschema.ecore#//Like"/>
-    <genClasses ecoreClass="erschema.ecore#//Length"/>
-    <genClasses ecoreClass="erschema.ecore#//Concat"/>
+    <genClasses ecoreClass="erschema.ecore#//Like">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute erschema.ecore#//Like/value"/>
+    </genClasses>
+    <genClasses ecoreClass="erschema.ecore#//Length">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute erschema.ecore#//Length/value"/>
+    </genClasses>
+    <genClasses ecoreClass="erschema.ecore#//Concat">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute erschema.ecore#//Concat/value"/>
+    </genClasses>
     <genClasses ecoreClass="erschema.ecore#//UnaryNot"/>
     <genClasses image="false" ecoreClass="erschema.ecore#//Operator">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference erschema.ecore#//Operator/attributes"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference erschema.ecore#//Operator/literals"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference erschema.ecore#//Operator/attribute"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference erschema.ecore#//Operator/entity"/>
     </genClasses>
     <genClasses ecoreClass="erschema.ecore#//Literal">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute erschema.ecore#//Literal/val"/>

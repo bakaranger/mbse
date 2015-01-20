@@ -157,15 +157,6 @@ public interface ErschemaFactory extends EFactory {
 	Date createDate();
 
 	/**
-	 * Returns a new object of class '<em>Expression</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Expression</em>'.
-	 * @generated
-	 */
-	Expression createExpression();
-
-	/**
 	 * Returns a new object of class '<em>Is Not</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -19,7 +19,6 @@ import de.tu_bs.cs.isf.mbse.erschema.Element;
 import de.tu_bs.cs.isf.mbse.erschema.Entity;
 import de.tu_bs.cs.isf.mbse.erschema.Equals;
 import de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage;
-import de.tu_bs.cs.isf.mbse.erschema.Expression;
 import de.tu_bs.cs.isf.mbse.erschema.Greater;
 import de.tu_bs.cs.isf.mbse.erschema.GreaterThan;
 import de.tu_bs.cs.isf.mbse.erschema.IsNot;
@@ -42,10 +41,8 @@ import de.tu_bs.cs.isf.mbse.erschema.StringOperator;
 import de.tu_bs.cs.isf.mbse.erschema.Sub;
 import de.tu_bs.cs.isf.mbse.erschema.Text;
 import de.tu_bs.cs.isf.mbse.erschema.UnaryNot;
-
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.util.Switch;
 
 /**
@@ -233,12 +230,6 @@ public class ErschemaSwitch<T> extends Switch<T> {
 				Date date = (Date)theEObject;
 				T result = caseDate(date);
 				if (result == null) result = caseDatatype(date);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ErschemaPackage.EXPRESSION: {
-				Expression expression = (Expression)theEObject;
-				T result = caseExpression(expression);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -433,6 +424,7 @@ public class ErschemaSwitch<T> extends Switch<T> {
 			case ErschemaPackage.LITERAL: {
 				Literal literal = (Literal)theEObject;
 				T result = caseLiteral(literal);
+				if (result == null) result = caseOperator(literal);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -722,21 +714,6 @@ public class ErschemaSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseDate(Date object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Expression</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Expression</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseExpression(Expression object) {
 		return null;
 	}
 

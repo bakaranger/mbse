@@ -3,17 +3,14 @@
 package de.tu_bs.cs.isf.mbse.erschema.impl;
 
 import de.tu_bs.cs.isf.mbse.erschema.Attribute;
+import de.tu_bs.cs.isf.mbse.erschema.Entity;
 import de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage;
-import de.tu_bs.cs.isf.mbse.erschema.Literal;
 import de.tu_bs.cs.isf.mbse.erschema.Operator;
 import java.util.Collection;
-import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,8 +19,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link de.tu_bs.cs.isf.mbse.erschema.impl.OperatorImpl#getAttributes <em>Attributes</em>}</li>
- *   <li>{@link de.tu_bs.cs.isf.mbse.erschema.impl.OperatorImpl#getLiterals <em>Literals</em>}</li>
+ *   <li>{@link de.tu_bs.cs.isf.mbse.erschema.impl.OperatorImpl#getAttribute <em>Attribute</em>}</li>
+ *   <li>{@link de.tu_bs.cs.isf.mbse.erschema.impl.OperatorImpl#getEntity <em>Entity</em>}</li>
  * </ul>
  * </p>
  *
@@ -31,24 +28,24 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public abstract class OperatorImpl extends MinimalEObjectImpl.Container implements Operator {
 	/**
-	 * The cached value of the '{@link #getAttributes() <em>Attributes</em>}' containment reference list.
+	 * The cached value of the '{@link #getAttribute() <em>Attribute</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getAttributes()
+	 * @see #getAttribute()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Attribute> attributes;
+	protected EList<Attribute> attribute;
 
 	/**
-	 * The cached value of the '{@link #getLiterals() <em>Literals</em>}' containment reference list.
+	 * The cached value of the '{@link #getEntity() <em>Entity</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getLiterals()
+	 * @see #getEntity()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Literal> literals;
+	protected EList<Entity> entity;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -74,11 +71,11 @@ public abstract class OperatorImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Attribute> getAttributes() {
-		if (attributes == null) {
-			attributes = new EObjectContainmentEList<Attribute>(Attribute.class, this, ErschemaPackage.OPERATOR__ATTRIBUTES);
+	public EList<Attribute> getAttribute() {
+		if (attribute == null) {
+			attribute = new EObjectResolvingEList<Attribute>(Attribute.class, this, ErschemaPackage.OPERATOR__ATTRIBUTE);
 		}
-		return attributes;
+		return attribute;
 	}
 
 	/**
@@ -86,27 +83,11 @@ public abstract class OperatorImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Literal> getLiterals() {
-		if (literals == null) {
-			literals = new EObjectContainmentEList<Literal>(Literal.class, this, ErschemaPackage.OPERATOR__LITERALS);
+	public EList<Entity> getEntity() {
+		if (entity == null) {
+			entity = new EObjectResolvingEList<Entity>(Entity.class, this, ErschemaPackage.OPERATOR__ENTITY);
 		}
-		return literals;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case ErschemaPackage.OPERATOR__ATTRIBUTES:
-				return ((InternalEList<?>)getAttributes()).basicRemove(otherEnd, msgs);
-			case ErschemaPackage.OPERATOR__LITERALS:
-				return ((InternalEList<?>)getLiterals()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
+		return entity;
 	}
 
 	/**
@@ -117,10 +98,10 @@ public abstract class OperatorImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ErschemaPackage.OPERATOR__ATTRIBUTES:
-				return getAttributes();
-			case ErschemaPackage.OPERATOR__LITERALS:
-				return getLiterals();
+			case ErschemaPackage.OPERATOR__ATTRIBUTE:
+				return getAttribute();
+			case ErschemaPackage.OPERATOR__ENTITY:
+				return getEntity();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -134,13 +115,13 @@ public abstract class OperatorImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ErschemaPackage.OPERATOR__ATTRIBUTES:
-				getAttributes().clear();
-				getAttributes().addAll((Collection<? extends Attribute>)newValue);
+			case ErschemaPackage.OPERATOR__ATTRIBUTE:
+				getAttribute().clear();
+				getAttribute().addAll((Collection<? extends Attribute>)newValue);
 				return;
-			case ErschemaPackage.OPERATOR__LITERALS:
-				getLiterals().clear();
-				getLiterals().addAll((Collection<? extends Literal>)newValue);
+			case ErschemaPackage.OPERATOR__ENTITY:
+				getEntity().clear();
+				getEntity().addAll((Collection<? extends Entity>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -154,11 +135,11 @@ public abstract class OperatorImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ErschemaPackage.OPERATOR__ATTRIBUTES:
-				getAttributes().clear();
+			case ErschemaPackage.OPERATOR__ATTRIBUTE:
+				getAttribute().clear();
 				return;
-			case ErschemaPackage.OPERATOR__LITERALS:
-				getLiterals().clear();
+			case ErschemaPackage.OPERATOR__ENTITY:
+				getEntity().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -172,10 +153,10 @@ public abstract class OperatorImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ErschemaPackage.OPERATOR__ATTRIBUTES:
-				return attributes != null && !attributes.isEmpty();
-			case ErschemaPackage.OPERATOR__LITERALS:
-				return literals != null && !literals.isEmpty();
+			case ErschemaPackage.OPERATOR__ATTRIBUTE:
+				return attribute != null && !attribute.isEmpty();
+			case ErschemaPackage.OPERATOR__ENTITY:
+				return entity != null && !entity.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

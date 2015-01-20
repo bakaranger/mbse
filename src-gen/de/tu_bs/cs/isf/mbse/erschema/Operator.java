@@ -14,8 +14,8 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link de.tu_bs.cs.isf.mbse.erschema.Operator#getAttributes <em>Attributes</em>}</li>
- *   <li>{@link de.tu_bs.cs.isf.mbse.erschema.Operator#getLiterals <em>Literals</em>}</li>
+ *   <li>{@link de.tu_bs.cs.isf.mbse.erschema.Operator#getAttribute <em>Attribute</em>}</li>
+ *   <li>{@link de.tu_bs.cs.isf.mbse.erschema.Operator#getEntity <em>Entity</em>}</li>
  * </ul>
  * </p>
  *
@@ -25,35 +25,35 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Operator extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Attributes</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Attribute</b></em>' reference list.
 	 * The list contents are of type {@link de.tu_bs.cs.isf.mbse.erschema.Attribute}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Attributes</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Attribute</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Attributes</em>' containment reference list.
-	 * @see de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage#getOperator_Attributes()
-	 * @model containment="true" upper="2"
+	 * @return the value of the '<em>Attribute</em>' reference list.
+	 * @see de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage#getOperator_Attribute()
+	 * @model required="true" upper="2"
 	 * @generated
 	 */
-	EList<Attribute> getAttributes();
+	EList<Attribute> getAttribute();
 
 	/**
-	 * Returns the value of the '<em><b>Literals</b></em>' containment reference list.
-	 * The list contents are of type {@link de.tu_bs.cs.isf.mbse.erschema.Literal}.
+	 * Returns the value of the '<em><b>Entity</b></em>' reference list.
+	 * The list contents are of type {@link de.tu_bs.cs.isf.mbse.erschema.Entity}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Literals</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Entity</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Literals</em>' containment reference list.
-	 * @see de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage#getOperator_Literals()
-	 * @model containment="true" upper="2"
+	 * @return the value of the '<em>Entity</em>' reference list.
+	 * @see de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage#getOperator_Entity()
+	 * @model required="true" upper="2"
 	 * @generated
 	 */
-	EList<Literal> getLiterals();
+	EList<Entity> getEntity();
 
 } // Operator

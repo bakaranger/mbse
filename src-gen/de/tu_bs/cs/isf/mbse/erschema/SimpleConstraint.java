@@ -14,12 +14,12 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link de.tu_bs.cs.isf.mbse.erschema.SimpleConstraint#getLeft <em>Left</em>}</li>
  *   <li>{@link de.tu_bs.cs.isf.mbse.erschema.SimpleConstraint#getCompare <em>Compare</em>}</li>
- *   <li>{@link de.tu_bs.cs.isf.mbse.erschema.SimpleConstraint#getRight <em>Right</em>}</li>
  *   <li>{@link de.tu_bs.cs.isf.mbse.erschema.SimpleConstraint#getEntity <em>Entity</em>}</li>
  *   <li>{@link de.tu_bs.cs.isf.mbse.erschema.SimpleConstraint#getAttributes <em>Attributes</em>}</li>
- *   <li>{@link de.tu_bs.cs.isf.mbse.erschema.SimpleConstraint#getExpression <em>Expression</em>}</li>
+ *   <li>{@link de.tu_bs.cs.isf.mbse.erschema.SimpleConstraint#getConnect <em>Connect</em>}</li>
+ *   <li>{@link de.tu_bs.cs.isf.mbse.erschema.SimpleConstraint#getStringop <em>Stringop</em>}</li>
+ *   <li>{@link de.tu_bs.cs.isf.mbse.erschema.SimpleConstraint#getArithmeticop <em>Arithmeticop</em>}</li>
  * </ul>
  * </p>
  *
@@ -28,32 +28,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface SimpleConstraint extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Left</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Left</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Left</em>' containment reference.
-	 * @see #setLeft(Expression)
-	 * @see de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage#getSimpleConstraint_Left()
-	 * @model containment="true"
-	 * @generated
-	 */
-	Expression getLeft();
-
-	/**
-	 * Sets the value of the '{@link de.tu_bs.cs.isf.mbse.erschema.SimpleConstraint#getLeft <em>Left</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Left</em>' containment reference.
-	 * @see #getLeft()
-	 * @generated
-	 */
-	void setLeft(Expression value);
-
 	/**
 	 * Returns the value of the '<em><b>Compare</b></em>' containment reference list.
 	 * The list contents are of type {@link de.tu_bs.cs.isf.mbse.erschema.Comparative}.
@@ -69,32 +43,6 @@ public interface SimpleConstraint extends EObject {
 	 * @generated
 	 */
 	EList<Comparative> getCompare();
-
-	/**
-	 * Returns the value of the '<em><b>Right</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Right</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Right</em>' containment reference.
-	 * @see #setRight(Expression)
-	 * @see de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage#getSimpleConstraint_Right()
-	 * @model containment="true" required="true"
-	 * @generated
-	 */
-	Expression getRight();
-
-	/**
-	 * Sets the value of the '{@link de.tu_bs.cs.isf.mbse.erschema.SimpleConstraint#getRight <em>Right</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Right</em>' containment reference.
-	 * @see #getRight()
-	 * @generated
-	 */
-	void setRight(Expression value);
 
 	/**
 	 * Returns the value of the '<em><b>Entity</b></em>' reference list.
@@ -129,19 +77,51 @@ public interface SimpleConstraint extends EObject {
 	EList<Attribute> getAttributes();
 
 	/**
-	 * Returns the value of the '<em><b>Expression</b></em>' containment reference list.
-	 * The list contents are of type {@link de.tu_bs.cs.isf.mbse.erschema.Expression}.
+	 * Returns the value of the '<em><b>Connect</b></em>' containment reference list.
+	 * The list contents are of type {@link de.tu_bs.cs.isf.mbse.erschema.Connective}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Expression</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Connect</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Expression</em>' containment reference list.
-	 * @see de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage#getSimpleConstraint_Expression()
+	 * @return the value of the '<em>Connect</em>' containment reference list.
+	 * @see de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage#getSimpleConstraint_Connect()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Expression> getExpression();
+	EList<Connective> getConnect();
+
+	/**
+	 * Returns the value of the '<em><b>Stringop</b></em>' containment reference list.
+	 * The list contents are of type {@link de.tu_bs.cs.isf.mbse.erschema.StringOperator}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Stringop</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Stringop</em>' containment reference list.
+	 * @see de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage#getSimpleConstraint_Stringop()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<StringOperator> getStringop();
+
+	/**
+	 * Returns the value of the '<em><b>Arithmeticop</b></em>' containment reference list.
+	 * The list contents are of type {@link de.tu_bs.cs.isf.mbse.erschema.ArithmeticOperator}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Arithmeticop</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Arithmeticop</em>' containment reference list.
+	 * @see de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage#getSimpleConstraint_Arithmeticop()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<ArithmeticOperator> getArithmeticop();
 
 } // SimpleConstraint

@@ -2,7 +2,6 @@
  */
 package de.tu_bs.cs.isf.mbse.erschema;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,7 +19,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface Literal extends EObject {
+public interface Literal extends Operator {
 	/**
 	 * Returns the value of the '<em><b>Val</b></em>' attribute.
 	 * <!-- begin-user-doc -->
