@@ -2,6 +2,8 @@
  */
 package de.tu_bs.cs.isf.mbse.erschema;
 
+import java.lang.Double;
+import java.lang.String;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
@@ -20,6 +22,8 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link de.tu_bs.cs.isf.mbse.erschema.SimpleConstraint#getConnect <em>Connect</em>}</li>
  *   <li>{@link de.tu_bs.cs.isf.mbse.erschema.SimpleConstraint#getStringop <em>Stringop</em>}</li>
  *   <li>{@link de.tu_bs.cs.isf.mbse.erschema.SimpleConstraint#getArithmeticop <em>Arithmeticop</em>}</li>
+ *   <li>{@link de.tu_bs.cs.isf.mbse.erschema.SimpleConstraint#getStringValue <em>String Value</em>}</li>
+ *   <li>{@link de.tu_bs.cs.isf.mbse.erschema.SimpleConstraint#getNumValue <em>Num Value</em>}</li>
  * </ul>
  * </p>
  *
@@ -123,5 +127,37 @@ public interface SimpleConstraint extends EObject {
 	 * @generated
 	 */
 	EList<ArithmeticOperator> getArithmeticop();
+
+	/**
+	 * Returns the value of the '<em><b>String Value</b></em>' attribute list.
+	 * The list contents are of type {@link java.lang.String}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>String Value</em>' attribute list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>String Value</em>' attribute list.
+	 * @see de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage#getSimpleConstraint_StringValue()
+	 * @model default="\"\"" upper="2"
+	 * @generated
+	 */
+	EList<String> getStringValue();
+
+	/**
+	 * Returns the value of the '<em><b>Num Value</b></em>' attribute list.
+	 * The list contents are of type {@link java.lang.Double}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Num Value</em>' attribute list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Num Value</em>' attribute list.
+	 * @see de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage#getSimpleConstraint_NumValue()
+	 * @model default="0" upper="2"
+	 * @generated
+	 */
+	EList<Double> getNumValue();
 
 } // SimpleConstraint

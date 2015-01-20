@@ -54,6 +54,8 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference erschema.ecore#//SimpleConstraint/connect"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference erschema.ecore#//SimpleConstraint/stringop"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference erschema.ecore#//SimpleConstraint/arithmeticop"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute erschema.ecore#//SimpleConstraint/StringValue"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute erschema.ecore#//SimpleConstraint/numValue"/>
     </genClasses>
     <genClasses ecoreClass="erschema.ecore#//DummyConstraint">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute erschema.ecore#//DummyConstraint/constraint"/>

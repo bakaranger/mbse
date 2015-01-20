@@ -66,6 +66,11 @@
         eType="#//StringOperator" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="arithmeticop" upperBound="-1"
         eType="#//ArithmeticOperator" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="StringValue" upperBound="2"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="&quot;&quot;"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numValue" upperBound="2"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"
+        defaultValueLiteral="0"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DummyConstraint">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="constraint" lowerBound="1"

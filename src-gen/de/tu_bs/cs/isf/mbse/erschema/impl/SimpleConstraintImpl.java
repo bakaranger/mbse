@@ -10,12 +10,15 @@ import de.tu_bs.cs.isf.mbse.erschema.Entity;
 import de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage;
 import de.tu_bs.cs.isf.mbse.erschema.SimpleConstraint;
 import de.tu_bs.cs.isf.mbse.erschema.StringOperator;
+import java.lang.Double;
+import java.lang.String;
 import java.util.Collection;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -33,6 +36,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link de.tu_bs.cs.isf.mbse.erschema.impl.SimpleConstraintImpl#getConnect <em>Connect</em>}</li>
  *   <li>{@link de.tu_bs.cs.isf.mbse.erschema.impl.SimpleConstraintImpl#getStringop <em>Stringop</em>}</li>
  *   <li>{@link de.tu_bs.cs.isf.mbse.erschema.impl.SimpleConstraintImpl#getArithmeticop <em>Arithmeticop</em>}</li>
+ *   <li>{@link de.tu_bs.cs.isf.mbse.erschema.impl.SimpleConstraintImpl#getStringValue <em>String Value</em>}</li>
+ *   <li>{@link de.tu_bs.cs.isf.mbse.erschema.impl.SimpleConstraintImpl#getNumValue <em>Num Value</em>}</li>
  * </ul>
  * </p>
  *
@@ -98,6 +103,26 @@ public class SimpleConstraintImpl extends MinimalEObjectImpl.Container implement
 	 * @ordered
 	 */
 	protected EList<ArithmeticOperator> arithmeticop;
+
+	/**
+	 * The cached value of the '{@link #getStringValue() <em>String Value</em>}' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getStringValue()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<String> stringValue;
+
+	/**
+	 * The cached value of the '{@link #getNumValue() <em>Num Value</em>}' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNumValue()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Double> numValue;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -195,6 +220,30 @@ public class SimpleConstraintImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<String> getStringValue() {
+		if (stringValue == null) {
+			stringValue = new EDataTypeUniqueEList<String>(String.class, this, ErschemaPackage.SIMPLE_CONSTRAINT__STRING_VALUE);
+		}
+		return stringValue;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Double> getNumValue() {
+		if (numValue == null) {
+			numValue = new EDataTypeUniqueEList<Double>(Double.class, this, ErschemaPackage.SIMPLE_CONSTRAINT__NUM_VALUE);
+		}
+		return numValue;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -230,6 +279,10 @@ public class SimpleConstraintImpl extends MinimalEObjectImpl.Container implement
 				return getStringop();
 			case ErschemaPackage.SIMPLE_CONSTRAINT__ARITHMETICOP:
 				return getArithmeticop();
+			case ErschemaPackage.SIMPLE_CONSTRAINT__STRING_VALUE:
+				return getStringValue();
+			case ErschemaPackage.SIMPLE_CONSTRAINT__NUM_VALUE:
+				return getNumValue();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -267,6 +320,14 @@ public class SimpleConstraintImpl extends MinimalEObjectImpl.Container implement
 				getArithmeticop().clear();
 				getArithmeticop().addAll((Collection<? extends ArithmeticOperator>)newValue);
 				return;
+			case ErschemaPackage.SIMPLE_CONSTRAINT__STRING_VALUE:
+				getStringValue().clear();
+				getStringValue().addAll((Collection<? extends String>)newValue);
+				return;
+			case ErschemaPackage.SIMPLE_CONSTRAINT__NUM_VALUE:
+				getNumValue().clear();
+				getNumValue().addAll((Collection<? extends Double>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -297,6 +358,12 @@ public class SimpleConstraintImpl extends MinimalEObjectImpl.Container implement
 			case ErschemaPackage.SIMPLE_CONSTRAINT__ARITHMETICOP:
 				getArithmeticop().clear();
 				return;
+			case ErschemaPackage.SIMPLE_CONSTRAINT__STRING_VALUE:
+				getStringValue().clear();
+				return;
+			case ErschemaPackage.SIMPLE_CONSTRAINT__NUM_VALUE:
+				getNumValue().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -321,8 +388,30 @@ public class SimpleConstraintImpl extends MinimalEObjectImpl.Container implement
 				return stringop != null && !stringop.isEmpty();
 			case ErschemaPackage.SIMPLE_CONSTRAINT__ARITHMETICOP:
 				return arithmeticop != null && !arithmeticop.isEmpty();
+			case ErschemaPackage.SIMPLE_CONSTRAINT__STRING_VALUE:
+				return stringValue != null && !stringValue.isEmpty();
+			case ErschemaPackage.SIMPLE_CONSTRAINT__NUM_VALUE:
+				return numValue != null && !numValue.isEmpty();
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (StringValue: ");
+		result.append(stringValue);
+		result.append(", numValue: ");
+		result.append(numValue);
+		result.append(')');
+		return result.toString();
 	}
 
 } //SimpleConstraintImpl

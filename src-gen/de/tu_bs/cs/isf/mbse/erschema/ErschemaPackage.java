@@ -527,13 +527,31 @@ public interface ErschemaPackage extends EPackage {
 	int SIMPLE_CONSTRAINT__ARITHMETICOP = 5;
 
 	/**
+	 * The feature id for the '<em><b>String Value</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_CONSTRAINT__STRING_VALUE = 6;
+
+	/**
+	 * The feature id for the '<em><b>Num Value</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_CONSTRAINT__NUM_VALUE = 7;
+
+	/**
 	 * The number of structural features of the '<em>Simple Constraint</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_CONSTRAINT_FEATURE_COUNT = 6;
+	int SIMPLE_CONSTRAINT_FEATURE_COUNT = 8;
 
 	/**
 	 * The number of operations of the '<em>Simple Constraint</em>' class.
@@ -2492,6 +2510,28 @@ public interface ErschemaPackage extends EPackage {
 	EReference getSimpleConstraint_Arithmeticop();
 
 	/**
+	 * Returns the meta object for the attribute list '{@link de.tu_bs.cs.isf.mbse.erschema.SimpleConstraint#getStringValue <em>String Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>String Value</em>'.
+	 * @see de.tu_bs.cs.isf.mbse.erschema.SimpleConstraint#getStringValue()
+	 * @see #getSimpleConstraint()
+	 * @generated
+	 */
+	EAttribute getSimpleConstraint_StringValue();
+
+	/**
+	 * Returns the meta object for the attribute list '{@link de.tu_bs.cs.isf.mbse.erschema.SimpleConstraint#getNumValue <em>Num Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Num Value</em>'.
+	 * @see de.tu_bs.cs.isf.mbse.erschema.SimpleConstraint#getNumValue()
+	 * @see #getSimpleConstraint()
+	 * @generated
+	 */
+	EAttribute getSimpleConstraint_NumValue();
+
+	/**
 	 * Returns the meta object for class '{@link de.tu_bs.cs.isf.mbse.erschema.DummyConstraint <em>Dummy Constraint</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3387,6 +3427,22 @@ public interface ErschemaPackage extends EPackage {
 		 * @generated
 		 */
 		EReference SIMPLE_CONSTRAINT__ARITHMETICOP = eINSTANCE.getSimpleConstraint_Arithmeticop();
+
+		/**
+		 * The meta object literal for the '<em><b>String Value</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SIMPLE_CONSTRAINT__STRING_VALUE = eINSTANCE.getSimpleConstraint_StringValue();
+
+		/**
+		 * The meta object literal for the '<em><b>Num Value</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SIMPLE_CONSTRAINT__NUM_VALUE = eINSTANCE.getSimpleConstraint_NumValue();
 
 		/**
 		 * The meta object literal for the '{@link de.tu_bs.cs.isf.mbse.erschema.impl.DummyConstraintImpl <em>Dummy Constraint</em>}' class.

@@ -719,6 +719,24 @@ public class ErschemaPackageImpl extends EPackageImpl implements ErschemaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getSimpleConstraint_StringValue() {
+		return (EAttribute)simpleConstraintEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getSimpleConstraint_NumValue() {
+		return (EAttribute)simpleConstraintEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getDummyConstraint() {
 		return dummyConstraintEClass;
 	}
@@ -1303,6 +1321,8 @@ public class ErschemaPackageImpl extends EPackageImpl implements ErschemaPackage
 		createEReference(simpleConstraintEClass, SIMPLE_CONSTRAINT__CONNECT);
 		createEReference(simpleConstraintEClass, SIMPLE_CONSTRAINT__STRINGOP);
 		createEReference(simpleConstraintEClass, SIMPLE_CONSTRAINT__ARITHMETICOP);
+		createEAttribute(simpleConstraintEClass, SIMPLE_CONSTRAINT__STRING_VALUE);
+		createEAttribute(simpleConstraintEClass, SIMPLE_CONSTRAINT__NUM_VALUE);
 
 		dummyConstraintEClass = createEClass(DUMMY_CONSTRAINT);
 		createEAttribute(dummyConstraintEClass, DUMMY_CONSTRAINT__CONSTRAINT);
@@ -1505,6 +1525,8 @@ public class ErschemaPackageImpl extends EPackageImpl implements ErschemaPackage
 		initEReference(getSimpleConstraint_Connect(), this.getConnective(), null, "connect", null, 0, -1, SimpleConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSimpleConstraint_Stringop(), this.getStringOperator(), null, "stringop", null, 0, -1, SimpleConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSimpleConstraint_Arithmeticop(), this.getArithmeticOperator(), null, "arithmeticop", null, 0, -1, SimpleConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSimpleConstraint_StringValue(), ecorePackage.getEString(), "StringValue", "\"\"", 0, 2, SimpleConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSimpleConstraint_NumValue(), ecorePackage.getEDoubleObject(), "numValue", "0", 0, 2, SimpleConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(dummyConstraintEClass, DummyConstraint.class, "DummyConstraint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getDummyConstraint_Constraint(), ecorePackage.getEString(), "constraint", null, 1, 1, DummyConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

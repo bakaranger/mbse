@@ -78,7 +78,7 @@ RULES {
 
 	DummyConstraint  ::= "constraint" "(" constraint[] ")";
 	
-	SimpleConstraint ::= "check" "(" ((entity[]"."attributes[] (arithmeticop* | (connect : And , Or)* | (stringop : Concat , Length)*) compare entity[]"."attributes[] (arithmeticop* | (connect : And , Or)* | (stringop : Concat , Length)*)) | stringop : Like | connect : UnaryNot )   ")";
+	SimpleConstraint ::= "check" "(" (((entity[]"."attributes[] | numValue[REAL_LITERAL] | StringValue['"','"']) (arithmeticop* | (connect : And , Or)* | (stringop : Concat , Length)*) compare (entity[]"."attributes[] | numValue[REAL_LITERAL] | StringValue['"','"']) (arithmeticop* | (connect : And , Or)* | (stringop : Concat , Length)*)) | stringop : Like | connect : UnaryNot )")";
 	
 	//entity[]"."attributes[] (entity[]"."attributes[])*
 	// (entity[]"."attributes[])+
@@ -111,7 +111,7 @@ RULES {
 	Mul ::= "*" (entity[]"."attribute[]|value[REAL_LITERAL]);
 	
 	Concat ::= "con" (entity[]"."attribute[]|value[]);
-	Like ::= entity[]"."attribute[] "like" value[] ; // TODO
+	Like ::= entity[]"."attribute[] "like" value['"','"'] ; // TODO
 	Length ::= ".length()";
 	
 	Literal ::= entity[]"."attribute[];		
