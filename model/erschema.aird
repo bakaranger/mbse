@@ -2226,7 +2226,7 @@
           <foregroundColor xmi:type="viewpoint:RGBValues" xmi:id="_6W72pKCsEeStJ8EqWgvH-w" red="255" green="252" blue="216"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
-        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_rpnGkKCsEeStJ8EqWgvH-w" name="StringValue : EString = &quot;&quot;" tooltipText="&#xA;ERROR : The required feature 'eAttributeType' of 'org.eclipse.emf.ecore.impl.EAttributeImpl@6e7aeab9{platform:/resource/ERSchema/model/erschema.ecore#//SimpleConstraint/newAttribute}' must be set&#xA;ERROR : The typed element must have a type">
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_rpnGkKCsEeStJ8EqWgvH-w" name="StringValue : EString = &quot;&quot;" tooltipText="">
           <target xmi:type="ecore:EAttribute" href="erschema.ecore#//SimpleConstraint/StringValue"/>
           <semanticElements xmi:type="ecore:EAttribute" href="erschema.ecore#//SimpleConstraint/StringValue"/>
           <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_0-9sYKCsEeStJ8EqWgvH-w" labelAlignment="LEFT">
@@ -2237,7 +2237,7 @@
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
         </ownedElements>
-        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_1lQ3YKCsEeStJ8EqWgvH-w" name="numValue : EDoubleObject = 0" tooltipText="&#xA;ERROR : The required feature 'eAttributeType' of 'org.eclipse.emf.ecore.impl.EAttributeImpl@68083eaa{platform:/resource/ERSchema/model/erschema.ecore#//SimpleConstraint/newAttribute}' must be set&#xA;ERROR : The typed element must have a type">
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_1lQ3YKCsEeStJ8EqWgvH-w" name="numValue : EDoubleObject = 0" tooltipText="">
           <target xmi:type="ecore:EAttribute" href="erschema.ecore#//SimpleConstraint/numValue"/>
           <semanticElements xmi:type="ecore:EAttribute" href="erschema.ecore#//SimpleConstraint/numValue"/>
           <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_6XYikKCsEeStJ8EqWgvH-w" labelAlignment="LEFT">
@@ -2774,7 +2774,7 @@
           <foregroundColor xmi:type="viewpoint:RGBValues" xmi:id="_rf48JKCnEeStJ8EqWgvH-w" red="255" green="252" blue="216"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
-        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_fODXEKCnEeStJ8EqWgvH-w" name="value : EDouble = 0" tooltipText="&#xA;ERROR : The required feature 'eAttributeType' of 'org.eclipse.emf.ecore.impl.EAttributeImpl@3e5fbf5c{platform:/resource/ERSchema/model/erschema.ecore#//Add/newAttribute}' must be set&#xA;ERROR : The typed element must have a type">
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_fODXEKCnEeStJ8EqWgvH-w" name="value : EDouble = 0" tooltipText="">
           <target xmi:type="ecore:EAttribute" href="erschema.ecore#//Add/value"/>
           <semanticElements xmi:type="ecore:EAttribute" href="erschema.ecore#//Add/value"/>
           <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_rgCtIKCnEeStJ8EqWgvH-w" labelAlignment="LEFT">
@@ -3278,7 +3278,7 @@
           <foregroundColor xmi:type="viewpoint:RGBValues" xmi:id="_PqfGFKCoEeStJ8EqWgvH-w" red="255" green="252" blue="216"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
-        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_Ci0FMKCoEeStJ8EqWgvH-w" name="value : EString = &quot; &quot;" tooltipText="&#xA;ERROR : The required feature 'eAttributeType' of 'org.eclipse.emf.ecore.impl.EAttributeImpl@5cdd228e{platform:/resource/ERSchema/model/erschema.ecore#//Like/newAttribute}' must be set&#xA;ERROR : The typed element must have a type">
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_Ci0FMKCoEeStJ8EqWgvH-w" name="value : EString = &quot; &quot;" tooltipText="">
           <target xmi:type="ecore:EAttribute" href="erschema.ecore#//Like/value"/>
           <semanticElements xmi:type="ecore:EAttribute" href="erschema.ecore#//Like/value"/>
           <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_Pqo3EKCoEeStJ8EqWgvH-w" labelAlignment="LEFT">

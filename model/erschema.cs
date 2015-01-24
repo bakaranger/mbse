@@ -76,9 +76,9 @@ RULES {
 	KeyValue::="key"#1(composition|attribute)|(attribute|composition);
 	Role ::= "role"#1name[] "references" entity[] ("[" lowerBound[BOUNDS] "," upperBound[BOUNDS] "]")? !0;
 
-	DummyConstraint  ::= "constraint" "(" constraint[] ")";
+	DummyConstraint  ::= "check" "(" constraint[] ")";
 	
-	SimpleConstraint ::= "check" "(" (((entity[]"."attributes[] | numValue[REAL_LITERAL] | StringValue['"','"']) (arithmeticop* | (connect : And , Or)* | (stringop : Concat , Length)*) compare (entity[]"."attributes[] | numValue[REAL_LITERAL] | StringValue['"','"']) (arithmeticop* | (connect : And , Or)* | (stringop : Concat , Length)*)) | stringop : Like | connect : UnaryNot )")";
+	SimpleConstraint ::= "constraint" "(" (((entity[]"."attributes[] | numValue[REAL_LITERAL] | StringValue['"','"']) (arithmeticop* | (connect : And , Or)* | (stringop : Concat , Length)*) compare (entity[]"."attributes[] | numValue[REAL_LITERAL] | StringValue['"','"']) (arithmeticop* | (connect : And , Or)* | (stringop : Concat , Length)*)) | stringop : Like | connect : UnaryNot )")";
 	
 	//entity[]"."attributes[] (entity[]"."attributes[])*
 	// (entity[]"."attributes[])+
@@ -102,7 +102,7 @@ RULES {
 	And ::= "and" entity[]"."attribute[];
 	Or  ::= "or" entity[]"."attribute[];
 	
-	UnaryNot ::= "!" entity[]"."attribute[];
+	UnaryNot ::= "not" entity[]"."attribute[];
 	
 	Add ::= "+" (entity[]"."attribute[]|value[REAL_LITERAL]);
 	Sub ::= "-" (entity[]"."attribute[]|value[REAL_LITERAL]);
