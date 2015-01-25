@@ -2,10 +2,13 @@
  */
 package de.tu_bs.cs.isf.mbse.erschema.impl;
 
-import de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage;
 import de.tu_bs.cs.isf.mbse.erschema.Literal;
+import de.tu_bs.cs.isf.mbse.erschema.erschemaPackage;
+
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
@@ -58,7 +61,7 @@ public class LiteralImpl extends OperatorImpl implements Literal {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ErschemaPackage.Literals.LITERAL;
+		return erschemaPackage.Literals.LITERAL;
 	}
 
 	/**
@@ -79,7 +82,7 @@ public class LiteralImpl extends OperatorImpl implements Literal {
 		Object oldVal = val;
 		val = newVal;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ErschemaPackage.LITERAL__VAL, oldVal, val));
+			eNotify(new ENotificationImpl(this, Notification.SET, erschemaPackage.LITERAL__VAL, oldVal, val));
 	}
 
 	/**
@@ -90,7 +93,7 @@ public class LiteralImpl extends OperatorImpl implements Literal {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ErschemaPackage.LITERAL__VAL:
+			case erschemaPackage.LITERAL__VAL:
 				return getVal();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -104,7 +107,7 @@ public class LiteralImpl extends OperatorImpl implements Literal {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ErschemaPackage.LITERAL__VAL:
+			case erschemaPackage.LITERAL__VAL:
 				setVal(newValue);
 				return;
 		}
@@ -119,7 +122,7 @@ public class LiteralImpl extends OperatorImpl implements Literal {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ErschemaPackage.LITERAL__VAL:
+			case erschemaPackage.LITERAL__VAL:
 				setVal(VAL_EDEFAULT);
 				return;
 		}
@@ -134,7 +137,7 @@ public class LiteralImpl extends OperatorImpl implements Literal {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ErschemaPackage.LITERAL__VAL:
+			case erschemaPackage.LITERAL__VAL:
 				return VAL_EDEFAULT == null ? val != null : !VAL_EDEFAULT.equals(val);
 		}
 		return super.eIsSet(featureID);

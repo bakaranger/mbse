@@ -19,7 +19,7 @@ import org.eclipse.emf.common.util.EList;
  * </ul>
  * </p>
  *
- * @see de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage#getRelation()
+ * @see de.tu_bs.cs.isf.mbse.erschema.erschemaPackage#getRelation()
  * @model
  * @generated
  */
@@ -34,7 +34,7 @@ public interface Relation extends Element {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Roles</em>' containment reference list.
-	 * @see de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage#getRelation_Roles()
+	 * @see de.tu_bs.cs.isf.mbse.erschema.erschemaPackage#getRelation_Roles()
 	 * @model containment="true" lower="2"
 	 * @generated
 	 */
@@ -50,7 +50,7 @@ public interface Relation extends Element {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Attributes</em>' containment reference list.
-	 * @see de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage#getRelation_Attributes()
+	 * @see de.tu_bs.cs.isf.mbse.erschema.erschemaPackage#getRelation_Attributes()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -66,7 +66,7 @@ public interface Relation extends Element {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Constraints</em>' containment reference list.
-	 * @see de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage#getRelation_Constraints()
+	 * @see de.tu_bs.cs.isf.mbse.erschema.erschemaPackage#getRelation_Constraints()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -82,7 +82,7 @@ public interface Relation extends Element {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Dummy Constraints</em>' containment reference list.
-	 * @see de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage#getRelation_DummyConstraints()
+	 * @see de.tu_bs.cs.isf.mbse.erschema.erschemaPackage#getRelation_DummyConstraints()
 	 * @model containment="true"
 	 * @generated
 	 */

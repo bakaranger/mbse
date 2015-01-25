@@ -4,8 +4,8 @@ package de.tu_bs.cs.isf.mbse.erschema;
 
 import java.lang.Double;
 import java.lang.String;
-import org.eclipse.emf.common.util.EList;
 
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,12 +20,11 @@ import org.eclipse.emf.common.util.EList;
  * </ul>
  * </p>
  *
- * @see de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage#getEquals()
+ * @see de.tu_bs.cs.isf.mbse.erschema.erschemaPackage#getEquals()
  * @model
  * @generated
  */
 public interface Equals extends Comparative {
-
 	/**
 	 * Returns the value of the '<em><b>Value Int</b></em>' attribute list.
 	 * The list contents are of type {@link java.lang.Double}.
@@ -36,7 +35,7 @@ public interface Equals extends Comparative {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Value Int</em>' attribute list.
-	 * @see de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage#getEquals_ValueInt()
+	 * @see de.tu_bs.cs.isf.mbse.erschema.erschemaPackage#getEquals_ValueInt()
 	 * @model default="0"
 	 * @generated
 	 */
@@ -53,7 +52,7 @@ public interface Equals extends Comparative {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Value</em>' attribute.
 	 * @see #setValue(String)
-	 * @see de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage#getEquals_Value()
+	 * @see de.tu_bs.cs.isf.mbse.erschema.erschemaPackage#getEquals_Value()
 	 * @model default="\" \""
 	 * @generated
 	 */
@@ -68,4 +67,5 @@ public interface Equals extends Comparative {
 	 * @generated
 	 */
 	void setValue(String value);
+
 } // Equals

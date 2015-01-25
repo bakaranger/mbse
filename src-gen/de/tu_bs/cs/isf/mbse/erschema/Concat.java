@@ -4,7 +4,6 @@ package de.tu_bs.cs.isf.mbse.erschema;
 
 import java.lang.String;
 
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Concat</b></em>'.
@@ -17,12 +16,11 @@ import java.lang.String;
  * </ul>
  * </p>
  *
- * @see de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage#getConcat()
+ * @see de.tu_bs.cs.isf.mbse.erschema.erschemaPackage#getConcat()
  * @model
  * @generated
  */
 public interface Concat extends StringOperator {
-
 	/**
 	 * Returns the value of the '<em><b>Value</b></em>' attribute.
 	 * The default value is <code>"\" \""</code>.
@@ -34,7 +32,7 @@ public interface Concat extends StringOperator {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Value</em>' attribute.
 	 * @see #setValue(String)
-	 * @see de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage#getConcat_Value()
+	 * @see de.tu_bs.cs.isf.mbse.erschema.erschemaPackage#getConcat_Value()
 	 * @model default="\" \""
 	 * @generated
 	 */
@@ -49,4 +47,5 @@ public interface Concat extends StringOperator {
 	 * @generated
 	 */
 	void setValue(String value);
+
 } // Concat

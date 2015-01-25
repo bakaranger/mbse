@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  * </p>
  *
- * @see de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage#getKeyValue()
+ * @see de.tu_bs.cs.isf.mbse.erschema.erschemaPackage#getKeyValue()
  * @model
  * @generated
  */
@@ -32,7 +32,7 @@ public interface KeyValue extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Attribute</em>' containment reference.
 	 * @see #setAttribute(Attribute)
-	 * @see de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage#getKeyValue_Attribute()
+	 * @see de.tu_bs.cs.isf.mbse.erschema.erschemaPackage#getKeyValue_Attribute()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -58,7 +58,7 @@ public interface KeyValue extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Composition</em>' containment reference.
 	 * @see #setComposition(Composition)
-	 * @see de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage#getKeyValue_Composition()
+	 * @see de.tu_bs.cs.isf.mbse.erschema.erschemaPackage#getKeyValue_Composition()
 	 * @model containment="true"
 	 * @generated
 	 */

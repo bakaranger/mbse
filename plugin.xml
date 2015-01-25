@@ -10,7 +10,7 @@
       <!-- @generated erschema -->
       <package
             uri="http://tu-bs.de/cs/isf/mbse/erschema"
-            class="de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage"
+            class="de.tu_bs.cs.isf.mbse.erschema.erschemaPackage"
             genModel="model/erschema.genmodel"/>
    </extension>
 

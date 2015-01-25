@@ -15,7 +15,7 @@ import org.eclipse.emf.common.util.Enumerator;
  * A representation of the literals of the enumeration '<em><b>Primitive</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage#getPrimitive()
+ * @see de.tu_bs.cs.isf.mbse.erschema.erschemaPackage#getPrimitive()
  * @model
  * @generated
  */

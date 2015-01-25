@@ -10,7 +10,7 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- end-user-doc -->
  *
  *
- * @see de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage#getDatatype()
+ * @see de.tu_bs.cs.isf.mbse.erschema.erschemaPackage#getDatatype()
  * @model abstract="true"
  * @generated
  */

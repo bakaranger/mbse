@@ -15,7 +15,7 @@ package de.tu_bs.cs.isf.mbse.erschema;
  * </ul>
  * </p>
  *
- * @see de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage#getLiteral()
+ * @see de.tu_bs.cs.isf.mbse.erschema.erschemaPackage#getLiteral()
  * @model
  * @generated
  */
@@ -30,7 +30,7 @@ public interface Literal extends Operator {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Val</em>' attribute.
 	 * @see #setVal(Object)
-	 * @see de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage#getLiteral_Val()
+	 * @see de.tu_bs.cs.isf.mbse.erschema.erschemaPackage#getLiteral_Val()
 	 * @model required="true"
 	 * @generated
 	 */

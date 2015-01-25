@@ -2,12 +2,15 @@
  */
 package de.tu_bs.cs.isf.mbse.erschema.impl;
 
-import de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage;
 import de.tu_bs.cs.isf.mbse.erschema.Length;
+import de.tu_bs.cs.isf.mbse.erschema.erschemaPackage;
 
 import java.lang.String;
+
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
@@ -33,6 +36,7 @@ public class LengthImpl extends StringOperatorImpl implements Length {
 	 * @ordered
 	 */
 	protected static final String VALUE_EDEFAULT = "\" \"";
+
 	/**
 	 * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -59,7 +63,7 @@ public class LengthImpl extends StringOperatorImpl implements Length {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ErschemaPackage.Literals.LENGTH;
+		return erschemaPackage.Literals.LENGTH;
 	}
 
 	/**
@@ -80,7 +84,7 @@ public class LengthImpl extends StringOperatorImpl implements Length {
 		String oldValue = value;
 		value = newValue;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ErschemaPackage.LENGTH__VALUE, oldValue, value));
+			eNotify(new ENotificationImpl(this, Notification.SET, erschemaPackage.LENGTH__VALUE, oldValue, value));
 	}
 
 	/**
@@ -91,7 +95,7 @@ public class LengthImpl extends StringOperatorImpl implements Length {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ErschemaPackage.LENGTH__VALUE:
+			case erschemaPackage.LENGTH__VALUE:
 				return getValue();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -105,7 +109,7 @@ public class LengthImpl extends StringOperatorImpl implements Length {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ErschemaPackage.LENGTH__VALUE:
+			case erschemaPackage.LENGTH__VALUE:
 				setValue((String)newValue);
 				return;
 		}
@@ -120,7 +124,7 @@ public class LengthImpl extends StringOperatorImpl implements Length {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ErschemaPackage.LENGTH__VALUE:
+			case erschemaPackage.LENGTH__VALUE:
 				setValue(VALUE_EDEFAULT);
 				return;
 		}
@@ -135,7 +139,7 @@ public class LengthImpl extends StringOperatorImpl implements Length {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ErschemaPackage.LENGTH__VALUE:
+			case erschemaPackage.LENGTH__VALUE:
 				return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
 		}
 		return super.eIsSet(featureID);

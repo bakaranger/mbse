@@ -20,7 +20,7 @@ import org.eclipse.emf.common.util.EList;
  * </ul>
  * </p>
  *
- * @see de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage#getEntity()
+ * @see de.tu_bs.cs.isf.mbse.erschema.erschemaPackage#getEntity()
  * @model annotation="OWL_DEFINITION Entity_attributes_unique_names='Entity_attributes min 0 '"
  * @generated
  */
@@ -35,7 +35,7 @@ public interface Entity extends Element {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Attributes</em>' containment reference list.
-	 * @see de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage#getEntity_Attributes()
+	 * @see de.tu_bs.cs.isf.mbse.erschema.erschemaPackage#getEntity_Attributes()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -51,7 +51,7 @@ public interface Entity extends Element {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Compositions</em>' containment reference list.
-	 * @see de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage#getEntity_Compositions()
+	 * @see de.tu_bs.cs.isf.mbse.erschema.erschemaPackage#getEntity_Compositions()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -67,7 +67,7 @@ public interface Entity extends Element {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Constraints</em>' containment reference list.
-	 * @see de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage#getEntity_Constraints()
+	 * @see de.tu_bs.cs.isf.mbse.erschema.erschemaPackage#getEntity_Constraints()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -83,7 +83,7 @@ public interface Entity extends Element {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Dummy Constraints</em>' containment reference list.
-	 * @see de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage#getEntity_DummyConstraints()
+	 * @see de.tu_bs.cs.isf.mbse.erschema.erschemaPackage#getEntity_DummyConstraints()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -99,7 +99,7 @@ public interface Entity extends Element {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Keys</em>' containment reference list.
-	 * @see de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage#getEntity_Keys()
+	 * @see de.tu_bs.cs.isf.mbse.erschema.erschemaPackage#getEntity_Keys()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */

@@ -4,12 +4,14 @@ package de.tu_bs.cs.isf.mbse.erschema.impl;
 
 import de.tu_bs.cs.isf.mbse.erschema.Attribute;
 import de.tu_bs.cs.isf.mbse.erschema.Datatype;
-import de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage;
+import de.tu_bs.cs.isf.mbse.erschema.erschemaPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
@@ -52,7 +54,7 @@ public class AttributeImpl extends ElementImpl implements Attribute {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ErschemaPackage.Literals.ATTRIBUTE;
+		return erschemaPackage.Literals.ATTRIBUTE;
 	}
 
 	/**
@@ -73,7 +75,7 @@ public class AttributeImpl extends ElementImpl implements Attribute {
 		Datatype oldType = type;
 		type = newType;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ErschemaPackage.ATTRIBUTE__TYPE, oldType, newType);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, erschemaPackage.ATTRIBUTE__TYPE, oldType, newType);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -88,14 +90,14 @@ public class AttributeImpl extends ElementImpl implements Attribute {
 		if (newType != type) {
 			NotificationChain msgs = null;
 			if (type != null)
-				msgs = ((InternalEObject)type).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ErschemaPackage.ATTRIBUTE__TYPE, null, msgs);
+				msgs = ((InternalEObject)type).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - erschemaPackage.ATTRIBUTE__TYPE, null, msgs);
 			if (newType != null)
-				msgs = ((InternalEObject)newType).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ErschemaPackage.ATTRIBUTE__TYPE, null, msgs);
+				msgs = ((InternalEObject)newType).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - erschemaPackage.ATTRIBUTE__TYPE, null, msgs);
 			msgs = basicSetType(newType, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ErschemaPackage.ATTRIBUTE__TYPE, newType, newType));
+			eNotify(new ENotificationImpl(this, Notification.SET, erschemaPackage.ATTRIBUTE__TYPE, newType, newType));
 	}
 
 	/**
@@ -106,7 +108,7 @@ public class AttributeImpl extends ElementImpl implements Attribute {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case ErschemaPackage.ATTRIBUTE__TYPE:
+			case erschemaPackage.ATTRIBUTE__TYPE:
 				return basicSetType(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -120,7 +122,7 @@ public class AttributeImpl extends ElementImpl implements Attribute {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ErschemaPackage.ATTRIBUTE__TYPE:
+			case erschemaPackage.ATTRIBUTE__TYPE:
 				return getType();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -134,7 +136,7 @@ public class AttributeImpl extends ElementImpl implements Attribute {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ErschemaPackage.ATTRIBUTE__TYPE:
+			case erschemaPackage.ATTRIBUTE__TYPE:
 				setType((Datatype)newValue);
 				return;
 		}
@@ -149,7 +151,7 @@ public class AttributeImpl extends ElementImpl implements Attribute {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ErschemaPackage.ATTRIBUTE__TYPE:
+			case erschemaPackage.ATTRIBUTE__TYPE:
 				setType((Datatype)null);
 				return;
 		}
@@ -164,7 +166,7 @@ public class AttributeImpl extends ElementImpl implements Attribute {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ErschemaPackage.ATTRIBUTE__TYPE:
+			case erschemaPackage.ATTRIBUTE__TYPE:
 				return type != null;
 		}
 		return super.eIsSet(featureID);

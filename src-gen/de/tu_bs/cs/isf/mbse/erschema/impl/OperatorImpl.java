@@ -4,12 +4,17 @@ package de.tu_bs.cs.isf.mbse.erschema.impl;
 
 import de.tu_bs.cs.isf.mbse.erschema.Attribute;
 import de.tu_bs.cs.isf.mbse.erschema.Entity;
-import de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage;
 import de.tu_bs.cs.isf.mbse.erschema.Operator;
+import de.tu_bs.cs.isf.mbse.erschema.erschemaPackage;
+
 import java.util.Collection;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
@@ -63,7 +68,7 @@ public abstract class OperatorImpl extends MinimalEObjectImpl.Container implemen
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ErschemaPackage.Literals.OPERATOR;
+		return erschemaPackage.Literals.OPERATOR;
 	}
 
 	/**
@@ -73,7 +78,7 @@ public abstract class OperatorImpl extends MinimalEObjectImpl.Container implemen
 	 */
 	public EList<Attribute> getAttribute() {
 		if (attribute == null) {
-			attribute = new EObjectResolvingEList<Attribute>(Attribute.class, this, ErschemaPackage.OPERATOR__ATTRIBUTE);
+			attribute = new EObjectResolvingEList<Attribute>(Attribute.class, this, erschemaPackage.OPERATOR__ATTRIBUTE);
 		}
 		return attribute;
 	}
@@ -85,7 +90,7 @@ public abstract class OperatorImpl extends MinimalEObjectImpl.Container implemen
 	 */
 	public EList<Entity> getEntity() {
 		if (entity == null) {
-			entity = new EObjectResolvingEList<Entity>(Entity.class, this, ErschemaPackage.OPERATOR__ENTITY);
+			entity = new EObjectResolvingEList<Entity>(Entity.class, this, erschemaPackage.OPERATOR__ENTITY);
 		}
 		return entity;
 	}
@@ -98,9 +103,9 @@ public abstract class OperatorImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ErschemaPackage.OPERATOR__ATTRIBUTE:
+			case erschemaPackage.OPERATOR__ATTRIBUTE:
 				return getAttribute();
-			case ErschemaPackage.OPERATOR__ENTITY:
+			case erschemaPackage.OPERATOR__ENTITY:
 				return getEntity();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -115,11 +120,11 @@ public abstract class OperatorImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ErschemaPackage.OPERATOR__ATTRIBUTE:
+			case erschemaPackage.OPERATOR__ATTRIBUTE:
 				getAttribute().clear();
 				getAttribute().addAll((Collection<? extends Attribute>)newValue);
 				return;
-			case ErschemaPackage.OPERATOR__ENTITY:
+			case erschemaPackage.OPERATOR__ENTITY:
 				getEntity().clear();
 				getEntity().addAll((Collection<? extends Entity>)newValue);
 				return;
@@ -135,10 +140,10 @@ public abstract class OperatorImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ErschemaPackage.OPERATOR__ATTRIBUTE:
+			case erschemaPackage.OPERATOR__ATTRIBUTE:
 				getAttribute().clear();
 				return;
-			case ErschemaPackage.OPERATOR__ENTITY:
+			case erschemaPackage.OPERATOR__ENTITY:
 				getEntity().clear();
 				return;
 		}
@@ -153,9 +158,9 @@ public abstract class OperatorImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ErschemaPackage.OPERATOR__ATTRIBUTE:
+			case erschemaPackage.OPERATOR__ATTRIBUTE:
 				return attribute != null && !attribute.isEmpty();
-			case ErschemaPackage.OPERATOR__ENTITY:
+			case erschemaPackage.OPERATOR__ENTITY:
 				return entity != null && !entity.isEmpty();
 		}
 		return super.eIsSet(featureID);

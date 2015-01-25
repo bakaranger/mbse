@@ -18,7 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  * </p>
  *
- * @see de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage#getDummyConstraint()
+ * @see de.tu_bs.cs.isf.mbse.erschema.erschemaPackage#getDummyConstraint()
  * @model
  * @generated
  */
@@ -33,7 +33,7 @@ public interface DummyConstraint extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Constraint</em>' attribute.
 	 * @see #setConstraint(String)
-	 * @see de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage#getDummyConstraint_Constraint()
+	 * @see de.tu_bs.cs.isf.mbse.erschema.erschemaPackage#getDummyConstraint_Constraint()
 	 * @model required="true"
 	 * @generated
 	 */

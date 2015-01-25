@@ -18,7 +18,6 @@ import de.tu_bs.cs.isf.mbse.erschema.DummyConstraint;
 import de.tu_bs.cs.isf.mbse.erschema.Element;
 import de.tu_bs.cs.isf.mbse.erschema.Entity;
 import de.tu_bs.cs.isf.mbse.erschema.Equals;
-import de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage;
 import de.tu_bs.cs.isf.mbse.erschema.Greater;
 import de.tu_bs.cs.isf.mbse.erschema.GreaterThan;
 import de.tu_bs.cs.isf.mbse.erschema.IsNot;
@@ -41,9 +40,13 @@ import de.tu_bs.cs.isf.mbse.erschema.StringOperator;
 import de.tu_bs.cs.isf.mbse.erschema.Sub;
 import de.tu_bs.cs.isf.mbse.erschema.Text;
 import de.tu_bs.cs.isf.mbse.erschema.UnaryNot;
+import de.tu_bs.cs.isf.mbse.erschema.erschemaPackage;
+
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
+
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -51,17 +54,17 @@ import org.eclipse.emf.ecore.EObject;
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage
+ * @see de.tu_bs.cs.isf.mbse.erschema.erschemaPackage
  * @generated
  */
-public class ErschemaAdapterFactory extends AdapterFactoryImpl {
+public class erschemaAdapterFactory extends AdapterFactoryImpl {
 	/**
 	 * The cached model package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static ErschemaPackage modelPackage;
+	protected static erschemaPackage modelPackage;
 
 	/**
 	 * Creates an instance of the adapter factory.
@@ -69,9 +72,9 @@ public class ErschemaAdapterFactory extends AdapterFactoryImpl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ErschemaAdapterFactory() {
+	public erschemaAdapterFactory() {
 		if (modelPackage == null) {
-			modelPackage = ErschemaPackage.eINSTANCE;
+			modelPackage = erschemaPackage.eINSTANCE;
 		}
 	}
 
@@ -100,8 +103,8 @@ public class ErschemaAdapterFactory extends AdapterFactoryImpl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ErschemaSwitch<Adapter> modelSwitch =
-		new ErschemaSwitch<Adapter>() {
+	protected erschemaSwitch<Adapter> modelSwitch =
+		new erschemaSwitch<Adapter>() {
 			@Override
 			public Adapter caseModel(Model object) {
 				return createModelAdapter();
@@ -908,4 +911,4 @@ public class ErschemaAdapterFactory extends AdapterFactoryImpl {
 		return null;
 	}
 
-} //ErschemaAdapterFactory
+} //erschemaAdapterFactory

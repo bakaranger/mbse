@@ -2,13 +2,17 @@
  */
 package de.tu_bs.cs.isf.mbse.erschema.impl;
 
-import de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage;
 import de.tu_bs.cs.isf.mbse.erschema.Sub;
+import de.tu_bs.cs.isf.mbse.erschema.erschemaPackage;
 
 import java.lang.Double;
+
 import java.util.Collection;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 
 /**
@@ -51,7 +55,7 @@ public class SubImpl extends ArithmeticOperatorImpl implements Sub {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ErschemaPackage.Literals.SUB;
+		return erschemaPackage.Literals.SUB;
 	}
 
 	/**
@@ -61,7 +65,7 @@ public class SubImpl extends ArithmeticOperatorImpl implements Sub {
 	 */
 	public EList<Double> getValue() {
 		if (value == null) {
-			value = new EDataTypeUniqueEList<Double>(Double.class, this, ErschemaPackage.SUB__VALUE);
+			value = new EDataTypeUniqueEList<Double>(Double.class, this, erschemaPackage.SUB__VALUE);
 		}
 		return value;
 	}
@@ -74,7 +78,7 @@ public class SubImpl extends ArithmeticOperatorImpl implements Sub {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ErschemaPackage.SUB__VALUE:
+			case erschemaPackage.SUB__VALUE:
 				return getValue();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -89,7 +93,7 @@ public class SubImpl extends ArithmeticOperatorImpl implements Sub {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ErschemaPackage.SUB__VALUE:
+			case erschemaPackage.SUB__VALUE:
 				getValue().clear();
 				getValue().addAll((Collection<? extends Double>)newValue);
 				return;
@@ -105,7 +109,7 @@ public class SubImpl extends ArithmeticOperatorImpl implements Sub {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ErschemaPackage.SUB__VALUE:
+			case erschemaPackage.SUB__VALUE:
 				getValue().clear();
 				return;
 		}
@@ -120,7 +124,7 @@ public class SubImpl extends ArithmeticOperatorImpl implements Sub {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ErschemaPackage.SUB__VALUE:
+			case erschemaPackage.SUB__VALUE:
 				return value != null && !value.isEmpty();
 		}
 		return super.eIsSet(featureID);

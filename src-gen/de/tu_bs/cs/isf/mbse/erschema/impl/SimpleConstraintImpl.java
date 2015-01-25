@@ -7,17 +7,24 @@ import de.tu_bs.cs.isf.mbse.erschema.Attribute;
 import de.tu_bs.cs.isf.mbse.erschema.Comparative;
 import de.tu_bs.cs.isf.mbse.erschema.Connective;
 import de.tu_bs.cs.isf.mbse.erschema.Entity;
-import de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage;
 import de.tu_bs.cs.isf.mbse.erschema.SimpleConstraint;
 import de.tu_bs.cs.isf.mbse.erschema.StringOperator;
+import de.tu_bs.cs.isf.mbse.erschema.erschemaPackage;
+
 import java.lang.Double;
 import java.lang.String;
+
 import java.util.Collection;
+
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
 import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
@@ -140,7 +147,7 @@ public class SimpleConstraintImpl extends MinimalEObjectImpl.Container implement
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ErschemaPackage.Literals.SIMPLE_CONSTRAINT;
+		return erschemaPackage.Literals.SIMPLE_CONSTRAINT;
 	}
 
 	/**
@@ -150,7 +157,7 @@ public class SimpleConstraintImpl extends MinimalEObjectImpl.Container implement
 	 */
 	public EList<Comparative> getCompare() {
 		if (compare == null) {
-			compare = new EObjectContainmentEList<Comparative>(Comparative.class, this, ErschemaPackage.SIMPLE_CONSTRAINT__COMPARE);
+			compare = new EObjectContainmentEList<Comparative>(Comparative.class, this, erschemaPackage.SIMPLE_CONSTRAINT__COMPARE);
 		}
 		return compare;
 	}
@@ -162,7 +169,7 @@ public class SimpleConstraintImpl extends MinimalEObjectImpl.Container implement
 	 */
 	public EList<Entity> getEntity() {
 		if (entity == null) {
-			entity = new EObjectResolvingEList<Entity>(Entity.class, this, ErschemaPackage.SIMPLE_CONSTRAINT__ENTITY);
+			entity = new EObjectResolvingEList<Entity>(Entity.class, this, erschemaPackage.SIMPLE_CONSTRAINT__ENTITY);
 		}
 		return entity;
 	}
@@ -174,7 +181,7 @@ public class SimpleConstraintImpl extends MinimalEObjectImpl.Container implement
 	 */
 	public EList<Attribute> getAttributes() {
 		if (attributes == null) {
-			attributes = new EObjectResolvingEList<Attribute>(Attribute.class, this, ErschemaPackage.SIMPLE_CONSTRAINT__ATTRIBUTES);
+			attributes = new EObjectResolvingEList<Attribute>(Attribute.class, this, erschemaPackage.SIMPLE_CONSTRAINT__ATTRIBUTES);
 		}
 		return attributes;
 	}
@@ -186,7 +193,7 @@ public class SimpleConstraintImpl extends MinimalEObjectImpl.Container implement
 	 */
 	public EList<Connective> getConnect() {
 		if (connect == null) {
-			connect = new EObjectContainmentEList<Connective>(Connective.class, this, ErschemaPackage.SIMPLE_CONSTRAINT__CONNECT);
+			connect = new EObjectContainmentEList<Connective>(Connective.class, this, erschemaPackage.SIMPLE_CONSTRAINT__CONNECT);
 		}
 		return connect;
 	}
@@ -198,7 +205,7 @@ public class SimpleConstraintImpl extends MinimalEObjectImpl.Container implement
 	 */
 	public EList<StringOperator> getStringop() {
 		if (stringop == null) {
-			stringop = new EObjectContainmentEList<StringOperator>(StringOperator.class, this, ErschemaPackage.SIMPLE_CONSTRAINT__STRINGOP);
+			stringop = new EObjectContainmentEList<StringOperator>(StringOperator.class, this, erschemaPackage.SIMPLE_CONSTRAINT__STRINGOP);
 		}
 		return stringop;
 	}
@@ -210,7 +217,7 @@ public class SimpleConstraintImpl extends MinimalEObjectImpl.Container implement
 	 */
 	public EList<ArithmeticOperator> getArithmeticop() {
 		if (arithmeticop == null) {
-			arithmeticop = new EObjectContainmentEList<ArithmeticOperator>(ArithmeticOperator.class, this, ErschemaPackage.SIMPLE_CONSTRAINT__ARITHMETICOP);
+			arithmeticop = new EObjectContainmentEList<ArithmeticOperator>(ArithmeticOperator.class, this, erschemaPackage.SIMPLE_CONSTRAINT__ARITHMETICOP);
 		}
 		return arithmeticop;
 	}
@@ -222,7 +229,7 @@ public class SimpleConstraintImpl extends MinimalEObjectImpl.Container implement
 	 */
 	public EList<String> getStringValue() {
 		if (stringValue == null) {
-			stringValue = new EDataTypeUniqueEList<String>(String.class, this, ErschemaPackage.SIMPLE_CONSTRAINT__STRING_VALUE);
+			stringValue = new EDataTypeUniqueEList<String>(String.class, this, erschemaPackage.SIMPLE_CONSTRAINT__STRING_VALUE);
 		}
 		return stringValue;
 	}
@@ -234,7 +241,7 @@ public class SimpleConstraintImpl extends MinimalEObjectImpl.Container implement
 	 */
 	public EList<Double> getNumValue() {
 		if (numValue == null) {
-			numValue = new EDataTypeUniqueEList<Double>(Double.class, this, ErschemaPackage.SIMPLE_CONSTRAINT__NUM_VALUE);
+			numValue = new EDataTypeUniqueEList<Double>(Double.class, this, erschemaPackage.SIMPLE_CONSTRAINT__NUM_VALUE);
 		}
 		return numValue;
 	}
@@ -247,13 +254,13 @@ public class SimpleConstraintImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case ErschemaPackage.SIMPLE_CONSTRAINT__COMPARE:
+			case erschemaPackage.SIMPLE_CONSTRAINT__COMPARE:
 				return ((InternalEList<?>)getCompare()).basicRemove(otherEnd, msgs);
-			case ErschemaPackage.SIMPLE_CONSTRAINT__CONNECT:
+			case erschemaPackage.SIMPLE_CONSTRAINT__CONNECT:
 				return ((InternalEList<?>)getConnect()).basicRemove(otherEnd, msgs);
-			case ErschemaPackage.SIMPLE_CONSTRAINT__STRINGOP:
+			case erschemaPackage.SIMPLE_CONSTRAINT__STRINGOP:
 				return ((InternalEList<?>)getStringop()).basicRemove(otherEnd, msgs);
-			case ErschemaPackage.SIMPLE_CONSTRAINT__ARITHMETICOP:
+			case erschemaPackage.SIMPLE_CONSTRAINT__ARITHMETICOP:
 				return ((InternalEList<?>)getArithmeticop()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -267,21 +274,21 @@ public class SimpleConstraintImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ErschemaPackage.SIMPLE_CONSTRAINT__COMPARE:
+			case erschemaPackage.SIMPLE_CONSTRAINT__COMPARE:
 				return getCompare();
-			case ErschemaPackage.SIMPLE_CONSTRAINT__ENTITY:
+			case erschemaPackage.SIMPLE_CONSTRAINT__ENTITY:
 				return getEntity();
-			case ErschemaPackage.SIMPLE_CONSTRAINT__ATTRIBUTES:
+			case erschemaPackage.SIMPLE_CONSTRAINT__ATTRIBUTES:
 				return getAttributes();
-			case ErschemaPackage.SIMPLE_CONSTRAINT__CONNECT:
+			case erschemaPackage.SIMPLE_CONSTRAINT__CONNECT:
 				return getConnect();
-			case ErschemaPackage.SIMPLE_CONSTRAINT__STRINGOP:
+			case erschemaPackage.SIMPLE_CONSTRAINT__STRINGOP:
 				return getStringop();
-			case ErschemaPackage.SIMPLE_CONSTRAINT__ARITHMETICOP:
+			case erschemaPackage.SIMPLE_CONSTRAINT__ARITHMETICOP:
 				return getArithmeticop();
-			case ErschemaPackage.SIMPLE_CONSTRAINT__STRING_VALUE:
+			case erschemaPackage.SIMPLE_CONSTRAINT__STRING_VALUE:
 				return getStringValue();
-			case ErschemaPackage.SIMPLE_CONSTRAINT__NUM_VALUE:
+			case erschemaPackage.SIMPLE_CONSTRAINT__NUM_VALUE:
 				return getNumValue();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -296,35 +303,35 @@ public class SimpleConstraintImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ErschemaPackage.SIMPLE_CONSTRAINT__COMPARE:
+			case erschemaPackage.SIMPLE_CONSTRAINT__COMPARE:
 				getCompare().clear();
 				getCompare().addAll((Collection<? extends Comparative>)newValue);
 				return;
-			case ErschemaPackage.SIMPLE_CONSTRAINT__ENTITY:
+			case erschemaPackage.SIMPLE_CONSTRAINT__ENTITY:
 				getEntity().clear();
 				getEntity().addAll((Collection<? extends Entity>)newValue);
 				return;
-			case ErschemaPackage.SIMPLE_CONSTRAINT__ATTRIBUTES:
+			case erschemaPackage.SIMPLE_CONSTRAINT__ATTRIBUTES:
 				getAttributes().clear();
 				getAttributes().addAll((Collection<? extends Attribute>)newValue);
 				return;
-			case ErschemaPackage.SIMPLE_CONSTRAINT__CONNECT:
+			case erschemaPackage.SIMPLE_CONSTRAINT__CONNECT:
 				getConnect().clear();
 				getConnect().addAll((Collection<? extends Connective>)newValue);
 				return;
-			case ErschemaPackage.SIMPLE_CONSTRAINT__STRINGOP:
+			case erschemaPackage.SIMPLE_CONSTRAINT__STRINGOP:
 				getStringop().clear();
 				getStringop().addAll((Collection<? extends StringOperator>)newValue);
 				return;
-			case ErschemaPackage.SIMPLE_CONSTRAINT__ARITHMETICOP:
+			case erschemaPackage.SIMPLE_CONSTRAINT__ARITHMETICOP:
 				getArithmeticop().clear();
 				getArithmeticop().addAll((Collection<? extends ArithmeticOperator>)newValue);
 				return;
-			case ErschemaPackage.SIMPLE_CONSTRAINT__STRING_VALUE:
+			case erschemaPackage.SIMPLE_CONSTRAINT__STRING_VALUE:
 				getStringValue().clear();
 				getStringValue().addAll((Collection<? extends String>)newValue);
 				return;
-			case ErschemaPackage.SIMPLE_CONSTRAINT__NUM_VALUE:
+			case erschemaPackage.SIMPLE_CONSTRAINT__NUM_VALUE:
 				getNumValue().clear();
 				getNumValue().addAll((Collection<? extends Double>)newValue);
 				return;
@@ -340,28 +347,28 @@ public class SimpleConstraintImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ErschemaPackage.SIMPLE_CONSTRAINT__COMPARE:
+			case erschemaPackage.SIMPLE_CONSTRAINT__COMPARE:
 				getCompare().clear();
 				return;
-			case ErschemaPackage.SIMPLE_CONSTRAINT__ENTITY:
+			case erschemaPackage.SIMPLE_CONSTRAINT__ENTITY:
 				getEntity().clear();
 				return;
-			case ErschemaPackage.SIMPLE_CONSTRAINT__ATTRIBUTES:
+			case erschemaPackage.SIMPLE_CONSTRAINT__ATTRIBUTES:
 				getAttributes().clear();
 				return;
-			case ErschemaPackage.SIMPLE_CONSTRAINT__CONNECT:
+			case erschemaPackage.SIMPLE_CONSTRAINT__CONNECT:
 				getConnect().clear();
 				return;
-			case ErschemaPackage.SIMPLE_CONSTRAINT__STRINGOP:
+			case erschemaPackage.SIMPLE_CONSTRAINT__STRINGOP:
 				getStringop().clear();
 				return;
-			case ErschemaPackage.SIMPLE_CONSTRAINT__ARITHMETICOP:
+			case erschemaPackage.SIMPLE_CONSTRAINT__ARITHMETICOP:
 				getArithmeticop().clear();
 				return;
-			case ErschemaPackage.SIMPLE_CONSTRAINT__STRING_VALUE:
+			case erschemaPackage.SIMPLE_CONSTRAINT__STRING_VALUE:
 				getStringValue().clear();
 				return;
-			case ErschemaPackage.SIMPLE_CONSTRAINT__NUM_VALUE:
+			case erschemaPackage.SIMPLE_CONSTRAINT__NUM_VALUE:
 				getNumValue().clear();
 				return;
 		}
@@ -376,21 +383,21 @@ public class SimpleConstraintImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ErschemaPackage.SIMPLE_CONSTRAINT__COMPARE:
+			case erschemaPackage.SIMPLE_CONSTRAINT__COMPARE:
 				return compare != null && !compare.isEmpty();
-			case ErschemaPackage.SIMPLE_CONSTRAINT__ENTITY:
+			case erschemaPackage.SIMPLE_CONSTRAINT__ENTITY:
 				return entity != null && !entity.isEmpty();
-			case ErschemaPackage.SIMPLE_CONSTRAINT__ATTRIBUTES:
+			case erschemaPackage.SIMPLE_CONSTRAINT__ATTRIBUTES:
 				return attributes != null && !attributes.isEmpty();
-			case ErschemaPackage.SIMPLE_CONSTRAINT__CONNECT:
+			case erschemaPackage.SIMPLE_CONSTRAINT__CONNECT:
 				return connect != null && !connect.isEmpty();
-			case ErschemaPackage.SIMPLE_CONSTRAINT__STRINGOP:
+			case erschemaPackage.SIMPLE_CONSTRAINT__STRINGOP:
 				return stringop != null && !stringop.isEmpty();
-			case ErschemaPackage.SIMPLE_CONSTRAINT__ARITHMETICOP:
+			case erschemaPackage.SIMPLE_CONSTRAINT__ARITHMETICOP:
 				return arithmeticop != null && !arithmeticop.isEmpty();
-			case ErschemaPackage.SIMPLE_CONSTRAINT__STRING_VALUE:
+			case erschemaPackage.SIMPLE_CONSTRAINT__STRING_VALUE:
 				return stringValue != null && !stringValue.isEmpty();
-			case ErschemaPackage.SIMPLE_CONSTRAINT__NUM_VALUE:
+			case erschemaPackage.SIMPLE_CONSTRAINT__NUM_VALUE:
 				return numValue != null && !numValue.isEmpty();
 		}
 		return super.eIsSet(featureID);

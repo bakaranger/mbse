@@ -3,8 +3,8 @@
 package de.tu_bs.cs.isf.mbse.erschema;
 
 import java.lang.Double;
-import org.eclipse.emf.common.util.EList;
 
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,12 +18,11 @@ import org.eclipse.emf.common.util.EList;
  * </ul>
  * </p>
  *
- * @see de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage#getAdd()
+ * @see de.tu_bs.cs.isf.mbse.erschema.erschemaPackage#getAdd()
  * @model
  * @generated
  */
 public interface Add extends ArithmeticOperator {
-
 	/**
 	 * Returns the value of the '<em><b>Value</b></em>' attribute list.
 	 * The list contents are of type {@link java.lang.Double}.
@@ -34,9 +33,10 @@ public interface Add extends ArithmeticOperator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Value</em>' attribute list.
-	 * @see de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage#getAdd_Value()
+	 * @see de.tu_bs.cs.isf.mbse.erschema.erschemaPackage#getAdd_Value()
 	 * @model default="0"
 	 * @generated
 	 */
 	EList<Double> getValue();
+
 } // Add

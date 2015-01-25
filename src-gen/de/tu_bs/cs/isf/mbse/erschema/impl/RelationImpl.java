@@ -4,10 +4,10 @@ package de.tu_bs.cs.isf.mbse.erschema.impl;
 
 import de.tu_bs.cs.isf.mbse.erschema.Attribute;
 import de.tu_bs.cs.isf.mbse.erschema.DummyConstraint;
-import de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage;
 import de.tu_bs.cs.isf.mbse.erschema.Relation;
 import de.tu_bs.cs.isf.mbse.erschema.Role;
 import de.tu_bs.cs.isf.mbse.erschema.SimpleConstraint;
+import de.tu_bs.cs.isf.mbse.erschema.erschemaPackage;
 
 import java.util.Collection;
 
@@ -94,7 +94,7 @@ public class RelationImpl extends ElementImpl implements Relation {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ErschemaPackage.Literals.RELATION;
+		return erschemaPackage.Literals.RELATION;
 	}
 
 	/**
@@ -104,7 +104,7 @@ public class RelationImpl extends ElementImpl implements Relation {
 	 */
 	public EList<Role> getRoles() {
 		if (roles == null) {
-			roles = new EObjectContainmentEList<Role>(Role.class, this, ErschemaPackage.RELATION__ROLES);
+			roles = new EObjectContainmentEList<Role>(Role.class, this, erschemaPackage.RELATION__ROLES);
 		}
 		return roles;
 	}
@@ -116,7 +116,7 @@ public class RelationImpl extends ElementImpl implements Relation {
 	 */
 	public EList<Attribute> getAttributes() {
 		if (attributes == null) {
-			attributes = new EObjectContainmentEList<Attribute>(Attribute.class, this, ErschemaPackage.RELATION__ATTRIBUTES);
+			attributes = new EObjectContainmentEList<Attribute>(Attribute.class, this, erschemaPackage.RELATION__ATTRIBUTES);
 		}
 		return attributes;
 	}
@@ -128,7 +128,7 @@ public class RelationImpl extends ElementImpl implements Relation {
 	 */
 	public EList<SimpleConstraint> getConstraints() {
 		if (constraints == null) {
-			constraints = new EObjectContainmentEList<SimpleConstraint>(SimpleConstraint.class, this, ErschemaPackage.RELATION__CONSTRAINTS);
+			constraints = new EObjectContainmentEList<SimpleConstraint>(SimpleConstraint.class, this, erschemaPackage.RELATION__CONSTRAINTS);
 		}
 		return constraints;
 	}
@@ -140,7 +140,7 @@ public class RelationImpl extends ElementImpl implements Relation {
 	 */
 	public EList<DummyConstraint> getDummyConstraints() {
 		if (dummyConstraints == null) {
-			dummyConstraints = new EObjectContainmentEList<DummyConstraint>(DummyConstraint.class, this, ErschemaPackage.RELATION__DUMMY_CONSTRAINTS);
+			dummyConstraints = new EObjectContainmentEList<DummyConstraint>(DummyConstraint.class, this, erschemaPackage.RELATION__DUMMY_CONSTRAINTS);
 		}
 		return dummyConstraints;
 	}
@@ -153,13 +153,13 @@ public class RelationImpl extends ElementImpl implements Relation {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case ErschemaPackage.RELATION__ROLES:
+			case erschemaPackage.RELATION__ROLES:
 				return ((InternalEList<?>)getRoles()).basicRemove(otherEnd, msgs);
-			case ErschemaPackage.RELATION__ATTRIBUTES:
+			case erschemaPackage.RELATION__ATTRIBUTES:
 				return ((InternalEList<?>)getAttributes()).basicRemove(otherEnd, msgs);
-			case ErschemaPackage.RELATION__CONSTRAINTS:
+			case erschemaPackage.RELATION__CONSTRAINTS:
 				return ((InternalEList<?>)getConstraints()).basicRemove(otherEnd, msgs);
-			case ErschemaPackage.RELATION__DUMMY_CONSTRAINTS:
+			case erschemaPackage.RELATION__DUMMY_CONSTRAINTS:
 				return ((InternalEList<?>)getDummyConstraints()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -173,13 +173,13 @@ public class RelationImpl extends ElementImpl implements Relation {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ErschemaPackage.RELATION__ROLES:
+			case erschemaPackage.RELATION__ROLES:
 				return getRoles();
-			case ErschemaPackage.RELATION__ATTRIBUTES:
+			case erschemaPackage.RELATION__ATTRIBUTES:
 				return getAttributes();
-			case ErschemaPackage.RELATION__CONSTRAINTS:
+			case erschemaPackage.RELATION__CONSTRAINTS:
 				return getConstraints();
-			case ErschemaPackage.RELATION__DUMMY_CONSTRAINTS:
+			case erschemaPackage.RELATION__DUMMY_CONSTRAINTS:
 				return getDummyConstraints();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -194,19 +194,19 @@ public class RelationImpl extends ElementImpl implements Relation {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ErschemaPackage.RELATION__ROLES:
+			case erschemaPackage.RELATION__ROLES:
 				getRoles().clear();
 				getRoles().addAll((Collection<? extends Role>)newValue);
 				return;
-			case ErschemaPackage.RELATION__ATTRIBUTES:
+			case erschemaPackage.RELATION__ATTRIBUTES:
 				getAttributes().clear();
 				getAttributes().addAll((Collection<? extends Attribute>)newValue);
 				return;
-			case ErschemaPackage.RELATION__CONSTRAINTS:
+			case erschemaPackage.RELATION__CONSTRAINTS:
 				getConstraints().clear();
 				getConstraints().addAll((Collection<? extends SimpleConstraint>)newValue);
 				return;
-			case ErschemaPackage.RELATION__DUMMY_CONSTRAINTS:
+			case erschemaPackage.RELATION__DUMMY_CONSTRAINTS:
 				getDummyConstraints().clear();
 				getDummyConstraints().addAll((Collection<? extends DummyConstraint>)newValue);
 				return;
@@ -222,16 +222,16 @@ public class RelationImpl extends ElementImpl implements Relation {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ErschemaPackage.RELATION__ROLES:
+			case erschemaPackage.RELATION__ROLES:
 				getRoles().clear();
 				return;
-			case ErschemaPackage.RELATION__ATTRIBUTES:
+			case erschemaPackage.RELATION__ATTRIBUTES:
 				getAttributes().clear();
 				return;
-			case ErschemaPackage.RELATION__CONSTRAINTS:
+			case erschemaPackage.RELATION__CONSTRAINTS:
 				getConstraints().clear();
 				return;
-			case ErschemaPackage.RELATION__DUMMY_CONSTRAINTS:
+			case erschemaPackage.RELATION__DUMMY_CONSTRAINTS:
 				getDummyConstraints().clear();
 				return;
 		}
@@ -246,13 +246,13 @@ public class RelationImpl extends ElementImpl implements Relation {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ErschemaPackage.RELATION__ROLES:
+			case erschemaPackage.RELATION__ROLES:
 				return roles != null && !roles.isEmpty();
-			case ErschemaPackage.RELATION__ATTRIBUTES:
+			case erschemaPackage.RELATION__ATTRIBUTES:
 				return attributes != null && !attributes.isEmpty();
-			case ErschemaPackage.RELATION__CONSTRAINTS:
+			case erschemaPackage.RELATION__CONSTRAINTS:
 				return constraints != null && !constraints.isEmpty();
-			case ErschemaPackage.RELATION__DUMMY_CONSTRAINTS:
+			case erschemaPackage.RELATION__DUMMY_CONSTRAINTS:
 				return dummyConstraints != null && !dummyConstraints.isEmpty();
 		}
 		return super.eIsSet(featureID);

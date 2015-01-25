@@ -18,7 +18,6 @@ import de.tu_bs.cs.isf.mbse.erschema.DummyConstraint;
 import de.tu_bs.cs.isf.mbse.erschema.Element;
 import de.tu_bs.cs.isf.mbse.erschema.Entity;
 import de.tu_bs.cs.isf.mbse.erschema.Equals;
-import de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage;
 import de.tu_bs.cs.isf.mbse.erschema.Greater;
 import de.tu_bs.cs.isf.mbse.erschema.GreaterThan;
 import de.tu_bs.cs.isf.mbse.erschema.IsNot;
@@ -41,8 +40,11 @@ import de.tu_bs.cs.isf.mbse.erschema.StringOperator;
 import de.tu_bs.cs.isf.mbse.erschema.Sub;
 import de.tu_bs.cs.isf.mbse.erschema.Text;
 import de.tu_bs.cs.isf.mbse.erschema.UnaryNot;
+import de.tu_bs.cs.isf.mbse.erschema.erschemaPackage;
+
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
+
 import org.eclipse.emf.ecore.util.Switch;
 
 /**
@@ -55,17 +57,17 @@ import org.eclipse.emf.ecore.util.Switch;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage
+ * @see de.tu_bs.cs.isf.mbse.erschema.erschemaPackage
  * @generated
  */
-public class ErschemaSwitch<T> extends Switch<T> {
+public class erschemaSwitch<T> extends Switch<T> {
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static ErschemaPackage modelPackage;
+	protected static erschemaPackage modelPackage;
 
 	/**
 	 * Creates an instance of the switch.
@@ -73,9 +75,9 @@ public class ErschemaSwitch<T> extends Switch<T> {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ErschemaSwitch() {
+	public erschemaSwitch() {
 		if (modelPackage == null) {
-			modelPackage = ErschemaPackage.eINSTANCE;
+			modelPackage = erschemaPackage.eINSTANCE;
 		}
 	}
 
@@ -102,92 +104,92 @@ public class ErschemaSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case ErschemaPackage.MODEL: {
+			case erschemaPackage.MODEL: {
 				Model model = (Model)theEObject;
 				T result = caseModel(model);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ErschemaPackage.ENTITY: {
+			case erschemaPackage.ENTITY: {
 				Entity entity = (Entity)theEObject;
 				T result = caseEntity(entity);
 				if (result == null) result = caseElement(entity);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ErschemaPackage.ATTRIBUTE: {
+			case erschemaPackage.ATTRIBUTE: {
 				Attribute attribute = (Attribute)theEObject;
 				T result = caseAttribute(attribute);
 				if (result == null) result = caseElement(attribute);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ErschemaPackage.ELEMENT: {
+			case erschemaPackage.ELEMENT: {
 				Element element = (Element)theEObject;
 				T result = caseElement(element);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ErschemaPackage.RELATION: {
+			case erschemaPackage.RELATION: {
 				Relation relation = (Relation)theEObject;
 				T result = caseRelation(relation);
 				if (result == null) result = caseElement(relation);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ErschemaPackage.ROLE: {
+			case erschemaPackage.ROLE: {
 				Role role = (Role)theEObject;
 				T result = caseRole(role);
 				if (result == null) result = caseElement(role);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ErschemaPackage.COMPOSITION: {
+			case erschemaPackage.COMPOSITION: {
 				Composition composition = (Composition)theEObject;
 				T result = caseComposition(composition);
 				if (result == null) result = caseElement(composition);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ErschemaPackage.SIMPLE_CONSTRAINT: {
+			case erschemaPackage.SIMPLE_CONSTRAINT: {
 				SimpleConstraint simpleConstraint = (SimpleConstraint)theEObject;
 				T result = caseSimpleConstraint(simpleConstraint);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ErschemaPackage.DUMMY_CONSTRAINT: {
+			case erschemaPackage.DUMMY_CONSTRAINT: {
 				DummyConstraint dummyConstraint = (DummyConstraint)theEObject;
 				T result = caseDummyConstraint(dummyConstraint);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ErschemaPackage.KEY_VALUE: {
+			case erschemaPackage.KEY_VALUE: {
 				KeyValue keyValue = (KeyValue)theEObject;
 				T result = caseKeyValue(keyValue);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ErschemaPackage.DATATYPE: {
+			case erschemaPackage.DATATYPE: {
 				Datatype datatype = (Datatype)theEObject;
 				T result = caseDatatype(datatype);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ErschemaPackage.NUMBER: {
+			case erschemaPackage.NUMBER: {
 				de.tu_bs.cs.isf.mbse.erschema.Number number = (de.tu_bs.cs.isf.mbse.erschema.Number)theEObject;
 				T result = caseNumber(number);
 				if (result == null) result = caseDatatype(number);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ErschemaPackage.CHAR_SEQUENCE: {
+			case erschemaPackage.CHAR_SEQUENCE: {
 				CharSequence charSequence = (CharSequence)theEObject;
 				T result = caseCharSequence(charSequence);
 				if (result == null) result = caseDatatype(charSequence);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ErschemaPackage.TEXT: {
+			case erschemaPackage.TEXT: {
 				Text text = (Text)theEObject;
 				T result = caseText(text);
 				if (result == null) result = caseCharSequence(text);
@@ -195,7 +197,7 @@ public class ErschemaSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ErschemaPackage.STRING: {
+			case erschemaPackage.STRING: {
 				de.tu_bs.cs.isf.mbse.erschema.String string = (de.tu_bs.cs.isf.mbse.erschema.String)theEObject;
 				T result = caseString(string);
 				if (result == null) result = caseCharSequence(string);
@@ -203,7 +205,7 @@ public class ErschemaSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ErschemaPackage.INTEGER: {
+			case erschemaPackage.INTEGER: {
 				de.tu_bs.cs.isf.mbse.erschema.Integer integer = (de.tu_bs.cs.isf.mbse.erschema.Integer)theEObject;
 				T result = caseInteger(integer);
 				if (result == null) result = caseNumber(integer);
@@ -211,14 +213,14 @@ public class ErschemaSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ErschemaPackage.BOOLEAN: {
+			case erschemaPackage.BOOLEAN: {
 				de.tu_bs.cs.isf.mbse.erschema.Boolean boolean_ = (de.tu_bs.cs.isf.mbse.erschema.Boolean)theEObject;
 				T result = caseBoolean(boolean_);
 				if (result == null) result = caseDatatype(boolean_);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ErschemaPackage.DOUBLE: {
+			case erschemaPackage.DOUBLE: {
 				de.tu_bs.cs.isf.mbse.erschema.Double double_ = (de.tu_bs.cs.isf.mbse.erschema.Double)theEObject;
 				T result = caseDouble(double_);
 				if (result == null) result = caseNumber(double_);
@@ -226,28 +228,28 @@ public class ErschemaSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ErschemaPackage.DATE: {
+			case erschemaPackage.DATE: {
 				Date date = (Date)theEObject;
 				T result = caseDate(date);
 				if (result == null) result = caseDatatype(date);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ErschemaPackage.ARITHMETIC_OPERATOR: {
+			case erschemaPackage.ARITHMETIC_OPERATOR: {
 				ArithmeticOperator arithmeticOperator = (ArithmeticOperator)theEObject;
 				T result = caseArithmeticOperator(arithmeticOperator);
 				if (result == null) result = caseOperator(arithmeticOperator);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ErschemaPackage.LOGICAL_OPERATOR: {
+			case erschemaPackage.LOGICAL_OPERATOR: {
 				LogicalOperator logicalOperator = (LogicalOperator)theEObject;
 				T result = caseLogicalOperator(logicalOperator);
 				if (result == null) result = caseOperator(logicalOperator);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ErschemaPackage.IS_NOT: {
+			case erschemaPackage.IS_NOT: {
 				IsNot isNot = (IsNot)theEObject;
 				T result = caseIsNot(isNot);
 				if (result == null) result = caseComparative(isNot);
@@ -256,7 +258,7 @@ public class ErschemaSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ErschemaPackage.EQUALS: {
+			case erschemaPackage.EQUALS: {
 				Equals equals = (Equals)theEObject;
 				T result = caseEquals(equals);
 				if (result == null) result = caseComparative(equals);
@@ -265,7 +267,7 @@ public class ErschemaSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ErschemaPackage.ADD: {
+			case erschemaPackage.ADD: {
 				Add add = (Add)theEObject;
 				T result = caseAdd(add);
 				if (result == null) result = caseArithmeticOperator(add);
@@ -273,7 +275,7 @@ public class ErschemaSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ErschemaPackage.MUL: {
+			case erschemaPackage.MUL: {
 				Mul mul = (Mul)theEObject;
 				T result = caseMul(mul);
 				if (result == null) result = caseArithmeticOperator(mul);
@@ -281,7 +283,7 @@ public class ErschemaSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ErschemaPackage.SUB: {
+			case erschemaPackage.SUB: {
 				Sub sub = (Sub)theEObject;
 				T result = caseSub(sub);
 				if (result == null) result = caseArithmeticOperator(sub);
@@ -289,7 +291,7 @@ public class ErschemaSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ErschemaPackage.DIV: {
+			case erschemaPackage.DIV: {
 				Div div = (Div)theEObject;
 				T result = caseDiv(div);
 				if (result == null) result = caseArithmeticOperator(div);
@@ -297,7 +299,7 @@ public class ErschemaSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ErschemaPackage.COMPARATIVE: {
+			case erschemaPackage.COMPARATIVE: {
 				Comparative comparative = (Comparative)theEObject;
 				T result = caseComparative(comparative);
 				if (result == null) result = caseLogicalOperator(comparative);
@@ -305,7 +307,7 @@ public class ErschemaSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ErschemaPackage.CONNECTIVE: {
+			case erschemaPackage.CONNECTIVE: {
 				Connective connective = (Connective)theEObject;
 				T result = caseConnective(connective);
 				if (result == null) result = caseLogicalOperator(connective);
@@ -313,7 +315,7 @@ public class ErschemaSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ErschemaPackage.AND: {
+			case erschemaPackage.AND: {
 				And and = (And)theEObject;
 				T result = caseAnd(and);
 				if (result == null) result = caseConnective(and);
@@ -322,7 +324,7 @@ public class ErschemaSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ErschemaPackage.OR: {
+			case erschemaPackage.OR: {
 				Or or = (Or)theEObject;
 				T result = caseOr(or);
 				if (result == null) result = caseConnective(or);
@@ -331,7 +333,7 @@ public class ErschemaSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ErschemaPackage.MODULO: {
+			case erschemaPackage.MODULO: {
 				Modulo modulo = (Modulo)theEObject;
 				T result = caseModulo(modulo);
 				if (result == null) result = caseArithmeticOperator(modulo);
@@ -339,7 +341,7 @@ public class ErschemaSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ErschemaPackage.GREATER_THAN: {
+			case erschemaPackage.GREATER_THAN: {
 				GreaterThan greaterThan = (GreaterThan)theEObject;
 				T result = caseGreaterThan(greaterThan);
 				if (result == null) result = caseComparative(greaterThan);
@@ -348,7 +350,7 @@ public class ErschemaSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ErschemaPackage.SMALLER: {
+			case erschemaPackage.SMALLER: {
 				Smaller smaller = (Smaller)theEObject;
 				T result = caseSmaller(smaller);
 				if (result == null) result = caseComparative(smaller);
@@ -357,7 +359,7 @@ public class ErschemaSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ErschemaPackage.SMALLER_THAN: {
+			case erschemaPackage.SMALLER_THAN: {
 				SmallerThan smallerThan = (SmallerThan)theEObject;
 				T result = caseSmallerThan(smallerThan);
 				if (result == null) result = caseComparative(smallerThan);
@@ -366,7 +368,7 @@ public class ErschemaSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ErschemaPackage.GREATER: {
+			case erschemaPackage.GREATER: {
 				Greater greater = (Greater)theEObject;
 				T result = caseGreater(greater);
 				if (result == null) result = caseComparative(greater);
@@ -375,14 +377,14 @@ public class ErschemaSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ErschemaPackage.STRING_OPERATOR: {
+			case erschemaPackage.STRING_OPERATOR: {
 				StringOperator stringOperator = (StringOperator)theEObject;
 				T result = caseStringOperator(stringOperator);
 				if (result == null) result = caseOperator(stringOperator);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ErschemaPackage.LIKE: {
+			case erschemaPackage.LIKE: {
 				Like like = (Like)theEObject;
 				T result = caseLike(like);
 				if (result == null) result = caseStringOperator(like);
@@ -390,7 +392,7 @@ public class ErschemaSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ErschemaPackage.LENGTH: {
+			case erschemaPackage.LENGTH: {
 				Length length = (Length)theEObject;
 				T result = caseLength(length);
 				if (result == null) result = caseStringOperator(length);
@@ -398,7 +400,7 @@ public class ErschemaSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ErschemaPackage.CONCAT: {
+			case erschemaPackage.CONCAT: {
 				Concat concat = (Concat)theEObject;
 				T result = caseConcat(concat);
 				if (result == null) result = caseStringOperator(concat);
@@ -406,7 +408,7 @@ public class ErschemaSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ErschemaPackage.UNARY_NOT: {
+			case erschemaPackage.UNARY_NOT: {
 				UnaryNot unaryNot = (UnaryNot)theEObject;
 				T result = caseUnaryNot(unaryNot);
 				if (result == null) result = caseConnective(unaryNot);
@@ -415,13 +417,13 @@ public class ErschemaSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ErschemaPackage.OPERATOR: {
+			case erschemaPackage.OPERATOR: {
 				Operator operator = (Operator)theEObject;
 				T result = caseOperator(operator);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ErschemaPackage.LITERAL: {
+			case erschemaPackage.LITERAL: {
 				Literal literal = (Literal)theEObject;
 				T result = caseLiteral(literal);
 				if (result == null) result = caseOperator(literal);
@@ -1093,4 +1095,4 @@ public class ErschemaSwitch<T> extends Switch<T> {
 		return null;
 	}
 
-} //ErschemaSwitch
+} //erschemaSwitch

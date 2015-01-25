@@ -4,7 +4,6 @@ package de.tu_bs.cs.isf.mbse.erschema;
 
 import java.lang.String;
 
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Length</b></em>'.
@@ -17,12 +16,11 @@ import java.lang.String;
  * </ul>
  * </p>
  *
- * @see de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage#getLength()
+ * @see de.tu_bs.cs.isf.mbse.erschema.erschemaPackage#getLength()
  * @model
  * @generated
  */
 public interface Length extends StringOperator {
-
 	/**
 	 * Returns the value of the '<em><b>Value</b></em>' attribute.
 	 * The default value is <code>"\" \""</code>.
@@ -34,7 +32,7 @@ public interface Length extends StringOperator {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Value</em>' attribute.
 	 * @see #setValue(String)
-	 * @see de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage#getLength_Value()
+	 * @see de.tu_bs.cs.isf.mbse.erschema.erschemaPackage#getLength_Value()
 	 * @model default="\" \""
 	 * @generated
 	 */
@@ -49,4 +47,5 @@ public interface Length extends StringOperator {
 	 * @generated
 	 */
 	void setValue(String value);
+
 } // Length

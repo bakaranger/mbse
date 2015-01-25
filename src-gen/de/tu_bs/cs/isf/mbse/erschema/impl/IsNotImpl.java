@@ -2,16 +2,22 @@
  */
 package de.tu_bs.cs.isf.mbse.erschema.impl;
 
-import de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage;
 import de.tu_bs.cs.isf.mbse.erschema.IsNot;
+import de.tu_bs.cs.isf.mbse.erschema.erschemaPackage;
 
 import java.lang.Double;
 import java.lang.String;
+
 import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 
 /**
@@ -38,6 +44,7 @@ public class IsNotImpl extends ComparativeImpl implements IsNot {
 	 * @ordered
 	 */
 	protected EList<Double> valueInt;
+
 	/**
 	 * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -47,6 +54,7 @@ public class IsNotImpl extends ComparativeImpl implements IsNot {
 	 * @ordered
 	 */
 	protected static final String VALUE_EDEFAULT = "\" \"";
+
 	/**
 	 * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -73,7 +81,7 @@ public class IsNotImpl extends ComparativeImpl implements IsNot {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ErschemaPackage.Literals.IS_NOT;
+		return erschemaPackage.Literals.IS_NOT;
 	}
 
 	/**
@@ -83,7 +91,7 @@ public class IsNotImpl extends ComparativeImpl implements IsNot {
 	 */
 	public EList<Double> getValueInt() {
 		if (valueInt == null) {
-			valueInt = new EDataTypeUniqueEList<Double>(Double.class, this, ErschemaPackage.IS_NOT__VALUE_INT);
+			valueInt = new EDataTypeUniqueEList<Double>(Double.class, this, erschemaPackage.IS_NOT__VALUE_INT);
 		}
 		return valueInt;
 	}
@@ -106,7 +114,7 @@ public class IsNotImpl extends ComparativeImpl implements IsNot {
 		String oldValue = value;
 		value = newValue;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ErschemaPackage.IS_NOT__VALUE, oldValue, value));
+			eNotify(new ENotificationImpl(this, Notification.SET, erschemaPackage.IS_NOT__VALUE, oldValue, value));
 	}
 
 	/**
@@ -117,9 +125,9 @@ public class IsNotImpl extends ComparativeImpl implements IsNot {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ErschemaPackage.IS_NOT__VALUE_INT:
+			case erschemaPackage.IS_NOT__VALUE_INT:
 				return getValueInt();
-			case ErschemaPackage.IS_NOT__VALUE:
+			case erschemaPackage.IS_NOT__VALUE:
 				return getValue();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -134,11 +142,11 @@ public class IsNotImpl extends ComparativeImpl implements IsNot {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ErschemaPackage.IS_NOT__VALUE_INT:
+			case erschemaPackage.IS_NOT__VALUE_INT:
 				getValueInt().clear();
 				getValueInt().addAll((Collection<? extends Double>)newValue);
 				return;
-			case ErschemaPackage.IS_NOT__VALUE:
+			case erschemaPackage.IS_NOT__VALUE:
 				setValue((String)newValue);
 				return;
 		}
@@ -153,10 +161,10 @@ public class IsNotImpl extends ComparativeImpl implements IsNot {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ErschemaPackage.IS_NOT__VALUE_INT:
+			case erschemaPackage.IS_NOT__VALUE_INT:
 				getValueInt().clear();
 				return;
-			case ErschemaPackage.IS_NOT__VALUE:
+			case erschemaPackage.IS_NOT__VALUE:
 				setValue(VALUE_EDEFAULT);
 				return;
 		}
@@ -171,9 +179,9 @@ public class IsNotImpl extends ComparativeImpl implements IsNot {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ErschemaPackage.IS_NOT__VALUE_INT:
+			case erschemaPackage.IS_NOT__VALUE_INT:
 				return valueInt != null && !valueInt.isEmpty();
-			case ErschemaPackage.IS_NOT__VALUE:
+			case erschemaPackage.IS_NOT__VALUE:
 				return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
 		}
 		return super.eIsSet(featureID);

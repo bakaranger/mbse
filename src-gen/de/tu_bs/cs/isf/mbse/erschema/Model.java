@@ -22,7 +22,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  * </p>
  *
- * @see de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage#getModel()
+ * @see de.tu_bs.cs.isf.mbse.erschema.erschemaPackage#getModel()
  * @model
  * @generated
  */
@@ -37,7 +37,7 @@ public interface Model extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Entities</em>' containment reference list.
-	 * @see de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage#getModel_Entities()
+	 * @see de.tu_bs.cs.isf.mbse.erschema.erschemaPackage#getModel_Entities()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -53,7 +53,7 @@ public interface Model extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Relations</em>' containment reference list.
-	 * @see de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage#getModel_Relations()
+	 * @see de.tu_bs.cs.isf.mbse.erschema.erschemaPackage#getModel_Relations()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -69,7 +69,7 @@ public interface Model extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage#getModel_Name()
+	 * @see de.tu_bs.cs.isf.mbse.erschema.erschemaPackage#getModel_Name()
 	 * @model id="true" required="true"
 	 * @generated
 	 */

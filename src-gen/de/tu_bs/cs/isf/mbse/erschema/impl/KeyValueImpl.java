@@ -4,12 +4,15 @@ package de.tu_bs.cs.isf.mbse.erschema.impl;
 
 import de.tu_bs.cs.isf.mbse.erschema.Attribute;
 import de.tu_bs.cs.isf.mbse.erschema.Composition;
-import de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage;
 import de.tu_bs.cs.isf.mbse.erschema.KeyValue;
+import de.tu_bs.cs.isf.mbse.erschema.erschemaPackage;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
@@ -64,7 +67,7 @@ public class KeyValueImpl extends MinimalEObjectImpl.Container implements KeyVal
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ErschemaPackage.Literals.KEY_VALUE;
+		return erschemaPackage.Literals.KEY_VALUE;
 	}
 
 	/**
@@ -85,7 +88,7 @@ public class KeyValueImpl extends MinimalEObjectImpl.Container implements KeyVal
 		Attribute oldAttribute = attribute;
 		attribute = newAttribute;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ErschemaPackage.KEY_VALUE__ATTRIBUTE, oldAttribute, newAttribute);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, erschemaPackage.KEY_VALUE__ATTRIBUTE, oldAttribute, newAttribute);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -100,14 +103,14 @@ public class KeyValueImpl extends MinimalEObjectImpl.Container implements KeyVal
 		if (newAttribute != attribute) {
 			NotificationChain msgs = null;
 			if (attribute != null)
-				msgs = ((InternalEObject)attribute).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ErschemaPackage.KEY_VALUE__ATTRIBUTE, null, msgs);
+				msgs = ((InternalEObject)attribute).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - erschemaPackage.KEY_VALUE__ATTRIBUTE, null, msgs);
 			if (newAttribute != null)
-				msgs = ((InternalEObject)newAttribute).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ErschemaPackage.KEY_VALUE__ATTRIBUTE, null, msgs);
+				msgs = ((InternalEObject)newAttribute).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - erschemaPackage.KEY_VALUE__ATTRIBUTE, null, msgs);
 			msgs = basicSetAttribute(newAttribute, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ErschemaPackage.KEY_VALUE__ATTRIBUTE, newAttribute, newAttribute));
+			eNotify(new ENotificationImpl(this, Notification.SET, erschemaPackage.KEY_VALUE__ATTRIBUTE, newAttribute, newAttribute));
 	}
 
 	/**
@@ -128,7 +131,7 @@ public class KeyValueImpl extends MinimalEObjectImpl.Container implements KeyVal
 		Composition oldComposition = composition;
 		composition = newComposition;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ErschemaPackage.KEY_VALUE__COMPOSITION, oldComposition, newComposition);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, erschemaPackage.KEY_VALUE__COMPOSITION, oldComposition, newComposition);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -143,14 +146,14 @@ public class KeyValueImpl extends MinimalEObjectImpl.Container implements KeyVal
 		if (newComposition != composition) {
 			NotificationChain msgs = null;
 			if (composition != null)
-				msgs = ((InternalEObject)composition).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ErschemaPackage.KEY_VALUE__COMPOSITION, null, msgs);
+				msgs = ((InternalEObject)composition).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - erschemaPackage.KEY_VALUE__COMPOSITION, null, msgs);
 			if (newComposition != null)
-				msgs = ((InternalEObject)newComposition).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ErschemaPackage.KEY_VALUE__COMPOSITION, null, msgs);
+				msgs = ((InternalEObject)newComposition).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - erschemaPackage.KEY_VALUE__COMPOSITION, null, msgs);
 			msgs = basicSetComposition(newComposition, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ErschemaPackage.KEY_VALUE__COMPOSITION, newComposition, newComposition));
+			eNotify(new ENotificationImpl(this, Notification.SET, erschemaPackage.KEY_VALUE__COMPOSITION, newComposition, newComposition));
 	}
 
 	/**
@@ -161,9 +164,9 @@ public class KeyValueImpl extends MinimalEObjectImpl.Container implements KeyVal
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case ErschemaPackage.KEY_VALUE__ATTRIBUTE:
+			case erschemaPackage.KEY_VALUE__ATTRIBUTE:
 				return basicSetAttribute(null, msgs);
-			case ErschemaPackage.KEY_VALUE__COMPOSITION:
+			case erschemaPackage.KEY_VALUE__COMPOSITION:
 				return basicSetComposition(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -177,9 +180,9 @@ public class KeyValueImpl extends MinimalEObjectImpl.Container implements KeyVal
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ErschemaPackage.KEY_VALUE__ATTRIBUTE:
+			case erschemaPackage.KEY_VALUE__ATTRIBUTE:
 				return getAttribute();
-			case ErschemaPackage.KEY_VALUE__COMPOSITION:
+			case erschemaPackage.KEY_VALUE__COMPOSITION:
 				return getComposition();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -193,10 +196,10 @@ public class KeyValueImpl extends MinimalEObjectImpl.Container implements KeyVal
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ErschemaPackage.KEY_VALUE__ATTRIBUTE:
+			case erschemaPackage.KEY_VALUE__ATTRIBUTE:
 				setAttribute((Attribute)newValue);
 				return;
-			case ErschemaPackage.KEY_VALUE__COMPOSITION:
+			case erschemaPackage.KEY_VALUE__COMPOSITION:
 				setComposition((Composition)newValue);
 				return;
 		}
@@ -211,10 +214,10 @@ public class KeyValueImpl extends MinimalEObjectImpl.Container implements KeyVal
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ErschemaPackage.KEY_VALUE__ATTRIBUTE:
+			case erschemaPackage.KEY_VALUE__ATTRIBUTE:
 				setAttribute((Attribute)null);
 				return;
-			case ErschemaPackage.KEY_VALUE__COMPOSITION:
+			case erschemaPackage.KEY_VALUE__COMPOSITION:
 				setComposition((Composition)null);
 				return;
 		}
@@ -229,9 +232,9 @@ public class KeyValueImpl extends MinimalEObjectImpl.Container implements KeyVal
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ErschemaPackage.KEY_VALUE__ATTRIBUTE:
+			case erschemaPackage.KEY_VALUE__ATTRIBUTE:
 				return attribute != null;
-			case ErschemaPackage.KEY_VALUE__COMPOSITION:
+			case erschemaPackage.KEY_VALUE__COMPOSITION:
 				return composition != null;
 		}
 		return super.eIsSet(featureID);

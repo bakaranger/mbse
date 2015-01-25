@@ -2,7 +2,7 @@
  */
 package de.tu_bs.cs.isf.mbse.erschema.impl;
 
-import de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage;
+import de.tu_bs.cs.isf.mbse.erschema.erschemaPackage;
 
 import org.eclipse.emf.ecore.EClass;
 
@@ -32,7 +32,7 @@ public class StringImpl extends CharSequenceImpl implements de.tu_bs.cs.isf.mbse
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ErschemaPackage.Literals.STRING;
+		return erschemaPackage.Literals.STRING;
 	}
 
 } //StringImpl

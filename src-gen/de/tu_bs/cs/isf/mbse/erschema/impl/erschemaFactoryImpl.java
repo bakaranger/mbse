@@ -12,8 +12,6 @@ import de.tu_bs.cs.isf.mbse.erschema.Div;
 import de.tu_bs.cs.isf.mbse.erschema.DummyConstraint;
 import de.tu_bs.cs.isf.mbse.erschema.Entity;
 import de.tu_bs.cs.isf.mbse.erschema.Equals;
-import de.tu_bs.cs.isf.mbse.erschema.ErschemaFactory;
-import de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage;
 import de.tu_bs.cs.isf.mbse.erschema.Greater;
 import de.tu_bs.cs.isf.mbse.erschema.GreaterThan;
 import de.tu_bs.cs.isf.mbse.erschema.IsNot;
@@ -34,11 +32,16 @@ import de.tu_bs.cs.isf.mbse.erschema.SmallerThan;
 import de.tu_bs.cs.isf.mbse.erschema.Sub;
 import de.tu_bs.cs.isf.mbse.erschema.Text;
 import de.tu_bs.cs.isf.mbse.erschema.UnaryNot;
+import de.tu_bs.cs.isf.mbse.erschema.erschemaFactory;
+import de.tu_bs.cs.isf.mbse.erschema.erschemaPackage;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
+
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
+
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
 /**
@@ -47,24 +50,24 @@ import org.eclipse.emf.ecore.plugin.EcorePlugin;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ErschemaFactoryImpl extends EFactoryImpl implements ErschemaFactory {
+public class erschemaFactoryImpl extends EFactoryImpl implements erschemaFactory {
 	/**
 	 * Creates the default factory implementation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static ErschemaFactory init() {
+	public static erschemaFactory init() {
 		try {
-			ErschemaFactory theErschemaFactory = (ErschemaFactory)EPackage.Registry.INSTANCE.getEFactory(ErschemaPackage.eNS_URI);
-			if (theErschemaFactory != null) {
-				return theErschemaFactory;
+			erschemaFactory theerschemaFactory = (erschemaFactory)EPackage.Registry.INSTANCE.getEFactory(erschemaPackage.eNS_URI);
+			if (theerschemaFactory != null) {
+				return theerschemaFactory;
 			}
 		}
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new ErschemaFactoryImpl();
+		return new erschemaFactoryImpl();
 	}
 
 	/**
@@ -73,7 +76,7 @@ public class ErschemaFactoryImpl extends EFactoryImpl implements ErschemaFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ErschemaFactoryImpl() {
+	public erschemaFactoryImpl() {
 		super();
 	}
 
@@ -85,39 +88,39 @@ public class ErschemaFactoryImpl extends EFactoryImpl implements ErschemaFactory
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case ErschemaPackage.MODEL: return createModel();
-			case ErschemaPackage.ENTITY: return createEntity();
-			case ErschemaPackage.ATTRIBUTE: return createAttribute();
-			case ErschemaPackage.RELATION: return createRelation();
-			case ErschemaPackage.ROLE: return createRole();
-			case ErschemaPackage.COMPOSITION: return createComposition();
-			case ErschemaPackage.SIMPLE_CONSTRAINT: return createSimpleConstraint();
-			case ErschemaPackage.DUMMY_CONSTRAINT: return createDummyConstraint();
-			case ErschemaPackage.KEY_VALUE: return createKeyValue();
-			case ErschemaPackage.TEXT: return createText();
-			case ErschemaPackage.STRING: return createString();
-			case ErschemaPackage.INTEGER: return createInteger();
-			case ErschemaPackage.BOOLEAN: return createBoolean();
-			case ErschemaPackage.DOUBLE: return createDouble();
-			case ErschemaPackage.DATE: return createDate();
-			case ErschemaPackage.IS_NOT: return createIsNot();
-			case ErschemaPackage.EQUALS: return createEquals();
-			case ErschemaPackage.ADD: return createAdd();
-			case ErschemaPackage.MUL: return createMul();
-			case ErschemaPackage.SUB: return createSub();
-			case ErschemaPackage.DIV: return createDiv();
-			case ErschemaPackage.AND: return createAnd();
-			case ErschemaPackage.OR: return createOr();
-			case ErschemaPackage.MODULO: return createModulo();
-			case ErschemaPackage.GREATER_THAN: return createGreaterThan();
-			case ErschemaPackage.SMALLER: return createSmaller();
-			case ErschemaPackage.SMALLER_THAN: return createSmallerThan();
-			case ErschemaPackage.GREATER: return createGreater();
-			case ErschemaPackage.LIKE: return createLike();
-			case ErschemaPackage.LENGTH: return createLength();
-			case ErschemaPackage.CONCAT: return createConcat();
-			case ErschemaPackage.UNARY_NOT: return createUnaryNot();
-			case ErschemaPackage.LITERAL: return createLiteral();
+			case erschemaPackage.MODEL: return createModel();
+			case erschemaPackage.ENTITY: return createEntity();
+			case erschemaPackage.ATTRIBUTE: return createAttribute();
+			case erschemaPackage.RELATION: return createRelation();
+			case erschemaPackage.ROLE: return createRole();
+			case erschemaPackage.COMPOSITION: return createComposition();
+			case erschemaPackage.SIMPLE_CONSTRAINT: return createSimpleConstraint();
+			case erschemaPackage.DUMMY_CONSTRAINT: return createDummyConstraint();
+			case erschemaPackage.KEY_VALUE: return createKeyValue();
+			case erschemaPackage.TEXT: return createText();
+			case erschemaPackage.STRING: return createString();
+			case erschemaPackage.INTEGER: return createInteger();
+			case erschemaPackage.BOOLEAN: return createBoolean();
+			case erschemaPackage.DOUBLE: return createDouble();
+			case erschemaPackage.DATE: return createDate();
+			case erschemaPackage.IS_NOT: return createIsNot();
+			case erschemaPackage.EQUALS: return createEquals();
+			case erschemaPackage.ADD: return createAdd();
+			case erschemaPackage.MUL: return createMul();
+			case erschemaPackage.SUB: return createSub();
+			case erschemaPackage.DIV: return createDiv();
+			case erschemaPackage.AND: return createAnd();
+			case erschemaPackage.OR: return createOr();
+			case erschemaPackage.MODULO: return createModulo();
+			case erschemaPackage.GREATER_THAN: return createGreaterThan();
+			case erschemaPackage.SMALLER: return createSmaller();
+			case erschemaPackage.SMALLER_THAN: return createSmallerThan();
+			case erschemaPackage.GREATER: return createGreater();
+			case erschemaPackage.LIKE: return createLike();
+			case erschemaPackage.LENGTH: return createLength();
+			case erschemaPackage.CONCAT: return createConcat();
+			case erschemaPackage.UNARY_NOT: return createUnaryNot();
+			case erschemaPackage.LITERAL: return createLiteral();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -131,7 +134,7 @@ public class ErschemaFactoryImpl extends EFactoryImpl implements ErschemaFactory
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
-			case ErschemaPackage.PRIMITIVE:
+			case erschemaPackage.PRIMITIVE:
 				return createPrimitiveFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -146,7 +149,7 @@ public class ErschemaFactoryImpl extends EFactoryImpl implements ErschemaFactory
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
-			case ErschemaPackage.PRIMITIVE:
+			case erschemaPackage.PRIMITIVE:
 				return convertPrimitiveToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -508,8 +511,8 @@ public class ErschemaFactoryImpl extends EFactoryImpl implements ErschemaFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ErschemaPackage getErschemaPackage() {
-		return (ErschemaPackage)getEPackage();
+	public erschemaPackage geterschemaPackage() {
+		return (erschemaPackage)getEPackage();
 	}
 
 	/**
@@ -519,8 +522,8 @@ public class ErschemaFactoryImpl extends EFactoryImpl implements ErschemaFactory
 	 * @generated
 	 */
 	@Deprecated
-	public static ErschemaPackage getPackage() {
-		return ErschemaPackage.eINSTANCE;
+	public static erschemaPackage getPackage() {
+		return erschemaPackage.eINSTANCE;
 	}
 
-} //ErschemaFactoryImpl
+} //erschemaFactoryImpl

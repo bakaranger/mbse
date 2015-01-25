@@ -3,8 +3,8 @@
 package de.tu_bs.cs.isf.mbse.erschema.impl;
 
 import de.tu_bs.cs.isf.mbse.erschema.Entity;
-import de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage;
 import de.tu_bs.cs.isf.mbse.erschema.Role;
+import de.tu_bs.cs.isf.mbse.erschema.erschemaPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -95,7 +95,7 @@ public class RoleImpl extends ElementImpl implements Role {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ErschemaPackage.Literals.ROLE;
+		return erschemaPackage.Literals.ROLE;
 	}
 
 	/**
@@ -116,7 +116,7 @@ public class RoleImpl extends ElementImpl implements Role {
 		char oldLowerBound = lowerBound;
 		lowerBound = newLowerBound;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ErschemaPackage.ROLE__LOWER_BOUND, oldLowerBound, lowerBound));
+			eNotify(new ENotificationImpl(this, Notification.SET, erschemaPackage.ROLE__LOWER_BOUND, oldLowerBound, lowerBound));
 	}
 
 	/**
@@ -137,7 +137,7 @@ public class RoleImpl extends ElementImpl implements Role {
 		char oldUpperBound = upperBound;
 		upperBound = newUpperBound;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ErschemaPackage.ROLE__UPPER_BOUND, oldUpperBound, upperBound));
+			eNotify(new ENotificationImpl(this, Notification.SET, erschemaPackage.ROLE__UPPER_BOUND, oldUpperBound, upperBound));
 	}
 
 	/**
@@ -151,7 +151,7 @@ public class RoleImpl extends ElementImpl implements Role {
 			entity = (Entity)eResolveProxy(oldEntity);
 			if (entity != oldEntity) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ErschemaPackage.ROLE__ENTITY, oldEntity, entity));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, erschemaPackage.ROLE__ENTITY, oldEntity, entity));
 			}
 		}
 		return entity;
@@ -175,7 +175,7 @@ public class RoleImpl extends ElementImpl implements Role {
 		Entity oldEntity = entity;
 		entity = newEntity;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ErschemaPackage.ROLE__ENTITY, oldEntity, entity));
+			eNotify(new ENotificationImpl(this, Notification.SET, erschemaPackage.ROLE__ENTITY, oldEntity, entity));
 	}
 
 	/**
@@ -186,11 +186,11 @@ public class RoleImpl extends ElementImpl implements Role {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ErschemaPackage.ROLE__LOWER_BOUND:
+			case erschemaPackage.ROLE__LOWER_BOUND:
 				return getLowerBound();
-			case ErschemaPackage.ROLE__UPPER_BOUND:
+			case erschemaPackage.ROLE__UPPER_BOUND:
 				return getUpperBound();
-			case ErschemaPackage.ROLE__ENTITY:
+			case erschemaPackage.ROLE__ENTITY:
 				if (resolve) return getEntity();
 				return basicGetEntity();
 		}
@@ -205,13 +205,13 @@ public class RoleImpl extends ElementImpl implements Role {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ErschemaPackage.ROLE__LOWER_BOUND:
+			case erschemaPackage.ROLE__LOWER_BOUND:
 				setLowerBound((Character)newValue);
 				return;
-			case ErschemaPackage.ROLE__UPPER_BOUND:
+			case erschemaPackage.ROLE__UPPER_BOUND:
 				setUpperBound((Character)newValue);
 				return;
-			case ErschemaPackage.ROLE__ENTITY:
+			case erschemaPackage.ROLE__ENTITY:
 				setEntity((Entity)newValue);
 				return;
 		}
@@ -226,13 +226,13 @@ public class RoleImpl extends ElementImpl implements Role {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ErschemaPackage.ROLE__LOWER_BOUND:
+			case erschemaPackage.ROLE__LOWER_BOUND:
 				setLowerBound(LOWER_BOUND_EDEFAULT);
 				return;
-			case ErschemaPackage.ROLE__UPPER_BOUND:
+			case erschemaPackage.ROLE__UPPER_BOUND:
 				setUpperBound(UPPER_BOUND_EDEFAULT);
 				return;
-			case ErschemaPackage.ROLE__ENTITY:
+			case erschemaPackage.ROLE__ENTITY:
 				setEntity((Entity)null);
 				return;
 		}
@@ -247,11 +247,11 @@ public class RoleImpl extends ElementImpl implements Role {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ErschemaPackage.ROLE__LOWER_BOUND:
+			case erschemaPackage.ROLE__LOWER_BOUND:
 				return lowerBound != LOWER_BOUND_EDEFAULT;
-			case ErschemaPackage.ROLE__UPPER_BOUND:
+			case erschemaPackage.ROLE__UPPER_BOUND:
 				return upperBound != UPPER_BOUND_EDEFAULT;
-			case ErschemaPackage.ROLE__ENTITY:
+			case erschemaPackage.ROLE__ENTITY:
 				return entity != null;
 		}
 		return super.eIsSet(featureID);

@@ -15,12 +15,11 @@ package de.tu_bs.cs.isf.mbse.erschema;
  * </ul>
  * </p>
  *
- * @see de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage#getAttribute()
+ * @see de.tu_bs.cs.isf.mbse.erschema.erschemaPackage#getAttribute()
  * @model
  * @generated
  */
 public interface Attribute extends Element {
-
 	/**
 	 * Returns the value of the '<em><b>Type</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
@@ -31,7 +30,7 @@ public interface Attribute extends Element {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Type</em>' containment reference.
 	 * @see #setType(Datatype)
-	 * @see de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage#getAttribute_Type()
+	 * @see de.tu_bs.cs.isf.mbse.erschema.erschemaPackage#getAttribute_Type()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
@@ -46,4 +45,5 @@ public interface Attribute extends Element {
 	 * @generated
 	 */
 	void setType(Datatype value);
+
 } // Attribute

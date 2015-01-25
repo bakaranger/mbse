@@ -18,19 +18,21 @@ public final class TestDB {
 		}
 	}
 
-	public static void query(final String sql) {
+	public static String validate(final String sql) {
 		try {
 			Statement st = INSTANCE.conn.createStatement();
 			st.execute(sql);
-			System.out.println("'" + sql + "' executed!");
+			System.out.println("'" + sql + "' executed!");			
 		} catch (SQLException e) {
 			System.err.println("Couldn't execute '" + sql + "'");
 			System.err.println(e.getMessage());
-		}		
+			return e.getMessage();
+		}
+		return sql;
 	}
 
 	public static void main(String[] args) {
 		final String query = "create table foo";
-		query(query);
+		validate(query);
 	}
 }

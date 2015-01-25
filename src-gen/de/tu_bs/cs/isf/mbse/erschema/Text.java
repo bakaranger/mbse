@@ -9,7 +9,7 @@ package de.tu_bs.cs.isf.mbse.erschema;
  * <!-- end-user-doc -->
  *
  *
- * @see de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage#getText()
+ * @see de.tu_bs.cs.isf.mbse.erschema.erschemaPackage#getText()
  * @model
  * @generated
  */

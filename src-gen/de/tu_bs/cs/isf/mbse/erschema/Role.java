@@ -17,7 +17,7 @@ package de.tu_bs.cs.isf.mbse.erschema;
  * </ul>
  * </p>
  *
- * @see de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage#getRole()
+ * @see de.tu_bs.cs.isf.mbse.erschema.erschemaPackage#getRole()
  * @model
  * @generated
  */
@@ -33,7 +33,7 @@ public interface Role extends Element {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Lower Bound</em>' attribute.
 	 * @see #setLowerBound(char)
-	 * @see de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage#getRole_LowerBound()
+	 * @see de.tu_bs.cs.isf.mbse.erschema.erschemaPackage#getRole_LowerBound()
 	 * @model default="\'0\'"
 	 * @generated
 	 */
@@ -60,7 +60,7 @@ public interface Role extends Element {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Upper Bound</em>' attribute.
 	 * @see #setUpperBound(char)
-	 * @see de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage#getRole_UpperBound()
+	 * @see de.tu_bs.cs.isf.mbse.erschema.erschemaPackage#getRole_UpperBound()
 	 * @model default="\'1\'"
 	 * @generated
 	 */
@@ -86,7 +86,7 @@ public interface Role extends Element {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Entity</em>' reference.
 	 * @see #setEntity(Entity)
-	 * @see de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage#getRole_Entity()
+	 * @see de.tu_bs.cs.isf.mbse.erschema.erschemaPackage#getRole_Entity()
 	 * @model required="true"
 	 * @generated
 	 */

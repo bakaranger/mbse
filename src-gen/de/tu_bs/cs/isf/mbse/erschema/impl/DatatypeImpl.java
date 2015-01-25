@@ -3,8 +3,10 @@
 package de.tu_bs.cs.isf.mbse.erschema.impl;
 
 import de.tu_bs.cs.isf.mbse.erschema.Datatype;
-import de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage;
+import de.tu_bs.cs.isf.mbse.erschema.erschemaPackage;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
@@ -33,7 +35,7 @@ public abstract class DatatypeImpl extends MinimalEObjectImpl.Container implemen
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ErschemaPackage.Literals.DATATYPE;
+		return erschemaPackage.Literals.DATATYPE;
 	}
 
 } //DatatypeImpl

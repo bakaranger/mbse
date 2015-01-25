@@ -9,17 +9,17 @@ import org.eclipse.emf.ecore.EFactory;
  * The <b>Factory</b> for the model.
  * It provides a create method for each non-abstract class of the model.
  * <!-- end-user-doc -->
- * @see de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage
+ * @see de.tu_bs.cs.isf.mbse.erschema.erschemaPackage
  * @generated
  */
-public interface ErschemaFactory extends EFactory {
+public interface erschemaFactory extends EFactory {
 	/**
 	 * The singleton instance of the factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	ErschemaFactory eINSTANCE = de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaFactoryImpl.init();
+	erschemaFactory eINSTANCE = de.tu_bs.cs.isf.mbse.erschema.impl.erschemaFactoryImpl.init();
 
 	/**
 	 * Returns a new object of class '<em>Model</em>'.
@@ -325,6 +325,6 @@ public interface ErschemaFactory extends EFactory {
 	 * @return the package supported by this factory.
 	 * @generated
 	 */
-	ErschemaPackage getErschemaPackage();
+	erschemaPackage geterschemaPackage();
 
-} //ErschemaFactory
+} //erschemaFactory

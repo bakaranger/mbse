@@ -3,10 +3,14 @@
 package de.tu_bs.cs.isf.mbse.erschema.impl;
 
 import de.tu_bs.cs.isf.mbse.erschema.Element;
-import de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage;
+import de.tu_bs.cs.isf.mbse.erschema.erschemaPackage;
+
 import java.lang.String;
+
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
@@ -60,7 +64,7 @@ public abstract class ElementImpl extends MinimalEObjectImpl.Container implement
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ErschemaPackage.Literals.ELEMENT;
+		return erschemaPackage.Literals.ELEMENT;
 	}
 
 	/**
@@ -81,7 +85,7 @@ public abstract class ElementImpl extends MinimalEObjectImpl.Container implement
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ErschemaPackage.ELEMENT__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, erschemaPackage.ELEMENT__NAME, oldName, name));
 	}
 
 	/**
@@ -92,7 +96,7 @@ public abstract class ElementImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ErschemaPackage.ELEMENT__NAME:
+			case erschemaPackage.ELEMENT__NAME:
 				return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -106,7 +110,7 @@ public abstract class ElementImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ErschemaPackage.ELEMENT__NAME:
+			case erschemaPackage.ELEMENT__NAME:
 				setName((String)newValue);
 				return;
 		}
@@ -121,7 +125,7 @@ public abstract class ElementImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ErschemaPackage.ELEMENT__NAME:
+			case erschemaPackage.ELEMENT__NAME:
 				setName(NAME_EDEFAULT);
 				return;
 		}
@@ -136,7 +140,7 @@ public abstract class ElementImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ErschemaPackage.ELEMENT__NAME:
+			case erschemaPackage.ELEMENT__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);

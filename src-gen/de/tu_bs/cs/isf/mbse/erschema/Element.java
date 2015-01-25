@@ -18,7 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  * </p>
  *
- * @see de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage#getElement()
+ * @see de.tu_bs.cs.isf.mbse.erschema.erschemaPackage#getElement()
  * @model abstract="true"
  * @generated
  */
@@ -33,7 +33,7 @@ public interface Element extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage#getElement_Name()
+	 * @see de.tu_bs.cs.isf.mbse.erschema.erschemaPackage#getElement_Name()
 	 * @model required="true"
 	 * @generated
 	 */

@@ -3,7 +3,7 @@
 package de.tu_bs.cs.isf.mbse.erschema.impl;
 
 import de.tu_bs.cs.isf.mbse.erschema.ArithmeticOperator;
-import de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage;
+import de.tu_bs.cs.isf.mbse.erschema.erschemaPackage;
 
 import org.eclipse.emf.ecore.EClass;
 
@@ -33,7 +33,7 @@ public abstract class ArithmeticOperatorImpl extends OperatorImpl implements Ari
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ErschemaPackage.Literals.ARITHMETIC_OPERATOR;
+		return erschemaPackage.Literals.ARITHMETIC_OPERATOR;
 	}
 
 } //ArithmeticOperatorImpl

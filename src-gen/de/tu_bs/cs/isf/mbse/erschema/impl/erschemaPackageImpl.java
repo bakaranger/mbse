@@ -18,8 +18,6 @@ import de.tu_bs.cs.isf.mbse.erschema.DummyConstraint;
 import de.tu_bs.cs.isf.mbse.erschema.Element;
 import de.tu_bs.cs.isf.mbse.erschema.Entity;
 import de.tu_bs.cs.isf.mbse.erschema.Equals;
-import de.tu_bs.cs.isf.mbse.erschema.ErschemaFactory;
-import de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage;
 import de.tu_bs.cs.isf.mbse.erschema.Greater;
 import de.tu_bs.cs.isf.mbse.erschema.GreaterThan;
 import de.tu_bs.cs.isf.mbse.erschema.IsNot;
@@ -43,11 +41,15 @@ import de.tu_bs.cs.isf.mbse.erschema.StringOperator;
 import de.tu_bs.cs.isf.mbse.erschema.Sub;
 import de.tu_bs.cs.isf.mbse.erschema.Text;
 import de.tu_bs.cs.isf.mbse.erschema.UnaryNot;
+import de.tu_bs.cs.isf.mbse.erschema.erschemaFactory;
+import de.tu_bs.cs.isf.mbse.erschema.erschemaPackage;
+
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
+
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 /**
@@ -56,7 +58,7 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ErschemaPackageImpl extends EPackageImpl implements ErschemaPackage {
+public class erschemaPackageImpl extends EPackageImpl implements erschemaPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -376,12 +378,12 @@ public class ErschemaPackageImpl extends EPackageImpl implements ErschemaPackage
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage#eNS_URI
+	 * @see de.tu_bs.cs.isf.mbse.erschema.erschemaPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-	private ErschemaPackageImpl() {
-		super(eNS_URI, ErschemaFactory.eINSTANCE);
+	private erschemaPackageImpl() {
+		super(eNS_URI, erschemaFactory.eINSTANCE);
 	}
 
 	/**
@@ -394,7 +396,7 @@ public class ErschemaPackageImpl extends EPackageImpl implements ErschemaPackage
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
-	 * <p>This method is used to initialize {@link ErschemaPackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link erschemaPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -403,27 +405,27 @@ public class ErschemaPackageImpl extends EPackageImpl implements ErschemaPackage
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-	public static ErschemaPackage init() {
-		if (isInited) return (ErschemaPackage)EPackage.Registry.INSTANCE.getEPackage(ErschemaPackage.eNS_URI);
+	public static erschemaPackage init() {
+		if (isInited) return (erschemaPackage)EPackage.Registry.INSTANCE.getEPackage(erschemaPackage.eNS_URI);
 
 		// Obtain or create and register package
-		ErschemaPackageImpl theErschemaPackage = (ErschemaPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ErschemaPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ErschemaPackageImpl());
+		erschemaPackageImpl theerschemaPackage = (erschemaPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof erschemaPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new erschemaPackageImpl());
 
 		isInited = true;
 
 		// Create package meta-data objects
-		theErschemaPackage.createPackageContents();
+		theerschemaPackage.createPackageContents();
 
 		// Initialize created meta-data
-		theErschemaPackage.initializePackageContents();
+		theerschemaPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theErschemaPackage.freeze();
+		theerschemaPackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(ErschemaPackage.eNS_URI, theErschemaPackage);
-		return theErschemaPackage;
+		EPackage.Registry.INSTANCE.put(erschemaPackage.eNS_URI, theerschemaPackage);
+		return theerschemaPackage;
 	}
 
 	/**
@@ -1259,8 +1261,8 @@ public class ErschemaPackageImpl extends EPackageImpl implements ErschemaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ErschemaFactory getErschemaFactory() {
-		return (ErschemaFactory)getEFactoryInstance();
+	public erschemaFactory geterschemaFactory() {
+		return (erschemaFactory)getEFactoryInstance();
 	}
 
 	/**
@@ -1653,4 +1655,4 @@ public class ErschemaPackageImpl extends EPackageImpl implements ErschemaPackage
 		   });
 	}
 
-} //ErschemaPackageImpl
+} //erschemaPackageImpl

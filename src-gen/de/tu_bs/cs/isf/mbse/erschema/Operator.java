@@ -19,7 +19,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  * </p>
  *
- * @see de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage#getOperator()
+ * @see de.tu_bs.cs.isf.mbse.erschema.erschemaPackage#getOperator()
  * @model abstract="true"
  * @generated
  */
@@ -34,7 +34,7 @@ public interface Operator extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Attribute</em>' reference list.
-	 * @see de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage#getOperator_Attribute()
+	 * @see de.tu_bs.cs.isf.mbse.erschema.erschemaPackage#getOperator_Attribute()
 	 * @model required="true" upper="2"
 	 * @generated
 	 */
@@ -50,7 +50,7 @@ public interface Operator extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Entity</em>' reference list.
-	 * @see de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage#getOperator_Entity()
+	 * @see de.tu_bs.cs.isf.mbse.erschema.erschemaPackage#getOperator_Entity()
 	 * @model required="true" upper="2"
 	 * @generated
 	 */

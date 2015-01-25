@@ -3,10 +3,14 @@
 package de.tu_bs.cs.isf.mbse.erschema.impl;
 
 import de.tu_bs.cs.isf.mbse.erschema.DummyConstraint;
-import de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage;
+import de.tu_bs.cs.isf.mbse.erschema.erschemaPackage;
+
 import java.lang.String;
+
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
@@ -60,7 +64,7 @@ public class DummyConstraintImpl extends MinimalEObjectImpl.Container implements
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ErschemaPackage.Literals.DUMMY_CONSTRAINT;
+		return erschemaPackage.Literals.DUMMY_CONSTRAINT;
 	}
 
 	/**
@@ -81,7 +85,7 @@ public class DummyConstraintImpl extends MinimalEObjectImpl.Container implements
 		String oldConstraint = constraint;
 		constraint = newConstraint;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ErschemaPackage.DUMMY_CONSTRAINT__CONSTRAINT, oldConstraint, constraint));
+			eNotify(new ENotificationImpl(this, Notification.SET, erschemaPackage.DUMMY_CONSTRAINT__CONSTRAINT, oldConstraint, constraint));
 	}
 
 	/**
@@ -92,7 +96,7 @@ public class DummyConstraintImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ErschemaPackage.DUMMY_CONSTRAINT__CONSTRAINT:
+			case erschemaPackage.DUMMY_CONSTRAINT__CONSTRAINT:
 				return getConstraint();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -106,7 +110,7 @@ public class DummyConstraintImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ErschemaPackage.DUMMY_CONSTRAINT__CONSTRAINT:
+			case erschemaPackage.DUMMY_CONSTRAINT__CONSTRAINT:
 				setConstraint((String)newValue);
 				return;
 		}
@@ -121,7 +125,7 @@ public class DummyConstraintImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ErschemaPackage.DUMMY_CONSTRAINT__CONSTRAINT:
+			case erschemaPackage.DUMMY_CONSTRAINT__CONSTRAINT:
 				setConstraint(CONSTRAINT_EDEFAULT);
 				return;
 		}
@@ -136,7 +140,7 @@ public class DummyConstraintImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ErschemaPackage.DUMMY_CONSTRAINT__CONSTRAINT:
+			case erschemaPackage.DUMMY_CONSTRAINT__CONSTRAINT:
 				return CONSTRAINT_EDEFAULT == null ? constraint != null : !CONSTRAINT_EDEFAULT.equals(constraint);
 		}
 		return super.eIsSet(featureID);

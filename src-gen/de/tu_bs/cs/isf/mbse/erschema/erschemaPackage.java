@@ -22,11 +22,11 @@ import org.eclipse.emf.ecore.EReference;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see de.tu_bs.cs.isf.mbse.erschema.ErschemaFactory
+ * @see de.tu_bs.cs.isf.mbse.erschema.erschemaFactory
  * @model kind="package"
  * @generated
  */
-public interface ErschemaPackage extends EPackage {
+public interface erschemaPackage extends EPackage {
 	/**
 	 * The package name.
 	 * <!-- begin-user-doc -->
@@ -57,14 +57,14 @@ public interface ErschemaPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	ErschemaPackage eINSTANCE = de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl.init();
+	erschemaPackage eINSTANCE = de.tu_bs.cs.isf.mbse.erschema.impl.erschemaPackageImpl.init();
 
 	/**
 	 * The meta object id for the '{@link de.tu_bs.cs.isf.mbse.erschema.impl.ModelImpl <em>Model</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ModelImpl
-	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getModel()
+	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.erschemaPackageImpl#getModel()
 	 * @generated
 	 */
 	int MODEL = 0;
@@ -119,7 +119,7 @@ public interface ErschemaPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ElementImpl
-	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getElement()
+	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.erschemaPackageImpl#getElement()
 	 * @generated
 	 */
 	int ELEMENT = 3;
@@ -156,7 +156,7 @@ public interface ErschemaPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.EntityImpl
-	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getEntity()
+	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.erschemaPackageImpl#getEntity()
 	 * @generated
 	 */
 	int ENTITY = 1;
@@ -238,7 +238,7 @@ public interface ErschemaPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.AttributeImpl
-	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getAttribute()
+	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.erschemaPackageImpl#getAttribute()
 	 * @generated
 	 */
 	int ATTRIBUTE = 2;
@@ -284,7 +284,7 @@ public interface ErschemaPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.RelationImpl
-	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getRelation()
+	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.erschemaPackageImpl#getRelation()
 	 * @generated
 	 */
 	int RELATION = 4;
@@ -357,7 +357,7 @@ public interface ErschemaPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.RoleImpl
-	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getRole()
+	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.erschemaPackageImpl#getRole()
 	 * @generated
 	 */
 	int ROLE = 5;
@@ -421,7 +421,7 @@ public interface ErschemaPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.CompositionImpl
-	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getComposition()
+	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.erschemaPackageImpl#getComposition()
 	 * @generated
 	 */
 	int COMPOSITION = 6;
@@ -467,7 +467,7 @@ public interface ErschemaPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.SimpleConstraintImpl
-	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getSimpleConstraint()
+	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.erschemaPackageImpl#getSimpleConstraint()
 	 * @generated
 	 */
 	int SIMPLE_CONSTRAINT = 7;
@@ -567,7 +567,7 @@ public interface ErschemaPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.DummyConstraintImpl
-	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getDummyConstraint()
+	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.erschemaPackageImpl#getDummyConstraint()
 	 * @generated
 	 */
 	int DUMMY_CONSTRAINT = 8;
@@ -604,7 +604,7 @@ public interface ErschemaPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.KeyValueImpl
-	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getKeyValue()
+	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.erschemaPackageImpl#getKeyValue()
 	 * @generated
 	 */
 	int KEY_VALUE = 9;
@@ -650,7 +650,7 @@ public interface ErschemaPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.DatatypeImpl
-	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getDatatype()
+	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.erschemaPackageImpl#getDatatype()
 	 * @generated
 	 */
 	int DATATYPE = 10;
@@ -678,7 +678,7 @@ public interface ErschemaPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.NumberImpl
-	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getNumber()
+	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.erschemaPackageImpl#getNumber()
 	 * @generated
 	 */
 	int NUMBER = 11;
@@ -706,7 +706,7 @@ public interface ErschemaPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.CharSequenceImpl
-	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getCharSequence()
+	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.erschemaPackageImpl#getCharSequence()
 	 * @generated
 	 */
 	int CHAR_SEQUENCE = 12;
@@ -734,7 +734,7 @@ public interface ErschemaPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.TextImpl
-	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getText()
+	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.erschemaPackageImpl#getText()
 	 * @generated
 	 */
 	int TEXT = 13;
@@ -762,7 +762,7 @@ public interface ErschemaPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.StringImpl
-	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getString()
+	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.erschemaPackageImpl#getString()
 	 * @generated
 	 */
 	int STRING = 14;
@@ -790,7 +790,7 @@ public interface ErschemaPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.IntegerImpl
-	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getInteger()
+	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.erschemaPackageImpl#getInteger()
 	 * @generated
 	 */
 	int INTEGER = 15;
@@ -818,7 +818,7 @@ public interface ErschemaPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.BooleanImpl
-	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getBoolean()
+	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.erschemaPackageImpl#getBoolean()
 	 * @generated
 	 */
 	int BOOLEAN = 16;
@@ -846,7 +846,7 @@ public interface ErschemaPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.DoubleImpl
-	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getDouble()
+	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.erschemaPackageImpl#getDouble()
 	 * @generated
 	 */
 	int DOUBLE = 17;
@@ -874,7 +874,7 @@ public interface ErschemaPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.DateImpl
-	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getDate()
+	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.erschemaPackageImpl#getDate()
 	 * @generated
 	 */
 	int DATE = 18;
@@ -902,7 +902,7 @@ public interface ErschemaPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.OperatorImpl
-	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getOperator()
+	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.erschemaPackageImpl#getOperator()
 	 * @generated
 	 */
 	int OPERATOR = 41;
@@ -948,7 +948,7 @@ public interface ErschemaPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ArithmeticOperatorImpl
-	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getArithmeticOperator()
+	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.erschemaPackageImpl#getArithmeticOperator()
 	 * @generated
 	 */
 	int ARITHMETIC_OPERATOR = 19;
@@ -994,7 +994,7 @@ public interface ErschemaPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.LogicalOperatorImpl
-	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getLogicalOperator()
+	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.erschemaPackageImpl#getLogicalOperator()
 	 * @generated
 	 */
 	int LOGICAL_OPERATOR = 20;
@@ -1040,7 +1040,7 @@ public interface ErschemaPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ComparativeImpl
-	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getComparative()
+	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.erschemaPackageImpl#getComparative()
 	 * @generated
 	 */
 	int COMPARATIVE = 27;
@@ -1086,7 +1086,7 @@ public interface ErschemaPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.IsNotImpl
-	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getIsNot()
+	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.erschemaPackageImpl#getIsNot()
 	 * @generated
 	 */
 	int IS_NOT = 21;
@@ -1150,7 +1150,7 @@ public interface ErschemaPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.EqualsImpl
-	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getEquals()
+	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.erschemaPackageImpl#getEquals()
 	 * @generated
 	 */
 	int EQUALS = 22;
@@ -1214,7 +1214,7 @@ public interface ErschemaPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.AddImpl
-	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getAdd()
+	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.erschemaPackageImpl#getAdd()
 	 * @generated
 	 */
 	int ADD = 23;
@@ -1269,7 +1269,7 @@ public interface ErschemaPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.MulImpl
-	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getMul()
+	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.erschemaPackageImpl#getMul()
 	 * @generated
 	 */
 	int MUL = 24;
@@ -1324,7 +1324,7 @@ public interface ErschemaPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.SubImpl
-	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getSub()
+	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.erschemaPackageImpl#getSub()
 	 * @generated
 	 */
 	int SUB = 25;
@@ -1379,7 +1379,7 @@ public interface ErschemaPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.DivImpl
-	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getDiv()
+	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.erschemaPackageImpl#getDiv()
 	 * @generated
 	 */
 	int DIV = 26;
@@ -1434,7 +1434,7 @@ public interface ErschemaPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ConnectiveImpl
-	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getConnective()
+	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.erschemaPackageImpl#getConnective()
 	 * @generated
 	 */
 	int CONNECTIVE = 28;
@@ -1480,7 +1480,7 @@ public interface ErschemaPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.AndImpl
-	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getAnd()
+	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.erschemaPackageImpl#getAnd()
 	 * @generated
 	 */
 	int AND = 29;
@@ -1526,7 +1526,7 @@ public interface ErschemaPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.OrImpl
-	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getOr()
+	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.erschemaPackageImpl#getOr()
 	 * @generated
 	 */
 	int OR = 30;
@@ -1572,7 +1572,7 @@ public interface ErschemaPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ModuloImpl
-	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getModulo()
+	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.erschemaPackageImpl#getModulo()
 	 * @generated
 	 */
 	int MODULO = 31;
@@ -1627,7 +1627,7 @@ public interface ErschemaPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.GreaterThanImpl
-	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getGreaterThan()
+	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.erschemaPackageImpl#getGreaterThan()
 	 * @generated
 	 */
 	int GREATER_THAN = 32;
@@ -1682,7 +1682,7 @@ public interface ErschemaPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.SmallerImpl
-	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getSmaller()
+	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.erschemaPackageImpl#getSmaller()
 	 * @generated
 	 */
 	int SMALLER = 33;
@@ -1737,7 +1737,7 @@ public interface ErschemaPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.SmallerThanImpl
-	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getSmallerThan()
+	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.erschemaPackageImpl#getSmallerThan()
 	 * @generated
 	 */
 	int SMALLER_THAN = 34;
@@ -1792,7 +1792,7 @@ public interface ErschemaPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.GreaterImpl
-	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getGreater()
+	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.erschemaPackageImpl#getGreater()
 	 * @generated
 	 */
 	int GREATER = 35;
@@ -1847,7 +1847,7 @@ public interface ErschemaPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.StringOperatorImpl
-	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getStringOperator()
+	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.erschemaPackageImpl#getStringOperator()
 	 * @generated
 	 */
 	int STRING_OPERATOR = 36;
@@ -1893,7 +1893,7 @@ public interface ErschemaPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.LikeImpl
-	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getLike()
+	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.erschemaPackageImpl#getLike()
 	 * @generated
 	 */
 	int LIKE = 37;
@@ -1948,7 +1948,7 @@ public interface ErschemaPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.LengthImpl
-	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getLength()
+	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.erschemaPackageImpl#getLength()
 	 * @generated
 	 */
 	int LENGTH = 38;
@@ -2003,7 +2003,7 @@ public interface ErschemaPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ConcatImpl
-	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getConcat()
+	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.erschemaPackageImpl#getConcat()
 	 * @generated
 	 */
 	int CONCAT = 39;
@@ -2058,7 +2058,7 @@ public interface ErschemaPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.UnaryNotImpl
-	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getUnaryNot()
+	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.erschemaPackageImpl#getUnaryNot()
 	 * @generated
 	 */
 	int UNARY_NOT = 40;
@@ -2104,7 +2104,7 @@ public interface ErschemaPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.LiteralImpl
-	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getLiteral()
+	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.erschemaPackageImpl#getLiteral()
 	 * @generated
 	 */
 	int LITERAL = 42;
@@ -2159,7 +2159,7 @@ public interface ErschemaPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see de.tu_bs.cs.isf.mbse.erschema.Primitive
-	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getPrimitive()
+	 * @see de.tu_bs.cs.isf.mbse.erschema.impl.erschemaPackageImpl#getPrimitive()
 	 * @generated
 	 */
 	int PRIMITIVE = 43;
@@ -3140,7 +3140,7 @@ public interface ErschemaPackage extends EPackage {
 	 * @return the factory that creates the instances of the model.
 	 * @generated
 	 */
-	ErschemaFactory getErschemaFactory();
+	erschemaFactory geterschemaFactory();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -3161,7 +3161,7 @@ public interface ErschemaPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ModelImpl
-		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getModel()
+		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.erschemaPackageImpl#getModel()
 		 * @generated
 		 */
 		EClass MODEL = eINSTANCE.getModel();
@@ -3195,7 +3195,7 @@ public interface ErschemaPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.EntityImpl
-		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getEntity()
+		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.erschemaPackageImpl#getEntity()
 		 * @generated
 		 */
 		EClass ENTITY = eINSTANCE.getEntity();
@@ -3245,7 +3245,7 @@ public interface ErschemaPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.AttributeImpl
-		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getAttribute()
+		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.erschemaPackageImpl#getAttribute()
 		 * @generated
 		 */
 		EClass ATTRIBUTE = eINSTANCE.getAttribute();
@@ -3263,7 +3263,7 @@ public interface ErschemaPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ElementImpl
-		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getElement()
+		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.erschemaPackageImpl#getElement()
 		 * @generated
 		 */
 		EClass ELEMENT = eINSTANCE.getElement();
@@ -3281,7 +3281,7 @@ public interface ErschemaPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.RelationImpl
-		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getRelation()
+		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.erschemaPackageImpl#getRelation()
 		 * @generated
 		 */
 		EClass RELATION = eINSTANCE.getRelation();
@@ -3323,7 +3323,7 @@ public interface ErschemaPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.RoleImpl
-		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getRole()
+		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.erschemaPackageImpl#getRole()
 		 * @generated
 		 */
 		EClass ROLE = eINSTANCE.getRole();
@@ -3357,7 +3357,7 @@ public interface ErschemaPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.CompositionImpl
-		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getComposition()
+		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.erschemaPackageImpl#getComposition()
 		 * @generated
 		 */
 		EClass COMPOSITION = eINSTANCE.getComposition();
@@ -3375,7 +3375,7 @@ public interface ErschemaPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.SimpleConstraintImpl
-		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getSimpleConstraint()
+		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.erschemaPackageImpl#getSimpleConstraint()
 		 * @generated
 		 */
 		EClass SIMPLE_CONSTRAINT = eINSTANCE.getSimpleConstraint();
@@ -3449,7 +3449,7 @@ public interface ErschemaPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.DummyConstraintImpl
-		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getDummyConstraint()
+		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.erschemaPackageImpl#getDummyConstraint()
 		 * @generated
 		 */
 		EClass DUMMY_CONSTRAINT = eINSTANCE.getDummyConstraint();
@@ -3467,7 +3467,7 @@ public interface ErschemaPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.KeyValueImpl
-		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getKeyValue()
+		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.erschemaPackageImpl#getKeyValue()
 		 * @generated
 		 */
 		EClass KEY_VALUE = eINSTANCE.getKeyValue();
@@ -3493,7 +3493,7 @@ public interface ErschemaPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.DatatypeImpl
-		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getDatatype()
+		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.erschemaPackageImpl#getDatatype()
 		 * @generated
 		 */
 		EClass DATATYPE = eINSTANCE.getDatatype();
@@ -3503,7 +3503,7 @@ public interface ErschemaPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.NumberImpl
-		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getNumber()
+		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.erschemaPackageImpl#getNumber()
 		 * @generated
 		 */
 		EClass NUMBER = eINSTANCE.getNumber();
@@ -3513,7 +3513,7 @@ public interface ErschemaPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.CharSequenceImpl
-		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getCharSequence()
+		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.erschemaPackageImpl#getCharSequence()
 		 * @generated
 		 */
 		EClass CHAR_SEQUENCE = eINSTANCE.getCharSequence();
@@ -3523,7 +3523,7 @@ public interface ErschemaPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.TextImpl
-		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getText()
+		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.erschemaPackageImpl#getText()
 		 * @generated
 		 */
 		EClass TEXT = eINSTANCE.getText();
@@ -3533,7 +3533,7 @@ public interface ErschemaPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.StringImpl
-		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getString()
+		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.erschemaPackageImpl#getString()
 		 * @generated
 		 */
 		EClass STRING = eINSTANCE.getString();
@@ -3543,7 +3543,7 @@ public interface ErschemaPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.IntegerImpl
-		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getInteger()
+		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.erschemaPackageImpl#getInteger()
 		 * @generated
 		 */
 		EClass INTEGER = eINSTANCE.getInteger();
@@ -3553,7 +3553,7 @@ public interface ErschemaPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.BooleanImpl
-		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getBoolean()
+		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.erschemaPackageImpl#getBoolean()
 		 * @generated
 		 */
 		EClass BOOLEAN = eINSTANCE.getBoolean();
@@ -3563,7 +3563,7 @@ public interface ErschemaPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.DoubleImpl
-		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getDouble()
+		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.erschemaPackageImpl#getDouble()
 		 * @generated
 		 */
 		EClass DOUBLE = eINSTANCE.getDouble();
@@ -3573,7 +3573,7 @@ public interface ErschemaPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.DateImpl
-		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getDate()
+		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.erschemaPackageImpl#getDate()
 		 * @generated
 		 */
 		EClass DATE = eINSTANCE.getDate();
@@ -3583,7 +3583,7 @@ public interface ErschemaPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ArithmeticOperatorImpl
-		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getArithmeticOperator()
+		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.erschemaPackageImpl#getArithmeticOperator()
 		 * @generated
 		 */
 		EClass ARITHMETIC_OPERATOR = eINSTANCE.getArithmeticOperator();
@@ -3593,7 +3593,7 @@ public interface ErschemaPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.LogicalOperatorImpl
-		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getLogicalOperator()
+		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.erschemaPackageImpl#getLogicalOperator()
 		 * @generated
 		 */
 		EClass LOGICAL_OPERATOR = eINSTANCE.getLogicalOperator();
@@ -3603,7 +3603,7 @@ public interface ErschemaPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.IsNotImpl
-		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getIsNot()
+		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.erschemaPackageImpl#getIsNot()
 		 * @generated
 		 */
 		EClass IS_NOT = eINSTANCE.getIsNot();
@@ -3629,7 +3629,7 @@ public interface ErschemaPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.EqualsImpl
-		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getEquals()
+		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.erschemaPackageImpl#getEquals()
 		 * @generated
 		 */
 		EClass EQUALS = eINSTANCE.getEquals();
@@ -3655,7 +3655,7 @@ public interface ErschemaPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.AddImpl
-		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getAdd()
+		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.erschemaPackageImpl#getAdd()
 		 * @generated
 		 */
 		EClass ADD = eINSTANCE.getAdd();
@@ -3673,7 +3673,7 @@ public interface ErschemaPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.MulImpl
-		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getMul()
+		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.erschemaPackageImpl#getMul()
 		 * @generated
 		 */
 		EClass MUL = eINSTANCE.getMul();
@@ -3691,7 +3691,7 @@ public interface ErschemaPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.SubImpl
-		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getSub()
+		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.erschemaPackageImpl#getSub()
 		 * @generated
 		 */
 		EClass SUB = eINSTANCE.getSub();
@@ -3709,7 +3709,7 @@ public interface ErschemaPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.DivImpl
-		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getDiv()
+		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.erschemaPackageImpl#getDiv()
 		 * @generated
 		 */
 		EClass DIV = eINSTANCE.getDiv();
@@ -3727,7 +3727,7 @@ public interface ErschemaPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ComparativeImpl
-		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getComparative()
+		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.erschemaPackageImpl#getComparative()
 		 * @generated
 		 */
 		EClass COMPARATIVE = eINSTANCE.getComparative();
@@ -3737,7 +3737,7 @@ public interface ErschemaPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ConnectiveImpl
-		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getConnective()
+		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.erschemaPackageImpl#getConnective()
 		 * @generated
 		 */
 		EClass CONNECTIVE = eINSTANCE.getConnective();
@@ -3747,7 +3747,7 @@ public interface ErschemaPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.AndImpl
-		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getAnd()
+		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.erschemaPackageImpl#getAnd()
 		 * @generated
 		 */
 		EClass AND = eINSTANCE.getAnd();
@@ -3757,7 +3757,7 @@ public interface ErschemaPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.OrImpl
-		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getOr()
+		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.erschemaPackageImpl#getOr()
 		 * @generated
 		 */
 		EClass OR = eINSTANCE.getOr();
@@ -3767,7 +3767,7 @@ public interface ErschemaPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ModuloImpl
-		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getModulo()
+		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.erschemaPackageImpl#getModulo()
 		 * @generated
 		 */
 		EClass MODULO = eINSTANCE.getModulo();
@@ -3785,7 +3785,7 @@ public interface ErschemaPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.GreaterThanImpl
-		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getGreaterThan()
+		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.erschemaPackageImpl#getGreaterThan()
 		 * @generated
 		 */
 		EClass GREATER_THAN = eINSTANCE.getGreaterThan();
@@ -3803,7 +3803,7 @@ public interface ErschemaPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.SmallerImpl
-		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getSmaller()
+		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.erschemaPackageImpl#getSmaller()
 		 * @generated
 		 */
 		EClass SMALLER = eINSTANCE.getSmaller();
@@ -3821,7 +3821,7 @@ public interface ErschemaPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.SmallerThanImpl
-		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getSmallerThan()
+		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.erschemaPackageImpl#getSmallerThan()
 		 * @generated
 		 */
 		EClass SMALLER_THAN = eINSTANCE.getSmallerThan();
@@ -3839,7 +3839,7 @@ public interface ErschemaPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.GreaterImpl
-		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getGreater()
+		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.erschemaPackageImpl#getGreater()
 		 * @generated
 		 */
 		EClass GREATER = eINSTANCE.getGreater();
@@ -3857,7 +3857,7 @@ public interface ErschemaPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.StringOperatorImpl
-		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getStringOperator()
+		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.erschemaPackageImpl#getStringOperator()
 		 * @generated
 		 */
 		EClass STRING_OPERATOR = eINSTANCE.getStringOperator();
@@ -3867,7 +3867,7 @@ public interface ErschemaPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.LikeImpl
-		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getLike()
+		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.erschemaPackageImpl#getLike()
 		 * @generated
 		 */
 		EClass LIKE = eINSTANCE.getLike();
@@ -3885,7 +3885,7 @@ public interface ErschemaPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.LengthImpl
-		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getLength()
+		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.erschemaPackageImpl#getLength()
 		 * @generated
 		 */
 		EClass LENGTH = eINSTANCE.getLength();
@@ -3903,7 +3903,7 @@ public interface ErschemaPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ConcatImpl
-		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getConcat()
+		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.erschemaPackageImpl#getConcat()
 		 * @generated
 		 */
 		EClass CONCAT = eINSTANCE.getConcat();
@@ -3921,7 +3921,7 @@ public interface ErschemaPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.UnaryNotImpl
-		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getUnaryNot()
+		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.erschemaPackageImpl#getUnaryNot()
 		 * @generated
 		 */
 		EClass UNARY_NOT = eINSTANCE.getUnaryNot();
@@ -3931,7 +3931,7 @@ public interface ErschemaPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.OperatorImpl
-		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getOperator()
+		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.erschemaPackageImpl#getOperator()
 		 * @generated
 		 */
 		EClass OPERATOR = eINSTANCE.getOperator();
@@ -3957,7 +3957,7 @@ public interface ErschemaPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.LiteralImpl
-		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getLiteral()
+		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.erschemaPackageImpl#getLiteral()
 		 * @generated
 		 */
 		EClass LITERAL = eINSTANCE.getLiteral();
@@ -3975,11 +3975,11 @@ public interface ErschemaPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see de.tu_bs.cs.isf.mbse.erschema.Primitive
-		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.ErschemaPackageImpl#getPrimitive()
+		 * @see de.tu_bs.cs.isf.mbse.erschema.impl.erschemaPackageImpl#getPrimitive()
 		 * @generated
 		 */
 		EEnum PRIMITIVE = eINSTANCE.getPrimitive();
 
 	}
 
-} //ErschemaPackage
+} //erschemaPackage

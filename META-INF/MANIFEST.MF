@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: mbse;singleton:=true
+Bundle-SymbolicName: erschema;singleton:=true
 Bundle-Version: 0.1.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
@@ -13,5 +13,3 @@ Export-Package: de.tu_bs.cs.isf.mbse.erschema,
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport
 Bundle-ActivationPolicy: lazy
-Import-Package: de.tu_bs.cs.isf.mbse.erschema.resource.erm,
- de.tu_bs.cs.isf.mbse.erschema.resource.erm.mopp

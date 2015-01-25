@@ -16,7 +16,7 @@ import org.eclipse.emf.common.util.EList;
  * </ul>
  * </p>
  *
- * @see de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage#getComposition()
+ * @see de.tu_bs.cs.isf.mbse.erschema.erschemaPackage#getComposition()
  * @model
  * @generated
  */
@@ -31,7 +31,7 @@ public interface Composition extends Element {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Attributes</em>' containment reference list.
-	 * @see de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage#getComposition_Attributes()
+	 * @see de.tu_bs.cs.isf.mbse.erschema.erschemaPackage#getComposition_Attributes()
 	 * @model containment="true" lower="2"
 	 * @generated
 	 */

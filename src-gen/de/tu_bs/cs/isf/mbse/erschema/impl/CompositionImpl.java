@@ -4,7 +4,7 @@ package de.tu_bs.cs.isf.mbse.erschema.impl;
 
 import de.tu_bs.cs.isf.mbse.erschema.Attribute;
 import de.tu_bs.cs.isf.mbse.erschema.Composition;
-import de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage;
+import de.tu_bs.cs.isf.mbse.erschema.erschemaPackage;
 
 import java.util.Collection;
 
@@ -58,7 +58,7 @@ public class CompositionImpl extends ElementImpl implements Composition {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ErschemaPackage.Literals.COMPOSITION;
+		return erschemaPackage.Literals.COMPOSITION;
 	}
 
 	/**
@@ -68,7 +68,7 @@ public class CompositionImpl extends ElementImpl implements Composition {
 	 */
 	public EList<Attribute> getAttributes() {
 		if (attributes == null) {
-			attributes = new EObjectContainmentEList<Attribute>(Attribute.class, this, ErschemaPackage.COMPOSITION__ATTRIBUTES);
+			attributes = new EObjectContainmentEList<Attribute>(Attribute.class, this, erschemaPackage.COMPOSITION__ATTRIBUTES);
 		}
 		return attributes;
 	}
@@ -81,7 +81,7 @@ public class CompositionImpl extends ElementImpl implements Composition {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case ErschemaPackage.COMPOSITION__ATTRIBUTES:
+			case erschemaPackage.COMPOSITION__ATTRIBUTES:
 				return ((InternalEList<?>)getAttributes()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -95,7 +95,7 @@ public class CompositionImpl extends ElementImpl implements Composition {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ErschemaPackage.COMPOSITION__ATTRIBUTES:
+			case erschemaPackage.COMPOSITION__ATTRIBUTES:
 				return getAttributes();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -110,7 +110,7 @@ public class CompositionImpl extends ElementImpl implements Composition {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ErschemaPackage.COMPOSITION__ATTRIBUTES:
+			case erschemaPackage.COMPOSITION__ATTRIBUTES:
 				getAttributes().clear();
 				getAttributes().addAll((Collection<? extends Attribute>)newValue);
 				return;
@@ -126,7 +126,7 @@ public class CompositionImpl extends ElementImpl implements Composition {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ErschemaPackage.COMPOSITION__ATTRIBUTES:
+			case erschemaPackage.COMPOSITION__ATTRIBUTES:
 				getAttributes().clear();
 				return;
 		}
@@ -141,7 +141,7 @@ public class CompositionImpl extends ElementImpl implements Composition {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ErschemaPackage.COMPOSITION__ATTRIBUTES:
+			case erschemaPackage.COMPOSITION__ATTRIBUTES:
 				return attributes != null && !attributes.isEmpty();
 		}
 		return super.eIsSet(featureID);

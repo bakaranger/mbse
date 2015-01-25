@@ -9,7 +9,7 @@ package de.tu_bs.cs.isf.mbse.erschema;
  * <!-- end-user-doc -->
  *
  *
- * @see de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage#getNumber()
+ * @see de.tu_bs.cs.isf.mbse.erschema.erschemaPackage#getNumber()
  * @model abstract="true"
  * @generated
  */

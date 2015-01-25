@@ -3,8 +3,8 @@
 package de.tu_bs.cs.isf.mbse.erschema;
 
 import java.lang.Double;
-import org.eclipse.emf.common.util.EList;
 
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,12 +18,11 @@ import org.eclipse.emf.common.util.EList;
  * </ul>
  * </p>
  *
- * @see de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage#getSmallerThan()
+ * @see de.tu_bs.cs.isf.mbse.erschema.erschemaPackage#getSmallerThan()
  * @model
  * @generated
  */
 public interface SmallerThan extends Comparative {
-
 	/**
 	 * Returns the value of the '<em><b>Value</b></em>' attribute list.
 	 * The list contents are of type {@link java.lang.Double}.
@@ -34,9 +33,10 @@ public interface SmallerThan extends Comparative {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Value</em>' attribute list.
-	 * @see de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage#getSmallerThan_Value()
+	 * @see de.tu_bs.cs.isf.mbse.erschema.erschemaPackage#getSmallerThan_Value()
 	 * @model default="0"
 	 * @generated
 	 */
 	EList<Double> getValue();
+
 } // SmallerThan

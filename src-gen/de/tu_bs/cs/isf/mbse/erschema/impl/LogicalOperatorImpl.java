@@ -2,8 +2,8 @@
  */
 package de.tu_bs.cs.isf.mbse.erschema.impl;
 
-import de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage;
 import de.tu_bs.cs.isf.mbse.erschema.LogicalOperator;
+import de.tu_bs.cs.isf.mbse.erschema.erschemaPackage;
 
 import org.eclipse.emf.ecore.EClass;
 
@@ -33,7 +33,7 @@ public abstract class LogicalOperatorImpl extends OperatorImpl implements Logica
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ErschemaPackage.Literals.LOGICAL_OPERATOR;
+		return erschemaPackage.Literals.LOGICAL_OPERATOR;
 	}
 
 } //LogicalOperatorImpl

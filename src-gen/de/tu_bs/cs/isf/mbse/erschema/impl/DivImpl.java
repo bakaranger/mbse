@@ -3,12 +3,16 @@
 package de.tu_bs.cs.isf.mbse.erschema.impl;
 
 import de.tu_bs.cs.isf.mbse.erschema.Div;
-import de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage;
+import de.tu_bs.cs.isf.mbse.erschema.erschemaPackage;
 
 import java.lang.Double;
+
 import java.util.Collection;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 
 /**
@@ -51,7 +55,7 @@ public class DivImpl extends ArithmeticOperatorImpl implements Div {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ErschemaPackage.Literals.DIV;
+		return erschemaPackage.Literals.DIV;
 	}
 
 	/**
@@ -61,7 +65,7 @@ public class DivImpl extends ArithmeticOperatorImpl implements Div {
 	 */
 	public EList<Double> getValue() {
 		if (value == null) {
-			value = new EDataTypeUniqueEList<Double>(Double.class, this, ErschemaPackage.DIV__VALUE);
+			value = new EDataTypeUniqueEList<Double>(Double.class, this, erschemaPackage.DIV__VALUE);
 		}
 		return value;
 	}
@@ -74,7 +78,7 @@ public class DivImpl extends ArithmeticOperatorImpl implements Div {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ErschemaPackage.DIV__VALUE:
+			case erschemaPackage.DIV__VALUE:
 				return getValue();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -89,7 +93,7 @@ public class DivImpl extends ArithmeticOperatorImpl implements Div {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ErschemaPackage.DIV__VALUE:
+			case erschemaPackage.DIV__VALUE:
 				getValue().clear();
 				getValue().addAll((Collection<? extends Double>)newValue);
 				return;
@@ -105,7 +109,7 @@ public class DivImpl extends ArithmeticOperatorImpl implements Div {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ErschemaPackage.DIV__VALUE:
+			case erschemaPackage.DIV__VALUE:
 				getValue().clear();
 				return;
 		}
@@ -120,7 +124,7 @@ public class DivImpl extends ArithmeticOperatorImpl implements Div {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ErschemaPackage.DIV__VALUE:
+			case erschemaPackage.DIV__VALUE:
 				return value != null && !value.isEmpty();
 		}
 		return super.eIsSet(featureID);

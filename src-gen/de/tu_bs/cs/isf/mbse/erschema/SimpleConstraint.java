@@ -4,6 +4,7 @@ package de.tu_bs.cs.isf.mbse.erschema;
 
 import java.lang.Double;
 import java.lang.String;
+
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
@@ -27,7 +28,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  * </p>
  *
- * @see de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage#getSimpleConstraint()
+ * @see de.tu_bs.cs.isf.mbse.erschema.erschemaPackage#getSimpleConstraint()
  * @model
  * @generated
  */
@@ -42,7 +43,7 @@ public interface SimpleConstraint extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Compare</em>' containment reference list.
-	 * @see de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage#getSimpleConstraint_Compare()
+	 * @see de.tu_bs.cs.isf.mbse.erschema.erschemaPackage#getSimpleConstraint_Compare()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
@@ -58,7 +59,7 @@ public interface SimpleConstraint extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Entity</em>' reference list.
-	 * @see de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage#getSimpleConstraint_Entity()
+	 * @see de.tu_bs.cs.isf.mbse.erschema.erschemaPackage#getSimpleConstraint_Entity()
 	 * @model lower="2"
 	 * @generated
 	 */
@@ -74,7 +75,7 @@ public interface SimpleConstraint extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Attributes</em>' reference list.
-	 * @see de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage#getSimpleConstraint_Attributes()
+	 * @see de.tu_bs.cs.isf.mbse.erschema.erschemaPackage#getSimpleConstraint_Attributes()
 	 * @model lower="2"
 	 * @generated
 	 */
@@ -90,7 +91,7 @@ public interface SimpleConstraint extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Connect</em>' containment reference list.
-	 * @see de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage#getSimpleConstraint_Connect()
+	 * @see de.tu_bs.cs.isf.mbse.erschema.erschemaPackage#getSimpleConstraint_Connect()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -106,7 +107,7 @@ public interface SimpleConstraint extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Stringop</em>' containment reference list.
-	 * @see de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage#getSimpleConstraint_Stringop()
+	 * @see de.tu_bs.cs.isf.mbse.erschema.erschemaPackage#getSimpleConstraint_Stringop()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -122,7 +123,7 @@ public interface SimpleConstraint extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Arithmeticop</em>' containment reference list.
-	 * @see de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage#getSimpleConstraint_Arithmeticop()
+	 * @see de.tu_bs.cs.isf.mbse.erschema.erschemaPackage#getSimpleConstraint_Arithmeticop()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -138,7 +139,7 @@ public interface SimpleConstraint extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>String Value</em>' attribute list.
-	 * @see de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage#getSimpleConstraint_StringValue()
+	 * @see de.tu_bs.cs.isf.mbse.erschema.erschemaPackage#getSimpleConstraint_StringValue()
 	 * @model default="\"\"" upper="2"
 	 * @generated
 	 */
@@ -154,7 +155,7 @@ public interface SimpleConstraint extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Num Value</em>' attribute list.
-	 * @see de.tu_bs.cs.isf.mbse.erschema.ErschemaPackage#getSimpleConstraint_NumValue()
+	 * @see de.tu_bs.cs.isf.mbse.erschema.erschemaPackage#getSimpleConstraint_NumValue()
 	 * @model default="0" upper="2"
 	 * @generated
 	 */
