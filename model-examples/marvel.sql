@@ -1,0 +1,24 @@
+CREATE SCHEMA marvel;
+
+CREATE TABLE hero (
+	first_name VARCHAR(255),
+	last_name VARCHAR(255),
+	alias VARCHAR(255) NOT NULL PRIMARY KEY
+);
+
+CREATE TABLE team (
+	name VARCHAR(255) NOT NULL PRIMARY KEY
+);
+
+CREATE TABLE member_of(
+	join DATE,
+	leave DATE,
+	FOREIGN KEY (hero) REFERENCES hero(alias)
+		ON DELETE CASCADE 
+		ON UPDATE CASCADE,
+	FOREIGN KEY (team) REFERENCES team(name)
+		ON DELETE CASCADE 
+		ON UPDATE CASCADE,
+CHECK ("hero.alias is not team.name")
+);
+

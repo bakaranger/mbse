@@ -11,13 +11,14 @@ OPTIONS {
 
 TOKENS {
 	DEFINE COMMENT $'//'(~('\n'|'\r'|'\uffff'))*$;
-	DEFINE BOUNDS $ ( '"''*''"' | ('"''0'..'9''"')+ )$; 
+	DEFINE BOUNDS $ ( '�' '*' '�' | ('�' '0'..'9' '�')+ )$; 
     DEFINE INTEGER_LITERAL $('1'..'9')('0'..'9')|'0'$;
     DEFINE REAL_LITERAL $ (('1'..'9') ('0'..'9')* | '0') '.' ('0'..'9')+ (('e'|'E') ('+'|'-')? ('0'..'9')*)?$;
     
     DEFINE WHITESPACE $(' '|'\t'|'\f')$;
     DEFINE LINEBREAKS $('\r\n'|'\r'|'\n')$;
-    DEFINE TEXT $ ('A'..'Z'|'a'..'z'|'0'..'9'|'_'|'-')+$;
+    DEFINE TEXT $('A'..'Z'|'a'..'z'|'0'..'9'|'_'|'-')+$;
+    DEFINE STRING $ ('"'('A'..'Z'|'a'..'z'|'0'..'9'|'_'|'-'|'.'|' '| '<'|'>'|'='|'!')+'"')$;
 }
 
 TOKENSTYLES {
@@ -45,12 +46,12 @@ TOKENSTYLES {
 	"bool" COLOR #7779bb;
 	"date" COLOR #7779bb;
 		
-	"and" COLOR #308080;
+	"and"COLOR #308080;
 	"or" COLOR #308080;
-	"not"  COLOR #308080;
+	"not"COLOR #308080;
 	"<=" COLOR #308080;
 	"<"	 COLOR #308080;
-	"!=" COLOR #308080;
+	"is not" COLOR #308080;
 	"==" COLOR #308080;
 	">"  COLOR #308080;
 	">=" COLOR #308080;
@@ -73,10 +74,10 @@ RULES {
 	Composition ::= "composition"#1name[] "{"attributes(attributes+)"}"!0;
 	Attribute ::= "val"#1name[] ":" type!0;
 	
-	KeyValue::="key"#1(composition|attribute)|(attribute|composition);
+	KeyValue::="key"#1(composition|attribute);
 	Role ::= "role"#1name[] "references" entity[] ("[" lowerBound[BOUNDS] "," upperBound[BOUNDS] "]")? !0;
 
-	DummyConstraint  ::= "check" "(" constraint[] ")";
+	DummyConstraint  ::= "check" "(" constraint[STRING] ")";
 	
 	SimpleConstraint ::= "constraint" "(" (((entity[]"."attributes[] | numValue[REAL_LITERAL] | StringValue['"','"']) (arithmeticop* | (connect : And , Or)* | (stringop : Concat , Length)*) compare (entity[]"."attributes[] | numValue[REAL_LITERAL] | StringValue['"','"']) (arithmeticop* | (connect : And , Or)* | (stringop : Concat , Length)*)) | stringop : Like | connect : UnaryNot )")";
 	
@@ -94,7 +95,7 @@ RULES {
 	// Operatoren	
 	SmallerThan ::= "<=";	
 	Smaller ::= "<"; 
-	IsNot ::= "!=";
+	IsNot ::= "is not";
 	Equals ::= "==";
 	Greater ::= ">";
 	GreaterThan ::= ">=";

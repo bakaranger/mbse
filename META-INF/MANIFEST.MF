@@ -8,6 +8,7 @@ Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Export-Package: de.tu_bs.cs.isf.mbse.erschema,
+ de.tu_bs.cs.isf.mbse.erschema.generator,
  de.tu_bs.cs.isf.mbse.erschema.impl,
  de.tu_bs.cs.isf.mbse.erschema.util
 Require-Bundle: org.eclipse.core.runtime,
