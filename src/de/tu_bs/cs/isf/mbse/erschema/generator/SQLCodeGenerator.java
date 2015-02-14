@@ -17,7 +17,7 @@ import de.tu_bs.cs.isf.mbse.erschema.impl.TextImpl;
 
 public final class SQLCodeGenerator {
 
-	public static String sql(final Model model) {
+	public static String sql(final Model model)  {
 		final StringBuilder sqlContent = new StringBuilder();
 		final String modelName = model.getName();
 
@@ -29,7 +29,10 @@ public final class SQLCodeGenerator {
 
 		for (final Relation rel : model.getRelations()) {
 			sqlContent.append(sqlRelation(rel)).append(";\n\n");
-		}		
+		}
+
+		String sql = sqlContent.toString();
+		
 		return sqlContent.toString();
 	}
 
@@ -60,7 +63,8 @@ public final class SQLCodeGenerator {
 
 		sql.append("\tFOREIGN KEY (").append(role.getName())
 				.append(") REFERENCES ").append(role.getName()).append("(")
-				.append(keyStr).append(")\n\t\t").append("ON DELETE CASCADE \n\t\t")
+				.append(keyStr).append(")\n\t\t")
+				.append("ON DELETE CASCADE \n\t\t")
 				.append("ON UPDATE CASCADE,\n");
 
 		return sql.toString();
@@ -77,7 +81,7 @@ public final class SQLCodeGenerator {
 		for (final Composition comp : ent.getCompositions()) {
 			sql.append(sqlComposition(comp));
 		}
-		for (final KeyValue key : ent.getKeys()) {			
+		for (final KeyValue key : ent.getKeys()) {
 			sql.append(sqlKeyValue(key));
 		}
 		for (final DummyConstraint constraint : ent.getDummyConstraints()) {
@@ -125,7 +129,7 @@ public final class SQLCodeGenerator {
 		final Attribute attr = key.getAttribute();
 		if (attr != null) {
 			return sqlKeyAttribute(attr);
-		} 
+		}
 		if (comp != null) {
 			return sqlKeyComposition(comp);
 		}
