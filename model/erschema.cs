@@ -68,7 +68,7 @@ TOKENSTYLES {
 
 RULES {
  
-	Model  ::= "model" #1 name[] !1"{"!1 entities+ relations* "}"!0;   
+	Model  ::= "model" #1 name[] "{" entities+ relations* "}"!0;   
 	//@Foldable
 	Entity ::= "entity"#1 name[] !1"{"!1 keys+ attributes* compositions* dummyConstraints* constraints*"}"!0; 
 	
