@@ -6,25 +6,17 @@ import de.tu_bs.cs.isf.mbse.erschema.ArithmeticOperator;
 import de.tu_bs.cs.isf.mbse.erschema.Attribute;
 import de.tu_bs.cs.isf.mbse.erschema.Comparative;
 import de.tu_bs.cs.isf.mbse.erschema.Connective;
-import de.tu_bs.cs.isf.mbse.erschema.Entity;
 import de.tu_bs.cs.isf.mbse.erschema.SimpleConstraint;
 import de.tu_bs.cs.isf.mbse.erschema.StringOperator;
 import de.tu_bs.cs.isf.mbse.erschema.erschemaPackage;
-
 import java.lang.Double;
 import java.lang.String;
-
 import java.util.Collection;
-
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
@@ -38,7 +30,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * <ul>
  *   <li>{@link de.tu_bs.cs.isf.mbse.erschema.impl.SimpleConstraintImpl#getCompare <em>Compare</em>}</li>
- *   <li>{@link de.tu_bs.cs.isf.mbse.erschema.impl.SimpleConstraintImpl#getEntity <em>Entity</em>}</li>
  *   <li>{@link de.tu_bs.cs.isf.mbse.erschema.impl.SimpleConstraintImpl#getAttributes <em>Attributes</em>}</li>
  *   <li>{@link de.tu_bs.cs.isf.mbse.erschema.impl.SimpleConstraintImpl#getConnect <em>Connect</em>}</li>
  *   <li>{@link de.tu_bs.cs.isf.mbse.erschema.impl.SimpleConstraintImpl#getStringop <em>Stringop</em>}</li>
@@ -60,16 +51,6 @@ public class SimpleConstraintImpl extends MinimalEObjectImpl.Container implement
 	 * @ordered
 	 */
 	protected EList<Comparative> compare;
-
-	/**
-	 * The cached value of the '{@link #getEntity() <em>Entity</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getEntity()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Entity> entity;
 
 	/**
 	 * The cached value of the '{@link #getAttributes() <em>Attributes</em>}' reference list.
@@ -160,18 +141,6 @@ public class SimpleConstraintImpl extends MinimalEObjectImpl.Container implement
 			compare = new EObjectContainmentEList<Comparative>(Comparative.class, this, erschemaPackage.SIMPLE_CONSTRAINT__COMPARE);
 		}
 		return compare;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<Entity> getEntity() {
-		if (entity == null) {
-			entity = new EObjectResolvingEList<Entity>(Entity.class, this, erschemaPackage.SIMPLE_CONSTRAINT__ENTITY);
-		}
-		return entity;
 	}
 
 	/**
@@ -276,8 +245,6 @@ public class SimpleConstraintImpl extends MinimalEObjectImpl.Container implement
 		switch (featureID) {
 			case erschemaPackage.SIMPLE_CONSTRAINT__COMPARE:
 				return getCompare();
-			case erschemaPackage.SIMPLE_CONSTRAINT__ENTITY:
-				return getEntity();
 			case erschemaPackage.SIMPLE_CONSTRAINT__ATTRIBUTES:
 				return getAttributes();
 			case erschemaPackage.SIMPLE_CONSTRAINT__CONNECT:
@@ -306,10 +273,6 @@ public class SimpleConstraintImpl extends MinimalEObjectImpl.Container implement
 			case erschemaPackage.SIMPLE_CONSTRAINT__COMPARE:
 				getCompare().clear();
 				getCompare().addAll((Collection<? extends Comparative>)newValue);
-				return;
-			case erschemaPackage.SIMPLE_CONSTRAINT__ENTITY:
-				getEntity().clear();
-				getEntity().addAll((Collection<? extends Entity>)newValue);
 				return;
 			case erschemaPackage.SIMPLE_CONSTRAINT__ATTRIBUTES:
 				getAttributes().clear();
@@ -350,9 +313,6 @@ public class SimpleConstraintImpl extends MinimalEObjectImpl.Container implement
 			case erschemaPackage.SIMPLE_CONSTRAINT__COMPARE:
 				getCompare().clear();
 				return;
-			case erschemaPackage.SIMPLE_CONSTRAINT__ENTITY:
-				getEntity().clear();
-				return;
 			case erschemaPackage.SIMPLE_CONSTRAINT__ATTRIBUTES:
 				getAttributes().clear();
 				return;
@@ -385,8 +345,6 @@ public class SimpleConstraintImpl extends MinimalEObjectImpl.Container implement
 		switch (featureID) {
 			case erschemaPackage.SIMPLE_CONSTRAINT__COMPARE:
 				return compare != null && !compare.isEmpty();
-			case erschemaPackage.SIMPLE_CONSTRAINT__ENTITY:
-				return entity != null && !entity.isEmpty();
 			case erschemaPackage.SIMPLE_CONSTRAINT__ATTRIBUTES:
 				return attributes != null && !attributes.isEmpty();
 			case erschemaPackage.SIMPLE_CONSTRAINT__CONNECT:

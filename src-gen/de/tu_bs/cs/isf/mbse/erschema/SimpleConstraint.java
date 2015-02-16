@@ -18,7 +18,6 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link de.tu_bs.cs.isf.mbse.erschema.SimpleConstraint#getCompare <em>Compare</em>}</li>
- *   <li>{@link de.tu_bs.cs.isf.mbse.erschema.SimpleConstraint#getEntity <em>Entity</em>}</li>
  *   <li>{@link de.tu_bs.cs.isf.mbse.erschema.SimpleConstraint#getAttributes <em>Attributes</em>}</li>
  *   <li>{@link de.tu_bs.cs.isf.mbse.erschema.SimpleConstraint#getConnect <em>Connect</em>}</li>
  *   <li>{@link de.tu_bs.cs.isf.mbse.erschema.SimpleConstraint#getStringop <em>Stringop</em>}</li>
@@ -48,22 +47,6 @@ public interface SimpleConstraint extends EObject {
 	 * @generated
 	 */
 	EList<Comparative> getCompare();
-
-	/**
-	 * Returns the value of the '<em><b>Entity</b></em>' reference list.
-	 * The list contents are of type {@link de.tu_bs.cs.isf.mbse.erschema.Entity}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Entity</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Entity</em>' reference list.
-	 * @see de.tu_bs.cs.isf.mbse.erschema.erschemaPackage#getSimpleConstraint_Entity()
-	 * @model lower="2"
-	 * @generated
-	 */
-	EList<Entity> getEntity();
 
 	/**
 	 * Returns the value of the '<em><b>Attributes</b></em>' reference list.

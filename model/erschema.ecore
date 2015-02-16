@@ -56,8 +56,6 @@
   <eClassifiers xsi:type="ecore:EClass" name="SimpleConstraint">
     <eStructuralFeatures xsi:type="ecore:EReference" name="compare" lowerBound="1"
         upperBound="-1" eType="#//Comparative" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="entity" lowerBound="2"
-        upperBound="-1" eType="#//Entity"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" lowerBound="2"
         upperBound="-1" eType="#//Attribute"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="connect" upperBound="-1"

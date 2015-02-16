@@ -1,3 +1,4 @@
+@SuppressWarnings
 SYNTAXDEF erm
 FOR <http://tu-bs.de/cs/isf/mbse/erschema> <erschema.genmodel>
 START Model
@@ -7,18 +8,20 @@ OPTIONS {
 	generateCodeFromGeneratorModel = "true";
 	overrideBuilder = "false";
 	usePredefinedTokens = "false";
+	
 }
 
 TOKENS {
 	DEFINE COMMENT $'//'(~('\n'|'\r'|'\uffff'))*$;
-	DEFINE BOUNDS $ ( 'ï¿½' '*' 'ï¿½' | ('ï¿½' '0'..'9' 'ï¿½')+ )$; 
+	DEFINE BOUNDS $ ( '´' '*' '´' | ('´' '0'..'9' '´')+ )$; 
     DEFINE INTEGER_LITERAL $('1'..'9')('0'..'9')|'0'$;
     DEFINE REAL_LITERAL $ (('1'..'9') ('0'..'9')* | '0') '.' ('0'..'9')+ (('e'|'E') ('+'|'-')? ('0'..'9')*)?$;
     
     DEFINE WHITESPACE $(' '|'\t'|'\f')$;
     DEFINE LINEBREAKS $('\r\n'|'\r'|'\n')$;
     DEFINE TEXT $('A'..'Z'|'a'..'z'|'0'..'9'|'_'|'-')+$;
-    DEFINE STRING $ ('"'('A'..'Z'|'a'..'z'|'0'..'9'|'_'|'-'|'.'|' '| '<'|'>'|'='|'!')+'"')$;
+    DEFINE STRING $ ('"' ('A'..'Z'|'a'..'z'|'0'..'9'|'_'|'-'|'.'|' '| '<'|'>'|'='|'!'|'*')+ '"')$;
+    DEFINE ATTRIBUT $('A'..'Z'|'a'..'z'|'0'..'9'|'_'|'-')+ '.' ('A'..'Z'|'a'..'z'|'0'..'9'|'_'|'-')+$;
 }
 
 TOKENSTYLES {
@@ -64,13 +67,13 @@ TOKENSTYLES {
 
 
 RULES {
-
-	Model  ::= "model" #1 name[] !1"{"!1 entities* relations* "}"!0;   
+ 
+	Model  ::= "model" #1 name[] !1"{"!1 entities+ relations* "}"!0;   
 	//@Foldable
 	Entity ::= "entity"#1 name[] !1"{"!1 keys+ attributes* compositions* dummyConstraints* constraints*"}"!0; 
 	
 	//@Foldable
-	Relation ::= "relation"#1 name[] !0"{" !1 attributes* roles(roles+) dummyConstraints* constraints* "}"!0;	
+	Relation ::= "relation"#1 name[] !0"{" !1 attributes* roles(roles+) dummyConstraints* constraints*"}"!0;	
 	Composition ::= "composition"#1name[] "{"attributes(attributes+)"}"!0;
 	Attribute ::= "val"#1name[] ":" type!0;
 	
@@ -79,11 +82,8 @@ RULES {
 
 	DummyConstraint  ::= "check" "(" constraint[STRING] ")";
 	
-	SimpleConstraint ::= "constraint" "(" (((entity[]"."attributes[] | numValue[REAL_LITERAL] | StringValue['"','"']) (arithmeticop* | (connect : And , Or)* | (stringop : Concat , Length)*) compare (entity[]"."attributes[] | numValue[REAL_LITERAL] | StringValue['"','"']) (arithmeticop* | (connect : And , Or)* | (stringop : Concat , Length)*)) | stringop : Like | connect : UnaryNot )")";
+	SimpleConstraint ::= "constraint" "(" (((attributes[ATTRIBUT] | numValue[REAL_LITERAL] | StringValue[STRING]) (arithmeticop* | (connect : And , Or)* | (stringop : Concat , Length)*) compare (attributes[ATTRIBUT] | numValue[REAL_LITERAL] | StringValue[STRING]) (arithmeticop* | (connect : And , Or)* | (stringop : Concat , Length)*)) | stringop : Like | connect : UnaryNot )")";
 	
-	//entity[]"."attributes[] (entity[]"."attributes[])*
-	// (entity[]"."attributes[])+
-	// (connect|compare|stringop|arithmeticop)* | attributes[]
 	// Datentypen	
 	Text 	::= "text";
 	String 	::= "string";
@@ -100,20 +100,20 @@ RULES {
 	Greater ::= ">";
 	GreaterThan ::= ">=";
 		
-	And ::= "and" entity[]"."attribute[];
-	Or  ::= "or" entity[]"."attribute[];
+	And ::= "and" attribute[ATTRIBUT];
+	Or  ::= "or" attribute[ATTRIBUT];
 	
-	UnaryNot ::= "not" entity[]"."attribute[];
+	UnaryNot ::= "not" attribute[ATTRIBUT];
 	
-	Add ::= "+" (entity[]"."attribute[]|value[REAL_LITERAL]);
-	Sub ::= "-" (entity[]"."attribute[]|value[REAL_LITERAL]);
-	Modulo ::= "%" (entity[]"."attribute[]|value[REAL_LITERAL]);
-	Div ::= "/" (entity[]"."attribute[]|value[REAL_LITERAL]);
-	Mul ::= "*" (entity[]"."attribute[]|value[REAL_LITERAL]);
+	Add ::= "+" (attribute[ATTRIBUT]|value[REAL_LITERAL]);
+	Sub ::= "-" (attribute[ATTRIBUT]|value[REAL_LITERAL]);
+	Modulo ::= "%" (attribute[ATTRIBUT]|value[REAL_LITERAL]);
+	Div ::= "/" (attribute[ATTRIBUT]|value[REAL_LITERAL]);
+	Mul ::= "*" (attribute[ATTRIBUT]|value[REAL_LITERAL]);
 	
-	Concat ::= "con" (entity[]"."attribute[]|value[]);
-	Like ::= entity[]"."attribute[] "like" value['"','"'] ; // TODO
+	Concat ::= "con" (attribute[ATTRIBUT]|value[]);
+	Like ::= attribute[ATTRIBUT] "like" value[STRING];
 	Length ::= ".length()";
 	
-	Literal ::= entity[]"."attribute[];		
+	Literal ::= attribute[ATTRIBUT];		
 }

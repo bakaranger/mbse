@@ -482,22 +482,13 @@ public interface erschemaPackage extends EPackage {
 	int SIMPLE_CONSTRAINT__COMPARE = 0;
 
 	/**
-	 * The feature id for the '<em><b>Entity</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIMPLE_CONSTRAINT__ENTITY = 1;
-
-	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_CONSTRAINT__ATTRIBUTES = 2;
+	int SIMPLE_CONSTRAINT__ATTRIBUTES = 1;
 
 	/**
 	 * The feature id for the '<em><b>Connect</b></em>' containment reference list.
@@ -506,7 +497,7 @@ public interface erschemaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_CONSTRAINT__CONNECT = 3;
+	int SIMPLE_CONSTRAINT__CONNECT = 2;
 
 	/**
 	 * The feature id for the '<em><b>Stringop</b></em>' containment reference list.
@@ -515,7 +506,7 @@ public interface erschemaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_CONSTRAINT__STRINGOP = 4;
+	int SIMPLE_CONSTRAINT__STRINGOP = 3;
 
 	/**
 	 * The feature id for the '<em><b>Arithmeticop</b></em>' containment reference list.
@@ -524,7 +515,7 @@ public interface erschemaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_CONSTRAINT__ARITHMETICOP = 5;
+	int SIMPLE_CONSTRAINT__ARITHMETICOP = 4;
 
 	/**
 	 * The feature id for the '<em><b>String Value</b></em>' attribute list.
@@ -533,7 +524,7 @@ public interface erschemaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_CONSTRAINT__STRING_VALUE = 6;
+	int SIMPLE_CONSTRAINT__STRING_VALUE = 5;
 
 	/**
 	 * The feature id for the '<em><b>Num Value</b></em>' attribute list.
@@ -542,7 +533,7 @@ public interface erschemaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_CONSTRAINT__NUM_VALUE = 7;
+	int SIMPLE_CONSTRAINT__NUM_VALUE = 6;
 
 	/**
 	 * The number of structural features of the '<em>Simple Constraint</em>' class.
@@ -551,7 +542,7 @@ public interface erschemaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_CONSTRAINT_FEATURE_COUNT = 8;
+	int SIMPLE_CONSTRAINT_FEATURE_COUNT = 7;
 
 	/**
 	 * The number of operations of the '<em>Simple Constraint</em>' class.
@@ -2455,17 +2446,6 @@ public interface erschemaPackage extends EPackage {
 	EReference getSimpleConstraint_Compare();
 
 	/**
-	 * Returns the meta object for the reference list '{@link de.tu_bs.cs.isf.mbse.erschema.SimpleConstraint#getEntity <em>Entity</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Entity</em>'.
-	 * @see de.tu_bs.cs.isf.mbse.erschema.SimpleConstraint#getEntity()
-	 * @see #getSimpleConstraint()
-	 * @generated
-	 */
-	EReference getSimpleConstraint_Entity();
-
-	/**
 	 * Returns the meta object for the reference list '{@link de.tu_bs.cs.isf.mbse.erschema.SimpleConstraint#getAttributes <em>Attributes</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3387,14 +3367,6 @@ public interface erschemaPackage extends EPackage {
 		 * @generated
 		 */
 		EReference SIMPLE_CONSTRAINT__COMPARE = eINSTANCE.getSimpleConstraint_Compare();
-
-		/**
-		 * The meta object literal for the '<em><b>Entity</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SIMPLE_CONSTRAINT__ENTITY = eINSTANCE.getSimpleConstraint_Entity();
 
 		/**
 		 * The meta object literal for the '<em><b>Attributes</b></em>' reference list feature.

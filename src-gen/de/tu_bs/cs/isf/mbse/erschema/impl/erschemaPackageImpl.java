@@ -676,7 +676,7 @@ public class erschemaPackageImpl extends EPackageImpl implements erschemaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSimpleConstraint_Entity() {
+	public EReference getSimpleConstraint_Attributes() {
 		return (EReference)simpleConstraintEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -685,7 +685,7 @@ public class erschemaPackageImpl extends EPackageImpl implements erschemaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSimpleConstraint_Attributes() {
+	public EReference getSimpleConstraint_Connect() {
 		return (EReference)simpleConstraintEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -694,7 +694,7 @@ public class erschemaPackageImpl extends EPackageImpl implements erschemaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSimpleConstraint_Connect() {
+	public EReference getSimpleConstraint_Stringop() {
 		return (EReference)simpleConstraintEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -703,7 +703,7 @@ public class erschemaPackageImpl extends EPackageImpl implements erschemaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSimpleConstraint_Stringop() {
+	public EReference getSimpleConstraint_Arithmeticop() {
 		return (EReference)simpleConstraintEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -712,17 +712,8 @@ public class erschemaPackageImpl extends EPackageImpl implements erschemaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSimpleConstraint_Arithmeticop() {
-		return (EReference)simpleConstraintEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getSimpleConstraint_StringValue() {
-		return (EAttribute)simpleConstraintEClass.getEStructuralFeatures().get(6);
+		return (EAttribute)simpleConstraintEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -731,7 +722,7 @@ public class erschemaPackageImpl extends EPackageImpl implements erschemaPackage
 	 * @generated
 	 */
 	public EAttribute getSimpleConstraint_NumValue() {
-		return (EAttribute)simpleConstraintEClass.getEStructuralFeatures().get(7);
+		return (EAttribute)simpleConstraintEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -1318,7 +1309,6 @@ public class erschemaPackageImpl extends EPackageImpl implements erschemaPackage
 
 		simpleConstraintEClass = createEClass(SIMPLE_CONSTRAINT);
 		createEReference(simpleConstraintEClass, SIMPLE_CONSTRAINT__COMPARE);
-		createEReference(simpleConstraintEClass, SIMPLE_CONSTRAINT__ENTITY);
 		createEReference(simpleConstraintEClass, SIMPLE_CONSTRAINT__ATTRIBUTES);
 		createEReference(simpleConstraintEClass, SIMPLE_CONSTRAINT__CONNECT);
 		createEReference(simpleConstraintEClass, SIMPLE_CONSTRAINT__STRINGOP);
@@ -1522,7 +1512,6 @@ public class erschemaPackageImpl extends EPackageImpl implements erschemaPackage
 
 		initEClass(simpleConstraintEClass, SimpleConstraint.class, "SimpleConstraint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSimpleConstraint_Compare(), this.getComparative(), null, "compare", null, 1, -1, SimpleConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSimpleConstraint_Entity(), this.getEntity(), null, "entity", null, 2, -1, SimpleConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSimpleConstraint_Attributes(), this.getAttribute(), null, "attributes", null, 2, -1, SimpleConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSimpleConstraint_Connect(), this.getConnective(), null, "connect", null, 0, -1, SimpleConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSimpleConstraint_Stringop(), this.getStringOperator(), null, "stringop", null, 0, -1, SimpleConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
